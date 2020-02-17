@@ -99,6 +99,13 @@
 		CD33098B23FB0D7B005EEB65 /* LearnHockey */ = {
 			isa = PBXGroup;
 			children = (
+				CD3309C223FB0E16005EEB65 /* UI */,
+				CD3309C123FB0E0F005EEB65 /* Models */,
+				CD3309C023FB0E05005EEB65 /* Interactors */,
+				CD3309BF23FB0DF8005EEB65 /* Repositories */,
+				CD3309BE23FB0DF2005EEB65 /* Injected */,
+				CD3309BD23FB0DE7005EEB65 /* Utilities */,
+				CD3309BC23FB0DE0005EEB65 /* System */,
 				CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */,
 				CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */,
 				CD33099023FB0D7B005EEB65 /* ContentView.swift */,
@@ -134,6 +141,71 @@
 				CD3309B023FB0D7C005EEB65 /* Info.plist */,
 			);
 			path = LearnHockeyUITests;
+			sourceTree = "<group>";
+		};
+		CD3309BC23FB0DE0005EEB65 /* System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		CD3309BD23FB0DE7005EEB65 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CD3309BE23FB0DF2005EEB65 /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		CD3309BF23FB0DF8005EEB65 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD3309C023FB0E05005EEB65 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		CD3309C123FB0E0F005EEB65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CD3309C223FB0E16005EEB65 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD3309C423FB0E24005EEB65 /* Components */,
+				CD3309C323FB0E1B005EEB65 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CD3309C323FB0E1B005EEB65 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CD3309C423FB0E24005EEB65 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
