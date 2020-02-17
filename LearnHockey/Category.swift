@@ -9,10 +9,11 @@
 import Foundation
 
 
-enum Categories {
-    case offense
+enum Category: CaseIterable {
     case defense
     case midfield
+    case offense
+
 }
 
 

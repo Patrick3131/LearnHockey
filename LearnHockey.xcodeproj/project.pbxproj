@@ -15,11 +15,17 @@
 		CD33099923FB0D7C005EEB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD33099723FB0D7C005EEB65 /* LaunchScreen.storyboard */; };
 		CD3309A423FB0D7C005EEB65 /* LearnHockeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309A323FB0D7C005EEB65 /* LearnHockeyTests.swift */; };
 		CD3309AF23FB0D7C005EEB65 /* LearnHockeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309AE23FB0D7C005EEB65 /* LearnHockeyUITests.swift */; };
-		CD3309C623FB0E4B005EEB65 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309C523FB0E4B005EEB65 /* Categories.swift */; };
+		CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309C523FB0E4B005EEB65 /* Category.swift */; };
 		CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309C723FB0EB2005EEB65 /* Exercise.swift */; };
 		CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309C923FB1528005EEB65 /* Helpers.swift */; };
 		CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309CB23FB1535005EEB65 /* Loadable.swift */; };
-		CD3309CE23FB1569005EEB65 /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309CD23FB1569005EEB65 /* SystemEventsHandler.swift */; };
+		CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309CF23FB15EA005EEB65 /* AppState.swift */; };
+		CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D123FB1991005EEB65 /* DIContainer.swift */; };
+		CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D323FB1A4E005EEB65 /* InteractorsDIContainer.swift */; };
+		CD3309D623FB1BA5005EEB65 /* RootViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D523FB1BA5005EEB65 /* RootViewModifier.swift */; };
+		CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D723FB1E35005EEB65 /* SystemEventsHandler.swift */; };
+		CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D923FB1EF0005EEB65 /* AppSystemEventsHandler.swift */; };
+		CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +60,17 @@
 		CD3309AA23FB0D7C005EEB65 /* LearnHockeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnHockeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3309AE23FB0D7C005EEB65 /* LearnHockeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnHockeyUITests.swift; sourceTree = "<group>"; };
 		CD3309B023FB0D7C005EEB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD3309C523FB0E4B005EEB65 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		CD3309C523FB0E4B005EEB65 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CD3309C723FB0EB2005EEB65 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		CD3309C923FB1528005EEB65 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		CD3309CB23FB1535005EEB65 /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
-		CD3309CD23FB1569005EEB65 /* SystemEventsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
+		CD3309CF23FB15EA005EEB65 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		CD3309D123FB1991005EEB65 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		CD3309D323FB1A4E005EEB65 /* InteractorsDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsDIContainer.swift; sourceTree = "<group>"; };
+		CD3309D523FB1BA5005EEB65 /* RootViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModifier.swift; sourceTree = "<group>"; };
+		CD3309D723FB1E35005EEB65 /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
+		CD3309D923FB1EF0005EEB65 /* AppSystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSystemEventsHandler.swift; sourceTree = "<group>"; };
+		CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +167,9 @@
 			children = (
 				CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */,
 				CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */,
-				CD3309CD23FB1569005EEB65 /* SystemEventsHandler.swift */,
+				CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */,
+				CD3309D723FB1E35005EEB65 /* SystemEventsHandler.swift */,
+				CD3309D923FB1EF0005EEB65 /* AppSystemEventsHandler.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -172,6 +186,9 @@
 		CD3309BE23FB0DF2005EEB65 /* Injected */ = {
 			isa = PBXGroup;
 			children = (
+				CD3309CF23FB15EA005EEB65 /* AppState.swift */,
+				CD3309D123FB1991005EEB65 /* DIContainer.swift */,
+				CD3309D323FB1A4E005EEB65 /* InteractorsDIContainer.swift */,
 			);
 			path = Injected;
 			sourceTree = "<group>";
@@ -193,7 +210,7 @@
 		CD3309C123FB0E0F005EEB65 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CD3309C523FB0E4B005EEB65 /* Categories.swift */,
+				CD3309C523FB0E4B005EEB65 /* Category.swift */,
 				CD3309C723FB0EB2005EEB65 /* Exercise.swift */,
 			);
 			name = Models;
@@ -202,6 +219,7 @@
 		CD3309C223FB0E16005EEB65 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CD3309D523FB1BA5005EEB65 /* RootViewModifier.swift */,
 				CD3309C423FB0E24005EEB65 /* Components */,
 				CD3309C323FB0E1B005EEB65 /* Screens */,
 			);
@@ -356,12 +374,18 @@
 			files = (
 				CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
+				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
+				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
+				CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */,
+				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
+				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
-				CD3309CE23FB1569005EEB65 /* SystemEventsHandler.swift in Sources */,
-				CD3309C623FB0E4B005EEB65 /* Categories.swift in Sources */,
+				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
+				CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */,
 				CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */,
 				CD33099123FB0D7B005EEB65 /* ContentView.swift in Sources */,
+				CD3309D623FB1BA5005EEB65 /* RootViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

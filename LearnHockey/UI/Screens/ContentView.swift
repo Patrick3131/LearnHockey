@@ -7,15 +7,21 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    private let container: DIContainer
+    init(container: DIContainer) {
+        self.container = container
+    }
     var body: some View {
         Text("Hello, World!")
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
