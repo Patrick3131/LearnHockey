@@ -12,8 +12,14 @@ import Foundation
 struct AppState {
     var categories = UserData()
     var system = System()
+    var routing = ViewRouting()
 }
 
+extension AppState {
+    struct ViewRouting:Equatable {
+        var exercises = CategoriesList.Routing()
+    }
+}
 
 extension AppState {
     struct UserData {
