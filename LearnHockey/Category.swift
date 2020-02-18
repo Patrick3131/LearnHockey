@@ -9,11 +9,15 @@
 import Foundation
 
 
-enum Category: CaseIterable {
-    case defense
-    case midfield
-    case offense
-
+enum Category: String, CaseIterable {
+    case defense = "Defense"
+    case midfield = "Midfield"
+    case offense = "Offense"
+    
+   
 }
 
+extension Category: Identifiable {
+    var id: UUID { UUID()}
+}
 
