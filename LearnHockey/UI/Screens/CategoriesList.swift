@@ -19,19 +19,36 @@ struct CategoriesList: View {
     private var categories = Category.allCases
     var body: some View {
         content
+            .onReceive(routingUpdate) { value in
+                
+                print(value)
+                self.routingState = value
+        }
     }
     
     
     private var content: some View {
-        List(self.categories) { category in
-            NavigationLink(
-                destination: Exercises(),
-                tag: category.rawValue,
-                selection: self.routingBinding.exercises) {
-                    CategorieCell()
+        NavigationView {
+            List(self.categories) { category in
+                NavigationLink(
+                    destination: Exercises(),
+                    tag: category.rawValue,
+                    selection: self.routingBinding.exercises) {
+                        CategorieCell()
                 }
+                
+            }.navigationBarTitle("Countries")
         }
+        
+        
+    }
+}
 
+// MARK: - State Updates
+
+private extension CategoriesList {
+    var routingUpdate: AnyPublisher<Routing, Never> {
+        injected.appState.updates(for: \.routing.exercises)
     }
 }
 
@@ -42,8 +59,29 @@ extension CategoriesList {
 }
 
 struct Exercises: View {
+    @Environment(\.locale) var locale: Locale
+    @Environment(\.injected) private var injected: DIContainer
+    @State private var routingState: Routing = .init()
+    private var routingBinding: Binding<Routing> {
+        $routingState.dispatched(to: injected.appState, \.routing.exercise)
+    }
     var body: some View {
-        Text("")
+        Text("Hello World")
+            .onReceive(routingUpdate) { value in
+                print("test:", value)
+                self.routingState = value}
+    }
+}
+
+extension Exercises {
+    struct Routing: Equatable {
+        var exercise: String?
+    }
+}
+
+private extension Exercises {
+    var routingUpdate: AnyPublisher<Routing,Never> {
+        injected.appState.updates(for: \.routing.exercise)
     }
 }
 
