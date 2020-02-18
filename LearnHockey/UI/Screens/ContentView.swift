@@ -16,7 +16,7 @@ struct ContentView: View {
         self.container = container
     }
     var body: some View {
-        Text("Hello, World!")
+        CategoriesList()
     }
 }
 //

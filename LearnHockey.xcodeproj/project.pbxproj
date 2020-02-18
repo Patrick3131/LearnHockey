@@ -26,6 +26,8 @@
 		CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D723FB1E35005EEB65 /* SystemEventsHandler.swift */; };
 		CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309D923FB1EF0005EEB65 /* AppSystemEventsHandler.swift */; };
 		CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */; };
+		CD3309DE23FB2514005EEB65 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DD23FB2514005EEB65 /* CategoriesList.swift */; };
+		CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		CD3309D723FB1E35005EEB65 /* SystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEventsHandler.swift; sourceTree = "<group>"; };
 		CD3309D923FB1EF0005EEB65 /* AppSystemEventsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSystemEventsHandler.swift; sourceTree = "<group>"; };
 		CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		CD3309DD23FB2514005EEB65 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
+		CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,7 @@
 		CD3309C023FB0E05005EEB65 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				CD33099023FB0D7B005EEB65 /* ContentView.swift */,
+				CD3309DD23FB2514005EEB65 /* CategoriesList.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -372,11 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3309DE23FB2514005EEB65 /* CategoriesList.swift in Sources */,
 				CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
+				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,
 				CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */,
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
