@@ -29,6 +29,7 @@
 		CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */; };
 		CD3309DE23FB2514005EEB65 /* CategoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DD23FB2514005EEB65 /* CategoriesList.swift */; };
 		CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */; };
+		CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		CD3309DD23FB2514005EEB65 /* CategoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesList.swift; sourceTree = "<group>"; };
 		CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInteractor.swift; sourceTree = "<group>"; };
+		CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBugFixer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		CD3309C223FB0E16005EEB65 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CD915FCD240873AD00319A0B /* Modifiers */,
 				CD3309D523FB1BA5005EEB65 /* RootViewModifier.swift */,
 				CD3309C423FB0E24005EEB65 /* Components */,
 				CD3309C323FB0E1B005EEB65 /* Screens */,
@@ -248,6 +251,14 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CD915FCD240873AD00319A0B /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
 				CD20326C23FC942D00EE5365 /* Exercises.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
+				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
 				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,

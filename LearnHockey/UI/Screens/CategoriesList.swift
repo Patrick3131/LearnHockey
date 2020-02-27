@@ -14,13 +14,13 @@ struct CategoriesList: View {
     @Environment(\.injected) private var injected: DIContainer
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
-        $routingState.dispatched(to: injected.appState, \.routing.exercises)
+        print(routingState)
+        return $routingState.dispatched(to: injected.appState, \.routing.exercises)
     }
     private var categories = Category.allCases
     var body: some View {
         content
             .onReceive(routingUpdate) { value in
-                
                 print(value)
                 self.routingState = value
         }
@@ -37,7 +37,7 @@ struct CategoriesList: View {
                         CategorieCell()
                 }
                 
-            }.navigationBarTitle("Countries")
+            }.navigationBarTitle("Categories")
         }
         
         

@@ -18,6 +18,8 @@ struct Exercises: View {
     }
     var body: some View {
         Text("Hello World")
+        .navigationBarTitle("Exercise")
+            .fixNavigationBarBug { self.goBack() }
             .onReceive(routingUpdate) { value in
                 print("test:", value)
                 self.routingState = value}
@@ -27,6 +29,10 @@ struct Exercises: View {
 extension Exercises {
     struct Routing: Equatable {
         var exercise: String?
+    }
+    
+    func goBack() {
+        injected.appState[\.routing.exercises.exercises] = nil
     }
 }
 
