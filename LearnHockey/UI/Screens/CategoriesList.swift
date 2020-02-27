@@ -34,9 +34,8 @@ struct CategoriesList: View {
                     destination: Exercises(),
                     tag: category.rawValue,
                     selection: self.routingBinding.categories) {
-                        CategorieCell()
+                        CategorieCell(name: category.rawValue)
                 }
-                
             }.navigationBarTitle("Categories")
         }
         
@@ -66,11 +65,7 @@ struct ExerciseDetail: View {
     }
 }
 
-struct CategorieCell: View {
-    var body:some View {
-        Text("Test")
-    }
-}
+
 
 struct CategoriesList_Previews: PreviewProvider {
     static var previews: some View {
