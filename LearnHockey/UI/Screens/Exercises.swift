@@ -14,7 +14,7 @@ struct Exercises: View {
     @Environment(\.injected) private var injected: DIContainer
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
-        $routingState.dispatched(to: injected.appState, \.routing.exercise)
+        $routingState.dispatched(to: injected.appState, \.routing.exercises)
     }
     var body: some View {
         Text("Hello World")
@@ -32,13 +32,13 @@ extension Exercises {
     }
     
     func goBack() {
-        injected.appState[\.routing.exercises.exercises] = nil
+        injected.appState[\.routing.categories.categories] = nil
     }
 }
 
 private extension Exercises {
     var routingUpdate: AnyPublisher<Routing,Never> {
-        injected.appState.updates(for: \.routing.exercise)
+        injected.appState.updates(for: \.routing.exercises)
     }
 }
 

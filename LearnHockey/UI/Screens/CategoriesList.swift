@@ -15,7 +15,7 @@ struct CategoriesList: View {
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
         print(routingState)
-        return $routingState.dispatched(to: injected.appState, \.routing.exercises)
+        return $routingState.dispatched(to: injected.appState, \.routing.categories)
     }
     private var categories = Category.allCases
     var body: some View {
@@ -33,7 +33,7 @@ struct CategoriesList: View {
                 NavigationLink(
                     destination: Exercises(),
                     tag: category.rawValue,
-                    selection: self.routingBinding.exercises) {
+                    selection: self.routingBinding.categories) {
                         CategorieCell()
                 }
                 
@@ -48,13 +48,13 @@ struct CategoriesList: View {
 
 private extension CategoriesList {
     var routingUpdate: AnyPublisher<Routing, Never> {
-        injected.appState.updates(for: \.routing.exercises)
+        injected.appState.updates(for: \.routing.categories)
     }
 }
 
 extension CategoriesList {
     struct Routing: Equatable {
-        var exercises: String?
+        var categories: String?
     }
 }
 
