@@ -8,6 +8,8 @@ target 'LearnHockey' do
   # Pods for LearnHockey
 pod "Firebase/Auth"
 pod "Firebase/Firestore"
+pod "Firebase/Storage"
+
 
   target 'LearnHockeyTests' do
     inherit! :search_paths
