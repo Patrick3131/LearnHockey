@@ -17,8 +17,8 @@ struct AppState {
 
 extension AppState {
     struct ViewRouting:Equatable {
-        var categories = CategoriesList.Routing()
-        var exercises = Exercises.Routing()
+        var categories = CategoriesListView.Routing()
+        var exercises = ExercisesView.Routing()
     }
 }
 

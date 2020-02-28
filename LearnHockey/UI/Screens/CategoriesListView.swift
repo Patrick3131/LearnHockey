@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct CategoriesList: View {
+struct CategoriesListView: View {
     @Environment(\.locale) private var locale: Locale
     @Environment(\.injected) private var injected: DIContainer
     @State private var routingState: Routing = .init()
@@ -31,7 +31,7 @@ struct CategoriesList: View {
         NavigationView {
             List(self.categories) { category in
                 NavigationLink(
-                    destination: Exercises(),
+                    destination: ExercisesView(),
                     tag: category.rawValue,
                     selection: self.routingBinding.categories) {
                         CategorieCell(name: category.rawValue)
@@ -45,13 +45,13 @@ struct CategoriesList: View {
 
 // MARK: - State Updates
 
-private extension CategoriesList {
+private extension CategoriesListView {
     var routingUpdate: AnyPublisher<Routing, Never> {
         injected.appState.updates(for: \.routing.categories)
     }
 }
 
-extension CategoriesList {
+extension CategoriesListView {
     struct Routing: Equatable {
         var categories: String?
     }
@@ -69,6 +69,6 @@ struct ExerciseDetail: View {
 
 struct CategoriesList_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesList()
+        CategoriesListView()
     }
 }

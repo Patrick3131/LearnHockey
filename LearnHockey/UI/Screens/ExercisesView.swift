@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-struct Exercises: View {
+struct ExercisesView: View {
     @Environment(\.locale) var locale: Locale
     @Environment(\.injected) private var injected: DIContainer
     @State private var routingState: Routing = .init()
@@ -26,7 +26,7 @@ struct Exercises: View {
     }
 }
 
-extension Exercises {
+extension ExercisesView {
     struct Routing: Equatable {
         var exercise: String?
     }
@@ -36,7 +36,7 @@ extension Exercises {
     }
 }
 
-private extension Exercises {
+private extension ExercisesView {
     var routingUpdate: AnyPublisher<Routing,Never> {
         injected.appState.updates(for: \.routing.exercises)
     }
@@ -44,6 +44,6 @@ private extension Exercises {
 
 struct Exercises_Previews: PreviewProvider {
     static var previews: some View {
-        Exercises()
+        ExercisesView()
     }
 }
