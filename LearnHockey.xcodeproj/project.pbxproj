@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		CD02E5112409524000F68AA3 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E5102409524000F68AA3 /* ExerciseView.swift */; };
 		CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E51324095B3000F68AA3 /* CRUDStorage.swift */; };
 		CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E515240965A400F68AA3 /* StorageRepository.swift */; };
+		CD02E5392409774C00F68AA3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */; };
+		CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */; };
 		CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20326B23FC942D00EE5365 /* ExercisesView.swift */; };
 		CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */; };
 		CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */; };
@@ -68,6 +70,7 @@
 		CD02E5102409524000F68AA3 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		CD02E51324095B3000F68AA3 /* CRUDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDStorage.swift; sourceTree = "<group>"; };
 		CD02E515240965A400F68AA3 /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
+		CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherBridge.swift; sourceTree = "<group>"; };
 		CD20326B23FC942D00EE5365 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		CD33098923FB0D7B005EEB65 /* LearnHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD02E5392409774C00F68AA3 /* KingfisherSwiftUI in Frameworks */,
 				2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +249,7 @@
 			children = (
 				CD3309CB23FB1535005EEB65 /* Loadable.swift */,
 				CD3309C923FB1528005EEB65 /* Helpers.swift */,
+				CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -350,6 +355,9 @@
 			dependencies = (
 			);
 			name = LearnHockey;
+			packageProductDependencies = (
+				CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */,
+			);
 			productName = LearnHockey;
 			productReference = CD33098923FB0D7B005EEB65 /* LearnHockey.app */;
 			productType = "com.apple.product-type.application";
@@ -425,6 +433,9 @@
 				Base,
 			);
 			mainGroup = CD33098023FB0D7B005EEB65;
+			packageReferences = (
+				CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = CD33098A23FB0D7B005EEB65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -584,6 +595,7 @@
 				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,
 				CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */,
 				CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */,
+				CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */,
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
@@ -924,6 +936,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD33098123FB0D7B005EEB65 /* Project object */;
 }
