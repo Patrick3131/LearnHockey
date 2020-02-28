@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */; };
 		CA336F378A67BD66A9F797D0 /* Pods_LearnHockey_LearnHockeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */; };
+		CD02E5112409524000F68AA3 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E5102409524000F68AA3 /* ExerciseView.swift */; };
+		CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E51324095B3000F68AA3 /* CRUDStorage.swift */; };
+		CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E515240965A400F68AA3 /* StorageRepository.swift */; };
 		CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20326B23FC942D00EE5365 /* ExercisesView.swift */; };
 		CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */; };
 		CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */; };
@@ -62,6 +65,9 @@
 		73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey_LearnHockeyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyTests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyTests/Pods-LearnHockeyTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD02E5102409524000F68AA3 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		CD02E51324095B3000F68AA3 /* CRUDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDStorage.swift; sourceTree = "<group>"; };
+		CD02E515240965A400F68AA3 /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
 		CD20326B23FC942D00EE5365 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		CD33098923FB0D7B005EEB65 /* LearnHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,11 +154,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CD02E51224095B0D00F68AA3 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				CD02E51324095B3000F68AA3 /* CRUDStorage.swift */,
+				CD02E515240965A400F68AA3 /* StorageRepository.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		CD33098023FB0D7B005EEB65 = {
 			isa = PBXGroup;
 			children = (
 				CD33098B23FB0D7B005EEB65 /* LearnHockey */,
-				CD33099A23FB0D7C005EEB65 /* Info.plist */,
 				CD3309A223FB0D7C005EEB65 /* LearnHockeyTests */,
 				CD3309AD23FB0D7C005EEB65 /* LearnHockeyUITests */,
 				CD33098A23FB0D7B005EEB65 /* Products */,
@@ -174,6 +188,7 @@
 		CD33098B23FB0D7B005EEB65 /* LearnHockey */ = {
 			isa = PBXGroup;
 			children = (
+				CD33099A23FB0D7C005EEB65 /* Info.plist */,
 				CD3309C223FB0E16005EEB65 /* UI */,
 				CD3309C123FB0E0F005EEB65 /* Models */,
 				CD3309C023FB0E05005EEB65 /* Interactors */,
@@ -247,6 +262,7 @@
 		CD3309BF23FB0DF8005EEB65 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				CD02E51224095B0D00F68AA3 /* Storage */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -285,6 +301,7 @@
 				CD33099023FB0D7B005EEB65 /* ContentView.swift */,
 				CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */,
 				CD20326B23FC942D00EE5365 /* ExercisesView.swift */,
+				CD02E5102409524000F68AA3 /* ExerciseView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -559,18 +576,21 @@
 				CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
 				CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */,
+				CD02E5112409524000F68AA3 /* ExerciseView.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
 				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
 				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,
 				CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */,
+				CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */,
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
 				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
 				CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */,
 				CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */,
+				CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */,
 				CD33099123FB0D7B005EEB65 /* ContentView.swift in Sources */,
 				CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */,
 				CD3309D623FB1BA5005EEB65 /* RootViewModifier.swift in Sources */,

@@ -25,6 +25,7 @@ extension AppState {
 extension AppState {
     struct UserData {
         var categories = Category.allCases
+        var exerciseDetail: Loadable<Exercise> = .notRequested
     }
 }
 
