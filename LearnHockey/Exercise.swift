@@ -9,6 +9,8 @@
 import Foundation
 
 struct Exercise {
+    /// id consists of Category + name
+    let id: String
     let name: String
     let image: URL?
     let explanation: String?
@@ -16,5 +18,13 @@ struct Exercise {
     let amountOfPlayers: String?
     let coaching: String?
     let variation: String?
-    let difficulty: String?
+    let difficulty: Difficulty?
+}
+
+extension Exercise {
+    enum Difficulty {
+        case beginner
+        case intermediate
+        case advanced
+    }
 }
