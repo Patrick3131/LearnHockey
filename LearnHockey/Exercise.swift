@@ -10,6 +10,11 @@ import Foundation
 
 struct Exercise {
     let name: String
-    let image: URL
-    let explanation: String
+    let image: URL?
+    let explanation: String?
+    let duration: String?
+    let amountOfPlayers: String?
+    let coaching: String?
+    let variation: String?
+    let difficulty: String?
 }
