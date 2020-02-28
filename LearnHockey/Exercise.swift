@@ -21,8 +21,10 @@ struct Exercise {
     let difficulty: Difficulty?
 }
 
+extension Exercise: Codable {}
+
 extension Exercise {
-    enum Difficulty {
+    enum Difficulty: Int, Codable {
         case beginner
         case intermediate
         case advanced

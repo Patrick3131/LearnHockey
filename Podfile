@@ -9,6 +9,8 @@ target 'LearnHockey' do
 pod "Firebase/Auth"
 pod "Firebase/Firestore"
 pod "Firebase/Storage"
+pod 'CodableFirebase'
+
 
 
   target 'LearnHockeyTests' do
@@ -17,6 +19,7 @@ pod "Firebase/Storage"
   end
 
   target 'LearnHockeyUITests' do
+    inherit! :search_paths
     # Pods for testing
   end
 
