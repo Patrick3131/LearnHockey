@@ -10,12 +10,13 @@ import Foundation
 
 
 enum Category: String, CaseIterable {
-    case defense = "Defense"
-    case midfield = "Midfield"
-    case offense = "Offense"
-    
-   
+    case defense = "defense"
+    case midfield = "midfield"
+    case offense = "offense"
+    case games = "games"
 }
+
+
 
 extension Category: Identifiable {
     var id: String { self.rawValue }

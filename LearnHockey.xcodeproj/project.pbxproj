@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */; };
-		CA336F378A67BD66A9F797D0 /* Pods_LearnHockey_LearnHockeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */; };
+		3C95C36703C7C5394B628B74 /* Pods_LearnHockeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AB16628D291907500FDE4F /* Pods_LearnHockeyUITests.framework */; };
 		CD02E5112409524000F68AA3 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E5102409524000F68AA3 /* ExerciseView.swift */; };
 		CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E51324095B3000F68AA3 /* CRUDStorage.swift */; };
 		CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E515240965A400F68AA3 /* StorageRepository.swift */; };
-		CD02E5392409774C00F68AA3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */; };
+		CD02E5392409774C00F68AA3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD02E5382409774C00F68AA3 /* SwiftPackageProductDependency */; };
 		CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */; };
 		CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20326B23FC942D00EE5365 /* ExercisesView.swift */; };
 		CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */; };
@@ -39,6 +39,7 @@
 		CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */; };
 		CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FD0240879CF00319A0B /* CategorieCell.swift */; };
 		CD915FD42408AEEA00319A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */; };
+		CD9F3A9D24097A910064016B /* ExercisesWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */; };
 		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,11 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05AB16628D291907500FDE4F /* Pods_LearnHockeyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B328A55EF158F7ABE21818 /* Pods-LearnHockeyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		31087646B2EB47E2C648F742 /* Pods-LearnHockey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockey/Pods-LearnHockey.debug.xcconfig"; sourceTree = "<group>"; };
 		554595EF135CF094B79B6E1F /* Pods-LearnHockeyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyTests.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockeyTests/Pods-LearnHockeyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5ACE04D87991E7AAEEE1A9AE /* Pods-LearnHockey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey.release.xcconfig"; path = "Target Support Files/Pods-LearnHockey/Pods-LearnHockey.release.xcconfig"; sourceTree = "<group>"; };
 		612E63535691385AC5A298E9 /* Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey_LearnHockeyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyTests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyTests/Pods-LearnHockeyTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD02E5102409524000F68AA3 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,8 @@
 		CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBugFixer.swift; sourceTree = "<group>"; };
 		CD915FD0240879CF00319A0B /* CategorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieCell.swift; sourceTree = "<group>"; };
 		CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesWebRepository.swift; sourceTree = "<group>"; };
+		E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD02E5392409774C00F68AA3 /* KingfisherSwiftUI in Frameworks */,
+				CD02E5392409774C00F68AA3 /* BuildFile in Frameworks */,
 				2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA336F378A67BD66A9F797D0 /* Pods_LearnHockey_LearnHockeyUITests.framework in Frameworks */,
+				3C95C36703C7C5394B628B74 /* Pods_LearnHockeyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */,
-				73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */,
 				E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */,
+				05AB16628D291907500FDE4F /* Pods_LearnHockeyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +158,8 @@
 				7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */,
 				554595EF135CF094B79B6E1F /* Pods-LearnHockeyTests.debug.xcconfig */,
 				8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */,
+				10B328A55EF158F7ABE21818 /* Pods-LearnHockeyUITests.debug.xcconfig */,
+				E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 		CD3309BF23FB0DF8005EEB65 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				CD9F3A9B240979CA0064016B /* Firestore */,
 				CD02E51224095B0D00F68AA3 /* Storage */,
+				CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -337,6 +345,13 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		CD9F3A9B240979CA0064016B /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firestore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,7 +371,7 @@
 			);
 			name = LearnHockey;
 			packageProductDependencies = (
-				CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */,
+				CD02E5382409774C00F68AA3 /* SwiftPackageProductDependency */,
 			);
 			productName = LearnHockey;
 			productReference = CD33098923FB0D7B005EEB65 /* LearnHockey.app */;
@@ -389,7 +404,6 @@
 				CD3309A623FB0D7C005EEB65 /* Sources */,
 				CD3309A723FB0D7C005EEB65 /* Frameworks */,
 				CD3309A823FB0D7C005EEB65 /* Resources */,
-				A1A89AD253602398B7D33072 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,7 +448,7 @@
 			);
 			mainGroup = CD33098023FB0D7B005EEB65;
 			packageReferences = (
-				CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CD02E5372409774C00F68AA3 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = CD33098A23FB0D7B005EEB65 /* Products */;
 			projectDirPath = "";
@@ -476,23 +490,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A1A89AD253602398B7D33072 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B425B23B83DD539167EFAC20 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,7 +544,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LearnHockey-LearnHockeyUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LearnHockeyUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -583,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9F3A9D24097A910064016B /* ExercisesWebRepository.swift in Sources */,
 				CD3309DE23FB2514005EEB65 /* CategoriesListView.swift in Sources */,
 				CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
@@ -856,7 +854,7 @@
 		};
 		CD3309BA23FB0D7C005EEB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 612E63535691385AC5A298E9 /* Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig */;
+			baseConfigurationReference = 10B328A55EF158F7ABE21818 /* Pods-LearnHockeyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -877,7 +875,7 @@
 		};
 		CD3309BB23FB0D7C005EEB65 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */;
+			baseConfigurationReference = E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -938,7 +936,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		CD02E5372409774C00F68AA3 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -949,9 +947,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */ = {
+		CD02E5382409774C00F68AA3 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = CD02E5372409774C00F68AA3 /* RemoteSwiftPackageReference */;
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

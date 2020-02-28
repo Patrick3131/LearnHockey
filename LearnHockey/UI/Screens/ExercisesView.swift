@@ -10,12 +10,23 @@ import SwiftUI
 import Combine
 
 struct ExercisesView: View {
+    let category: Category
+    
     @Environment(\.locale) var locale: Locale
     @Environment(\.injected) private var injected: DIContainer
+    
+    @State private var exercises: Loadable<[Exercise]>
+    
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
         $routingState.dispatched(to: injected.appState, \.routing.exercises)
     }
+    
+    init(category:Category, exercises: Loadable<[Exercise]> = .notRequested) {
+        self.category = category
+        self._exercises = .init(initialValue: exercises)
+    }
+    
     var body: some View {
         Text("Hello World")
         .navigationBarTitle("Exercise")
@@ -23,6 +34,12 @@ struct ExercisesView: View {
             .onReceive(routingUpdate) { value in
                 print("test:", value)
                 self.routingState = value}
+    }
+}
+
+private extension ExercisesView {
+    func loadExercises() {
+        injected.interactors.exerciseInteractor.loadExercises(exercises: $exercises, category: category)
     }
 }
 
@@ -44,6 +61,6 @@ private extension ExercisesView {
 
 struct Exercises_Previews: PreviewProvider {
     static var previews: some View {
-        ExercisesView()
+        ExercisesView(category: Category.games)
     }
 }

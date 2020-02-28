@@ -31,7 +31,7 @@ struct CategoriesListView: View {
         NavigationView {
             List(self.categories) { category in
                 NavigationLink(
-                    destination: ExercisesView(),
+                    destination: ExercisesView(category: category),
                     tag: category.rawValue,
                     selection: self.routingBinding.categories) {
                         CategorieCell(name: category.rawValue)

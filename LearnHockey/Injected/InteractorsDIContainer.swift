@@ -9,11 +9,17 @@
 
 extension DIContainer {
     struct Interactors {
+        let exerciseInteractor: ExerciseInteractor
+        
+        init(exerciseInteractor: ExerciseInteractor) {
+            self.exerciseInteractor = exerciseInteractor
+        }
+        
         
         static var stub: Self {
-            .init()
+            .init(exerciseInteractor: StubAppExerciseInteractor())
         }
     }
     
-
+    
 }

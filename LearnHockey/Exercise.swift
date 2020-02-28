@@ -22,6 +22,7 @@ struct Exercise {
 }
 
 extension Exercise: Codable {}
+extension Exercise: Equatable {}
 
 extension Exercise {
     enum Difficulty: Int, Codable {

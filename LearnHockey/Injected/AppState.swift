@@ -10,7 +10,7 @@ import Foundation
 
 
 struct AppState {
-    var categories = UserData()
+    var userData = UserData()
     var system = System()
     var routing = ViewRouting()
 }
@@ -25,6 +25,7 @@ extension AppState {
 extension AppState {
     struct UserData {
         var categories = Category.allCases
+        var exercises: Loadable<[Exercise]> = .notRequested
         var exerciseDetail: Loadable<Exercise> = .notRequested
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Combine
+import Firebase
 
 struct AppEnvironment {
     let container: DIContainer
@@ -24,6 +25,12 @@ extension AppEnvironment {
     }
     
     private static func configureInteractors(appState: Store<AppState>) -> DIContainer.Interactors {
-        return .init()
+        
+        FirebaseApp.configure()
+        
+        let exerciseWebRepository = FirebaseWebRepository(store: Firestore.firestore())
+        
+        let exerciseInteractor = AppExerciseInteractor(webRepository: exerciseWebRepository, appState: appState)
+        return .init(exerciseInteractor: exerciseInteractor)
     }
 }
