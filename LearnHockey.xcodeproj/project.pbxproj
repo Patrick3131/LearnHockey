@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */; };
+		CA336F378A67BD66A9F797D0 /* Pods_LearnHockey_LearnHockeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */; };
 		CD20326C23FC942D00EE5365 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20326B23FC942D00EE5365 /* Exercises.swift */; };
 		CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */; };
 		CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */; };
@@ -31,6 +33,8 @@
 		CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */; };
 		CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */; };
 		CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FD0240879CF00319A0B /* CategorieCell.swift */; };
+		CD915FD42408AEEA00319A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */; };
+		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31087646B2EB47E2C648F742 /* Pods-LearnHockey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockey/Pods-LearnHockey.debug.xcconfig"; sourceTree = "<group>"; };
+		554595EF135CF094B79B6E1F /* Pods-LearnHockeyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyTests.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockeyTests/Pods-LearnHockeyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5ACE04D87991E7AAEEE1A9AE /* Pods-LearnHockey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey.release.xcconfig"; path = "Target Support Files/Pods-LearnHockey/Pods-LearnHockey.release.xcconfig"; sourceTree = "<group>"; };
+		612E63535691385AC5A298E9 /* Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey_LearnHockeyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyTests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyTests/Pods-LearnHockeyTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD20326B23FC942D00EE5365 /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		CD33098923FB0D7B005EEB65 /* LearnHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +92,9 @@
 		CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInteractor.swift; sourceTree = "<group>"; };
 		CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBugFixer.swift; sourceTree = "<group>"; };
 		CD915FD0240879CF00319A0B /* CategorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieCell.swift; sourceTree = "<group>"; };
+		CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,12 +118,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA336F378A67BD66A9F797D0 /* Pods_LearnHockey_LearnHockeyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36F503B50728A4988D0762C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */,
+				73507F297E26231F199AAF24 /* Pods_LearnHockey_LearnHockeyUITests.framework */,
+				E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B62CA5A779AABDD7D5321D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31087646B2EB47E2C648F742 /* Pods-LearnHockey.debug.xcconfig */,
+				5ACE04D87991E7AAEEE1A9AE /* Pods-LearnHockey.release.xcconfig */,
+				612E63535691385AC5A298E9 /* Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig */,
+				7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */,
+				554595EF135CF094B79B6E1F /* Pods-LearnHockeyTests.debug.xcconfig */,
+				8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CD33098023FB0D7B005EEB65 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +156,8 @@
 				CD3309A223FB0D7C005EEB65 /* LearnHockeyTests */,
 				CD3309AD23FB0D7C005EEB65 /* LearnHockeyUITests */,
 				CD33098A23FB0D7B005EEB65 /* Products */,
+				4B62CA5A779AABDD7D5321D2 /* Pods */,
+				36F503B50728A4988D0762C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,9 +181,7 @@
 				CD3309BE23FB0DF2005EEB65 /* Injected */,
 				CD3309BD23FB0DE7005EEB65 /* Utilities */,
 				CD3309BC23FB0DE0005EEB65 /* System */,
-				CD33099223FB0D7C005EEB65 /* Assets.xcassets */,
-				CD33099723FB0D7C005EEB65 /* LaunchScreen.storyboard */,
-				CD33099A23FB0D7C005EEB65 /* Info.plist */,
+				CD915FD22408AED900319A0B /* Others */,
 				CD33099423FB0D7C005EEB65 /* Preview Content */,
 			);
 			path = LearnHockey;
@@ -264,6 +305,17 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		CD915FD22408AED900319A0B /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */,
+				CD33099223FB0D7C005EEB65 /* Assets.xcassets */,
+				CD33099723FB0D7C005EEB65 /* LaunchScreen.storyboard */,
+				CD33099A23FB0D7C005EEB65 /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3309B323FB0D7C005EEB65 /* Build configuration list for PBXNativeTarget "LearnHockey" */;
 			buildPhases = (
+				BB07CEB1A9C51D2AA1B52BBA /* [CP] Check Pods Manifest.lock */,
 				CD33098523FB0D7B005EEB65 /* Sources */,
 				CD33098623FB0D7B005EEB65 /* Frameworks */,
 				CD33098723FB0D7B005EEB65 /* Resources */,
+				B425B23B83DD539167EFAC20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +342,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3309B623FB0D7C005EEB65 /* Build configuration list for PBXNativeTarget "LearnHockeyTests" */;
 			buildPhases = (
+				F64B718A28A0494C6DD12FE5 /* [CP] Check Pods Manifest.lock */,
 				CD33099B23FB0D7C005EEB65 /* Sources */,
 				CD33099C23FB0D7C005EEB65 /* Frameworks */,
 				CD33099D23FB0D7C005EEB65 /* Resources */,
@@ -306,9 +361,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD3309B923FB0D7C005EEB65 /* Build configuration list for PBXNativeTarget "LearnHockeyUITests" */;
 			buildPhases = (
+				CF666ED517A0DDF9FF3E9E85 /* [CP] Check Pods Manifest.lock */,
 				CD3309A623FB0D7C005EEB65 /* Sources */,
 				CD3309A723FB0D7C005EEB65 /* Frameworks */,
 				CD3309A823FB0D7C005EEB65 /* Resources */,
+				A1A89AD253602398B7D33072 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +427,7 @@
 			files = (
 				CD33099923FB0D7C005EEB65 /* LaunchScreen.storyboard in Resources */,
 				CD33099623FB0D7C005EEB65 /* Preview Assets.xcassets in Resources */,
+				CD915FD42408AEEA00319A0B /* GoogleService-Info.plist in Resources */,
 				CD33099323FB0D7C005EEB65 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +447,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1A89AD253602398B7D33072 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B425B23B83DD539167EFAC20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnHockey/Pods-LearnHockey-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnHockey/Pods-LearnHockey-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnHockey/Pods-LearnHockey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB07CEB1A9C51D2AA1B52BBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnHockey-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF666ED517A0DDF9FF3E9E85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnHockey-LearnHockeyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64B718A28A0494C6DD12FE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnHockeyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD33098523FB0D7B005EEB65 /* Sources */ = {
@@ -576,6 +737,7 @@
 		};
 		CD3309B423FB0D7C005EEB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31087646B2EB47E2C648F742 /* Pods-LearnHockey.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -596,6 +758,7 @@
 		};
 		CD3309B523FB0D7C005EEB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ACE04D87991E7AAEEE1A9AE /* Pods-LearnHockey.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -616,6 +779,7 @@
 		};
 		CD3309B723FB0D7C005EEB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 554595EF135CF094B79B6E1F /* Pods-LearnHockeyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -638,6 +802,7 @@
 		};
 		CD3309B823FB0D7C005EEB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,6 +825,7 @@
 		};
 		CD3309BA23FB0D7C005EEB65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 612E63535691385AC5A298E9 /* Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,6 +846,7 @@
 		};
 		CD3309BB23FB0D7C005EEB65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
