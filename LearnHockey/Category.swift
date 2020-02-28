@@ -18,6 +18,6 @@ enum Category: String, CaseIterable {
 }
 
 extension Category: Identifiable {
-    var id: UUID { UUID()}
+    var id: String { self.rawValue }
 }
 

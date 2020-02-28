@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -145,7 +145,6 @@
 				554595EF135CF094B79B6E1F /* Pods-LearnHockeyTests.debug.xcconfig */,
 				8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				CD33098B23FB0D7B005EEB65 /* LearnHockey */,
+				CD33099A23FB0D7C005EEB65 /* Info.plist */,
 				CD3309A223FB0D7C005EEB65 /* LearnHockeyTests */,
 				CD3309AD23FB0D7C005EEB65 /* LearnHockeyUITests */,
 				CD33098A23FB0D7B005EEB65 /* Products */,
@@ -311,7 +311,6 @@
 				CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */,
 				CD33099223FB0D7C005EEB65 /* Assets.xcassets */,
 				CD33099723FB0D7C005EEB65 /* LaunchScreen.storyboard */,
-				CD33099A23FB0D7C005EEB65 /* Info.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";
