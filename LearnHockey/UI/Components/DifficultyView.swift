@@ -14,29 +14,11 @@ struct DifficultyView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title).font(.title)
-            HStack(spacing: 5) {
-                Image(systemName: "star.fill")
-                Image(systemName: self.secondStar())
-                Image(systemName: self.thirdStar())
-            }
+            ThreeStarView(howManyStarsFilled: difficulty)
         }
     }
     
-    private func secondStar() -> String {
-        if difficulty > 1 {
-            return "star.fill"
-        } else {
-           return "star"
-        }
-    }
     
-    private func thirdStar() -> String {
-        if difficulty > 2 {
-            return "star.fill"
-        } else {
-           return "star"
-        }
-    }
 }
 
 struct DifficultyView_Previews: PreviewProvider {
