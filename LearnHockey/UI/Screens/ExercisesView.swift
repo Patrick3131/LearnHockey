@@ -17,6 +17,14 @@ struct ExercisesView: View {
     
     @State private var exercises: Loadable<[Exercise]>
     
+    @State private var selection: Int = 1 {
+        mutating didSet {
+            
+            filterExercises()
+            
+        }
+    }
+    
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
         $routingState.dispatched(to: injected.appState, \.routing.exercises)
@@ -29,11 +37,13 @@ struct ExercisesView: View {
     
     var body: some View {
         content
-        .navigationBarTitle("Exercise")
+            .navigationBarTitle("Exercise")
             .fixNavigationBarBug { self.goBack() }
-            .onReceive(routingUpdate) { value in
-                print("test:", value)
-                self.routingState = value}
+            .onReceive(routingUpdate) { self.routingState = $0 }
+            .onReceive([self.selection].publisher.first()) { _ in
+                self.filterExercises()
+                
+        }
     }
     
     private var content: AnyView {
@@ -44,8 +54,41 @@ struct ExercisesView: View {
         case let .failed(error): return AnyView(Text("failed"))
         }
     }
+    private func filterExercises() {
+        switch selection {
+        case 0:
+            let filtered = exercises.map { exercises in
+                exercises.sorted { $0.name ?? "" > $1.name ?? "" }
+            }
+            exercises = filtered
+        case 1:
+            let filtered = exercises.map { exercises in
+                exercises.sorted { $0.difficulty?.rawValue ?? 0 < $1.difficulty?.rawValue ?? 0 }
+            }
+            exercises = filtered
+        case 2:
+            let filtered = exercises.map { exercises in
+                exercises.sorted { $0.amountOfPlayers ?? "" >  $1.amountOfPlayers ?? ""}
+                
+            }
+            exercises = filtered
+        default:
+            break
+            
+        }
+    }
 }
 
+private extension ExercisesView {
+    struct ExercisesFilter {
+        
+        var seletcion: Int {
+            didSet { }
+        }
+        
+        
+    }
+}
 
 
 private extension ExercisesView {
@@ -64,15 +107,24 @@ private extension ExercisesView {
     }
     
     func loadedView(_ exercises: [Exercise]) -> some View {
-        List(exercises) { exercise in
-            NavigationLink(
-                destination: EmptyView(),
-                tag: exercise.name!,
-                selection: self.routingBinding.exercise) {
-                    CategorieCell(name: exercise.name!)
+        VStack {
+            Picker(selection: $selection, label: Text("df")) {
+                Text("Name").tag(0)
+                Text("Difficulty").tag(1)
+                Text("Player").tag(2)
+            }.pickerStyle(SegmentedPickerStyle())
+                .padding(.horizontal, 5)
+            List(exercises) { exercise in
+                NavigationLink(
+                    destination: ExerciseDetailView(exercise: Exercise.mock),
+                    tag: exercise.name!,
+                    selection: self.routingBinding.exercise) {
+                        ExerciseCell(exercise: exercise.name!, difficulty: exercise.difficulty!.rawValue , amountOfPlayers: exercise.amountOfPlayers!)
+                }
+                
             }
-            
         }
+            
     }
 }
 
