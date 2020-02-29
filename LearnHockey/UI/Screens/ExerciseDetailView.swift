@@ -16,17 +16,61 @@ struct ExerciseDetailView: View {
     
     
     var body: some View {
-        Group {
-            
-            if exercise.amountOfPlayers != nil {
-                DetailItemView(title: "Amount of players", content: exercise.amountOfPlayers!)
+        GeometryReader { geometry in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 5) {
+                    self.createImageItem(title: "Image", image: self.exercise.image)
+                    self.createDifficultyItem(title: "Difficulty", content: self.exercise.difficulty)
+                    self.createItem(title: "Amount of Players", content: self.exercise.amountOfPlayers)
+                    self.createItem(title: "Explanation", content: self.exercise.variation)
+                    self.createItem(title: "Duration", content: self.exercise.variation)
+                    self.createItem(title: "Coaching", content: self.exercise.variation)
+                    self.createItem(title: "Variation", content: self.exercise.coaching)
+                    
+                }.padding()
+                    .navigationBarTitle(self.exercise.name ?? "")
+            }.frame(width: geometry.size.width, height: geometry.size.height, alignment: .topLeading)
+        }
+        
+        
+    }
+    
+    func createItem(title: String, content: String?) -> AnyView {
+        AnyView(
+            Group {
+            if content != nil {
+                DetailItemView(title: title, content: content!)
             } else {
                 EmptyView()
             }
-//            if exercise.coaching != nil {
-//                DetailItemView(title: "Coaching", content: exercise.coaching!)
-//            }
-        }
+        })
+    }
+    
+    func createDifficultyItem(title: String, content: Exercise.Difficulty?) -> AnyView {
+        AnyView(
+            Group {
+                if content != nil {
+                    DifficultyView(difficulty: content!.rawValue)
+                } else {
+                    EmptyView()
+                }
+            }
+        )
+        
+    }
+    
+    func createImageItem(title: String, image: String?) -> AnyView {
+        AnyView(
+            Group {
+                if image != nil && URL(string: image ?? "") != nil {
+                    CachedImage(URL(string: image!)!)
+                        .resizable()
+                        .aspectRatio(1.0, contentMode: .fit)
+                } else {
+                    EmptyView()
+                }
+            }
+        )
     }
 }
 
