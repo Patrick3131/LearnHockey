@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */; };
 		3C95C36703C7C5394B628B74 /* Pods_LearnHockeyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AB16628D291907500FDE4F /* Pods_LearnHockeyUITests.framework */; };
-		CD02E5112409524000F68AA3 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E5102409524000F68AA3 /* ExerciseView.swift */; };
+		CD02E5112409524000F68AA3 /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E5102409524000F68AA3 /* ExerciseDetailView.swift */; };
 		CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E51324095B3000F68AA3 /* CRUDStorage.swift */; };
 		CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E515240965A400F68AA3 /* StorageRepository.swift */; };
-		CD02E5392409774C00F68AA3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD02E5382409774C00F68AA3 /* SwiftPackageProductDependency */; };
+		CD02E5392409774C00F68AA3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */; };
 		CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */; };
 		CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20326B23FC942D00EE5365 /* ExercisesView.swift */; };
 		CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */; };
@@ -69,7 +69,7 @@
 		612E63535691385AC5A298E9 /* Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E96E24391A7E87EA1A41B30 /* Pods-LearnHockey-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockey-LearnHockeyUITests/Pods-LearnHockey-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8153B07B4664B445CD80326F /* Pods-LearnHockeyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyTests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyTests/Pods-LearnHockeyTests.release.xcconfig"; sourceTree = "<group>"; };
-		CD02E5102409524000F68AA3 /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
+		CD02E5102409524000F68AA3 /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
 		CD02E51324095B3000F68AA3 /* CRUDStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDStorage.swift; sourceTree = "<group>"; };
 		CD02E515240965A400F68AA3 /* StorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageRepository.swift; sourceTree = "<group>"; };
 		CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherBridge.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD02E5392409774C00F68AA3 /* BuildFile in Frameworks */,
+				CD02E5392409774C00F68AA3 /* KingfisherSwiftUI in Frameworks */,
 				2AB4261808CF8D5B434C141C /* Pods_LearnHockey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +314,7 @@
 				CD33099023FB0D7B005EEB65 /* ContentView.swift */,
 				CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */,
 				CD20326B23FC942D00EE5365 /* ExercisesView.swift */,
-				CD02E5102409524000F68AA3 /* ExerciseView.swift */,
+				CD02E5102409524000F68AA3 /* ExerciseDetailView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -371,7 +371,7 @@
 			);
 			name = LearnHockey;
 			packageProductDependencies = (
-				CD02E5382409774C00F68AA3 /* SwiftPackageProductDependency */,
+				CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */,
 			);
 			productName = LearnHockey;
 			productReference = CD33098923FB0D7B005EEB65 /* LearnHockey.app */;
@@ -448,7 +448,7 @@
 			);
 			mainGroup = CD33098023FB0D7B005EEB65;
 			packageReferences = (
-				CD02E5372409774C00F68AA3 /* RemoteSwiftPackageReference */,
+				CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CD33098A23FB0D7B005EEB65 /* Products */;
 			projectDirPath = "";
@@ -585,7 +585,7 @@
 				CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
 				CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */,
-				CD02E5112409524000F68AA3 /* ExerciseView.swift in Sources */,
+				CD02E5112409524000F68AA3 /* ExerciseDetailView.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
 				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
@@ -936,7 +936,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD02E5372409774C00F68AA3 /* RemoteSwiftPackageReference */ = {
+		CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -947,9 +947,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD02E5382409774C00F68AA3 /* SwiftPackageProductDependency */ = {
+		CD02E5382409774C00F68AA3 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD02E5372409774C00F68AA3 /* RemoteSwiftPackageReference */;
+			package = CD02E5372409774C00F68AA3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

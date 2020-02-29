@@ -40,7 +40,7 @@ struct ExercisesView: View {
         switch exercises {
         case .notRequested: return AnyView(notRequestedView)
         case let .isLoading(last, _): return AnyView(Text("loading"))
-        case let .loaded(exercises) : return AnyView(Text("loaded"))
+        case let .loaded(exercises) : return AnyView(loadedView(exercises))
         case let .failed(error): return AnyView(Text("failed"))
         }
     }
@@ -62,7 +62,18 @@ private extension ExercisesView {
             self.loadExercises()
         }
     }
-
+    
+    func loadedView(_ exercises: [Exercise]) -> some View {
+        List(exercises) { exercise in
+            NavigationLink(
+                destination: EmptyView(),
+                tag: exercise.name!,
+                selection: self.routingBinding.exercise) {
+                    CategorieCell(name: exercise.name!)
+            }
+            
+        }
+    }
 }
 
 extension ExercisesView {
