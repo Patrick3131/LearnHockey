@@ -40,6 +40,13 @@ extension Exercise {
 
 extension Exercise {
     static var mock: Exercise = {
-      return Exercise(name: "Präzises Werfen", image: nil, explanation: nil, duration: nil, amountOfPlayers: nil, coaching: nil, variation: nil, difficulty: nil)
+        return Exercise(name: "Präzises Werfen",
+                        image: "https://firebasestorage.googleapis.com/v0/b/learnhockey1.appspot.com/o/exercise%2F2-2-2-zu-1-3-2-gegen-3-3-in-der-E-Jugend-1024x770.jpg?alt=media&token=db55ab67-1e89-419f-ac4f-a438b34a6324",
+                        explanation: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic",
+                        duration: "Half an hour",
+                        amountOfPlayers: "Team",
+                        coaching: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic",
+                        variation: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic",
+                        difficulty: .beginner)
     }()
 }
