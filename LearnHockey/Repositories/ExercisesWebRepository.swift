@@ -25,8 +25,25 @@ struct FirebaseWebRepository: ExercisesWebRepository {
     
     
     func loadExercises(category: Category) -> AnyPublisher<[Exercise], Error> {
-//        let document = store.collection(dbName)
-       return Empty().eraseToAnyPublisher()
+        let document = store.collection(category.rawValue)
+        return Future<[Exercise], Error> { promise in
+            document.getDocuments { documents, error in
+                if let error = error {
+                    promise(.failure(error))
+                } else if let documents = documents {
+                    var exercises = [Exercise]()
+                    for document in documents.documents {
+                        do {
+                            let decoded = try FirestoreDecoder().decode(Exercise.self, from: document.data())
+                            exercises.append(decoded)
+                        } catch let error {
+                            promise(.failure(error))
+                        }
+                    }
+                    promise(.success(exercises))
+                }
+            }
+        }.eraseToAnyPublisher()
     }
     
     func loadExerciseDetail(_ exerciseId: String) -> AnyPublisher<Exercise, Error> {
@@ -57,7 +74,7 @@ struct FirebaseWebRepository: ExercisesWebRepository {
 
 extension FirebaseWebRepository {
     init() {
-        self.categorie = Category.defense
+        self.categorie = Category.games
         self.store = Firestore.firestore()
     }
 }

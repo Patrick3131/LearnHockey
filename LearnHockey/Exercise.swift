@@ -9,10 +9,9 @@
 import Foundation
 
 struct Exercise {
-    /// id consists of Category + name
-    let id: String
-    let name: String
-    let image: URL?
+    
+    let name: String?
+    let image: String?
     let explanation: String?
     let duration: String?
     let amountOfPlayers: String?
@@ -23,6 +22,12 @@ struct Exercise {
 
 extension Exercise: Codable {}
 extension Exercise: Equatable {}
+
+extension Exercise: Identifiable {
+    var id: String {
+        return name ?? UUID().uuidString
+    }
+}
 
 extension Exercise {
     enum Difficulty: Int, Codable {

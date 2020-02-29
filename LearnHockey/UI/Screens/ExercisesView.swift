@@ -28,19 +28,41 @@ struct ExercisesView: View {
     }
     
     var body: some View {
-        Text("Hello World")
+        content
         .navigationBarTitle("Exercise")
             .fixNavigationBarBug { self.goBack() }
             .onReceive(routingUpdate) { value in
                 print("test:", value)
                 self.routingState = value}
     }
+    
+    private var content: AnyView {
+        switch exercises {
+        case .notRequested: return AnyView(notRequestedView)
+        case let .isLoading(last, _): return AnyView(Text("loading"))
+        case let .loaded(exercises) : return AnyView(Text("loaded"))
+        case let .failed(error): return AnyView(Text("failed"))
+        }
+    }
 }
+
+
 
 private extension ExercisesView {
     func loadExercises() {
         injected.interactors.exerciseInteractor.loadExercises(exercises: $exercises, category: category)
     }
+}
+
+// MARK: - Loading Content
+
+private extension ExercisesView {
+    var notRequestedView: some View {
+        Text("not requested").onAppear {
+            self.loadExercises()
+        }
+    }
+
 }
 
 extension ExercisesView {
