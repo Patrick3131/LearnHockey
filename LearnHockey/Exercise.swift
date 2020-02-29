@@ -10,14 +10,15 @@ import Foundation
 
 struct Exercise {
     
-    let name: String?
-    let image: String?
-    let explanation: String?
-    let duration: String?
-    let amountOfPlayers: String?
-    let coaching: String?
-    let variation: String?
-    let difficulty: Difficulty?
+    var name: String?
+    var image: String?
+    var explanation: String?
+    var duration: String?
+    var amountOfPlayers: String?
+    var coaching: String?
+    var variation: String?
+    var difficulty: Difficulty?
+    
 }
 
 extension Exercise: Codable {}
@@ -35,4 +36,10 @@ extension Exercise {
         case intermediate
         case advanced
     }
+}
+
+extension Exercise {
+    static var mock: Exercise = {
+      return Exercise(name: "Präzises Werfen", image: nil, explanation: nil, duration: nil, amountOfPlayers: nil, coaching: nil, variation: nil, difficulty: nil)
+    }()
 }

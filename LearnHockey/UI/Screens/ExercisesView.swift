@@ -12,7 +12,7 @@ import Combine
 struct ExercisesView: View {
     let category: Category
     
-    @Environment(\.locale) var locale: Locale
+    @Environment(\.locale) private var locale: Locale
     @Environment(\.injected) private var injected: DIContainer
     
     @State private var exercises: Loadable<[Exercise]>

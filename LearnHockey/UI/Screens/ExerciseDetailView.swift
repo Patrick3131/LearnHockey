@@ -9,13 +9,30 @@
 import SwiftUI
 
 struct ExerciseDetailView: View {
+    let exercise: Exercise
+    
+    @Environment(\.locale) private var locale: Locale
+    @Environment(\.injected) private var injected: DIContainer
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            
+            if exercise.amountOfPlayers != nil {
+                DetailItemView(title: "Amount of players", content: exercise.amountOfPlayers!)
+            } else {
+                EmptyView()
+            }
+//            if exercise.coaching != nil {
+//                DetailItemView(title: "Coaching", content: exercise.coaching!)
+//            }
+        }
     }
 }
 
+
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseDetailView()
+        ExerciseDetailView(exercise: Exercise.mock)
     }
 }
