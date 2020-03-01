@@ -12,11 +12,14 @@ import Combine
 struct ContentView: View {
     
     private let container: DIContainer
+    @State private var accountDetails: Loadable<AppState.UserData.AccountDetails> = .notRequested
     init(container: DIContainer) {
         self.container = container
     }
     var body: some View {
-        CategoriesListView().inject(container)
+        Group {
+            CategoriesListView().inject(container)
+        }.onAppear() { self.container.interactors.authInteractor.checkLoginState(accountDetails: self.$accountDetails) }
     }
 }
 //

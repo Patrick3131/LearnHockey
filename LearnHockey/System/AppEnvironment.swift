@@ -29,8 +29,10 @@ extension AppEnvironment {
         FirebaseApp.configure()
         
         let exerciseWebRepository = FirebaseWebRepository(store: Firestore.firestore())
-        
         let exerciseInteractor = AppExerciseInteractor(webRepository: exerciseWebRepository, appState: appState)
-        return .init(exerciseInteractor: exerciseInteractor)
+        
+        let authRepository = FirebaseAuthRepository()
+        let authInteractor = AppAuthInteractor(authRepository: authRepository)
+        return .init(exerciseInteractor: exerciseInteractor, authInteractor: authInteractor)
     }
 }
