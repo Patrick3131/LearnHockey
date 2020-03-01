@@ -27,6 +27,13 @@ extension AppState {
         var categories = Category.allCases
         var exercises: Loadable<[Exercise]> = .notRequested
         var exerciseDetail: Loadable<Exercise> = .notRequested
+        var accountDetails: Loadable<AccountDetails> = .notRequested
+        
+        struct AccountDetails {
+            var userUID: String?
+            var loggedIn: Bool = false
+            var premiumUser: Bool = false
+        }
     }
 }
 
