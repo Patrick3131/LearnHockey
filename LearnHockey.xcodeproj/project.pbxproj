@@ -194,6 +194,7 @@
 		CD33098023FB0D7B005EEB65 = {
 			isa = PBXGroup;
 			children = (
+				CDC9D654240EBFEB00D45F49 /* README.md */,
 				CD33098B23FB0D7B005EEB65 /* LearnHockey */,
 				CD3309A223FB0D7C005EEB65 /* LearnHockeyTests */,
 				CD3309AD23FB0D7C005EEB65 /* LearnHockeyUITests */,
@@ -226,7 +227,6 @@
 				CD3309BC23FB0DE0005EEB65 /* System */,
 				CD915FD22408AED900319A0B /* Others */,
 				CD33099423FB0D7C005EEB65 /* Preview Content */,
-				CDC9D654240EBFEB00D45F49 /* README.md */,
 			);
 			path = LearnHockey;
 			sourceTree = "<group>";

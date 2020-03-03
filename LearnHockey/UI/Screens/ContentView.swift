@@ -17,14 +17,37 @@ struct ContentView: View {
         self.container = container
     }
     var body: some View {
-        Group {
-            CategoriesListView().inject(container)
-        }.onAppear() { self.container.interactors.authInteractor.checkLoginState(accountDetails: self.$accountDetails) }
+            content
+                .onReceive(authentificationUpdate) { value in
+                    print("onRecieve:", value)
+                    self.accountDetails = value
+                    
+            }
+        .onAppear() { self.container.interactors.authInteractor.checkLoginState() }
+    }
+    
+    
+    private var content: AnyView {
+        print("container: ",container.appState.value.userData.accountDetails)
+        switch accountDetails {
+            
+        case .loaded(let details):
+            
+            if details.loggedIn == true {
+                return AnyView(CategoriesListView().inject(container))
+            } else {
+                return AnyView(LoginView())
+            }
+        case .notRequested:
+            return AnyView(LoginView())
+        default: break
+        }
+        return AnyView(EmptyView())
     }
 }
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+
+ extension ContentView {
+    var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.AccountDetails>,Never> {
+        container.appState.updates(for:\.userData.accountDetails)
+    }
+}

@@ -29,7 +29,7 @@ extension AppState {
         var exerciseDetail: Loadable<Exercise> = .notRequested
         var accountDetails: Loadable<AccountDetails> = .notRequested
         
-        struct AccountDetails {
+        struct AccountDetails: Equatable {
             var userUID: String?
             var loggedIn: Bool = false
             var premiumUser: Bool = false

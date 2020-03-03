@@ -32,7 +32,7 @@ extension AppEnvironment {
         let exerciseInteractor = AppExerciseInteractor(webRepository: exerciseWebRepository, appState: appState)
         
         let authRepository = FirebaseAuthRepository()
-        let authInteractor = AppAuthInteractor(authRepository: authRepository)
+        let authInteractor = AppAuthInteractor(authRepository: authRepository, appState: appState)
         return .init(exerciseInteractor: exerciseInteractor, authInteractor: authInteractor)
     }
 }

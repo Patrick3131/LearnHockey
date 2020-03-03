@@ -17,13 +17,7 @@ struct ExercisesView: View {
     
     @State private var exercises: Loadable<[Exercise]>
     
-    @State private var selection: Int = 1 {
-        mutating didSet {
-            
-            filterExercises()
-            
-        }
-    }
+    @State private var selection: Int = 1
     
     @State private var routingState: Routing = .init()
     private var routingBinding: Binding<Routing> {
@@ -42,7 +36,6 @@ struct ExercisesView: View {
             .onReceive(routingUpdate) { self.routingState = $0 }
             .onReceive([self.selection].publisher.first()) { _ in
                 self.filterExercises()
-                
         }
     }
     

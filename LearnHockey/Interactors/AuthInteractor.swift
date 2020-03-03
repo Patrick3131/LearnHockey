@@ -9,29 +9,40 @@
 import Foundation
 import Combine
 import SwiftUI
+import FirebaseAuth
 
 protocol AuthInteractor {
-    func checkLoginState(accountDetails: Binding<Loadable<AppState.UserData.AccountDetails>>)
+    func checkLoginState()
 }
 
 struct AppAuthInteractor: AuthInteractor {
     let authRepository: AuthRepository
-    
-    init(authRepository: AuthRepository) {
+    let appState: Store<AppState>
+
+    init(authRepository: AuthRepository, appState: Store<AppState>) {
         self.authRepository = authRepository
+        self.appState = appState
     }
     
-    func checkLoginState(accountDetails: Binding<Loadable<AppState.UserData.AccountDetails>>) {
+    func checkLoginState() {
         let cancelBag = CancelBag()
-        authRepository.checkLoginState()
-            .sinkToLoadable { accountDetails.wrappedValue = $0 }
-            .store(in: cancelBag)
+        let accountDetails = appState.value.userData.accountDetails.value
+        appState[\.userData.accountDetails] = .isLoading(last: accountDetails, cancelBag: cancelBag)
+        
+        weak var weakAppState = appState
+        
+        authRepository.checkLoginState(completion: { value in
+            value.sinkToLoadable { weakAppState?[\.userData.accountDetails] = $0 }
+                .store(in: cancelBag)
+            
+        })
+       
     }
     
 }
 
 struct StubAuthInteractor: AuthInteractor {
-    func checkLoginState(accountDetails: Binding<Loadable<AppState.UserData.AccountDetails>>) {
+    func checkLoginState() {
     
     }
     
