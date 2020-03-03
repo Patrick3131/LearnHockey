@@ -47,6 +47,8 @@
 		CDC9D64D240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D64C240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift */; };
 		CDC9D64F240C2B6F00D45F49 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */; };
 		CDC9D651240C2E8100D45F49 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D650240C2E8100D45F49 /* AuthInteractor.swift */; };
+		CDC9D653240C331500D45F49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D652240C331500D45F49 /* LoginView.swift */; };
+		CDC9D655240EBFEB00D45F49 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D654240EBFEB00D45F49 /* README.md */; };
 		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +121,8 @@
 		CDC9D64C240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUIAuthBaseViewControllerWrapper.swift; sourceTree = "<group>"; };
 		CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		CDC9D650240C2E8100D45F49 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		CDC9D652240C331500D45F49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CDC9D654240EBFEB00D45F49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +226,7 @@
 				CD3309BC23FB0DE0005EEB65 /* System */,
 				CD915FD22408AED900319A0B /* Others */,
 				CD33099423FB0D7C005EEB65 /* Preview Content */,
+				CDC9D654240EBFEB00D45F49 /* README.md */,
 			);
 			path = LearnHockey;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 				CD69E3B3240AAC4200958FFC /* DifficultyView.swift */,
 				CD69E3B5240ABFE200958FFC /* ThreeStarView.swift */,
 				CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */,
+				CDC9D652240C331500D45F49 /* LoginView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 			files = (
 				CD33099923FB0D7C005EEB65 /* LaunchScreen.storyboard in Resources */,
 				CD33099623FB0D7C005EEB65 /* Preview Assets.xcassets in Resources */,
+				CDC9D655240EBFEB00D45F49 /* README.md in Resources */,
 				CD915FD42408AEEA00319A0B /* GoogleService-Info.plist in Resources */,
 				CD33099323FB0D7C005EEB65 /* Assets.xcassets in Resources */,
 			);
@@ -657,6 +664,7 @@
 				CD33099123FB0D7B005EEB65 /* ContentView.swift in Sources */,
 				CD69E3B4240AAC4200958FFC /* DifficultyView.swift in Sources */,
 				CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */,
+				CDC9D653240C331500D45F49 /* LoginView.swift in Sources */,
 				CD3309D623FB1BA5005EEB65 /* RootViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
