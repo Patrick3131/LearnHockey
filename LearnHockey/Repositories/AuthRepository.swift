@@ -13,10 +13,13 @@ import FirebaseAuth
 
 protocol AuthRepository {
     func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void)
+    func logOut()
 }
 
 
 class FirebaseAuthRepository: AuthRepository {
+    
+    
 
     var handler: AuthStateDidChangeListenerHandle?
     
@@ -37,6 +40,10 @@ class FirebaseAuthRepository: AuthRepository {
                 }.eraseToAnyPublisher()
             )
         }
+    }
+    
+    func logOut() {
+        try? Auth.auth().signOut()
     }
     
     private func stopListen() {

@@ -13,9 +13,12 @@ import FirebaseAuth
 
 protocol AuthInteractor {
     func loginState()
+    func logOut()
 }
 
 struct AppAuthInteractor: AuthInteractor {
+    
+    
     let authRepository: AuthRepository
     let appState: Store<AppState>
 
@@ -36,12 +39,19 @@ struct AppAuthInteractor: AuthInteractor {
                 .store(in: cancelBag)
             
         }
-       
+    }
+    
+    func logOut() {
+        authRepository.logOut()
     }
     
 }
 
 struct StubAuthInteractor: AuthInteractor {
+    func logOut() {
+        
+    }
+    
     func loginState() {
     
     }
