@@ -23,7 +23,7 @@ struct ContentView: View {
                     self.accountDetails = value
                     
             }
-        .onAppear() { self.container.interactors.authInteractor.checkLoginState() }
+        .onAppear() { self.container.interactors.authInteractor.loginState() }
     }
     
     

@@ -37,6 +37,8 @@ extension AppState {
     }
 }
 
+typealias AccountDetails = AppState.UserData.AccountDetails
+
 extension AppState {
     struct System {
         var isActive: Bool = false

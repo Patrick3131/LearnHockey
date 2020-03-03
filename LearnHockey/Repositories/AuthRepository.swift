@@ -9,8 +9,10 @@
 import Foundation
 import Combine
 import FirebaseAuth
+
+
 protocol AuthRepository {
-    func checkLoginState(completion: @escaping (AnyPublisher<AppState.UserData.AccountDetails,Error>) -> Void)
+    func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void)
 }
 
 
@@ -22,15 +24,15 @@ class FirebaseAuthRepository: AuthRepository {
         stopListen()
     }
     
-    func checkLoginState(completion: @escaping (AnyPublisher<AppState.UserData.AccountDetails,Error>) -> Void) {
+    func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
         self.handler = Auth.auth().addStateDidChangeListener { auth, user in
-            completion(Future<AppState.UserData.AccountDetails,Error> { promise in
+            completion(Future<AccountDetails,Error> { promise in
                 if let user = user {
                     print(user)
                     print(auth)
-                    promise(.success(AppState.UserData.AccountDetails(userUID: user.uid, loggedIn: true, premiumUser: false)))
+                    promise(.success(AccountDetails(userUID: user.uid, loggedIn: true, premiumUser: false)))
                 } else {
-                    promise(.success(AppState.UserData.AccountDetails(userUID: nil, loggedIn: false, premiumUser: false)))
+                    promise(.success(AccountDetails(userUID: nil, loggedIn: false, premiumUser: false)))
                 }
                 }.eraseToAnyPublisher()
             )

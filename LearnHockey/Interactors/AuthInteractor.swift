@@ -12,7 +12,7 @@ import SwiftUI
 import FirebaseAuth
 
 protocol AuthInteractor {
-    func checkLoginState()
+    func loginState()
 }
 
 struct AppAuthInteractor: AuthInteractor {
@@ -24,25 +24,25 @@ struct AppAuthInteractor: AuthInteractor {
         self.appState = appState
     }
     
-    func checkLoginState() {
+    func loginState() {
         let cancelBag = CancelBag()
         let accountDetails = appState.value.userData.accountDetails.value
         appState[\.userData.accountDetails] = .isLoading(last: accountDetails, cancelBag: cancelBag)
         
         weak var weakAppState = appState
         
-        authRepository.checkLoginState(completion: { value in
+        authRepository.checkLoginState() { value in
             value.sinkToLoadable { weakAppState?[\.userData.accountDetails] = $0 }
                 .store(in: cancelBag)
             
-        })
+        }
        
     }
     
 }
 
 struct StubAuthInteractor: AuthInteractor {
-    func checkLoginState() {
+    func loginState() {
     
     }
     
