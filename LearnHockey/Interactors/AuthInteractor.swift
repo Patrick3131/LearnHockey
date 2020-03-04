@@ -32,16 +32,17 @@ struct AppAuthInteractor: AuthInteractor {
         let accountDetails = appState.value.userData.accountDetails.value
         appState[\.userData.accountDetails] = .isLoading(last: accountDetails, cancelBag: cancelBag)
         
-        weak var weakAppState = appState
+//        weak var weakAppState = appState
         
         authRepository.checkLoginState() { value in
-            value.sinkToLoadable { weakAppState?[\.userData.accountDetails] = $0 }
+            value.sinkToLoadable { self.appState[\.userData.accountDetails] = $0 }
                 .store(in: cancelBag)
             
         }
     }
     
     func logOut() {
+        
         authRepository.logOut()
     }
     
