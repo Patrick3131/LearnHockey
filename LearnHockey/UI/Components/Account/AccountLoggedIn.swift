@@ -11,6 +11,8 @@ import SwiftUI
 struct AccountLoggedIn: View {
     var userName: String
     var logOut: () -> Void
+    var buyPremium: () -> Void
+    var isPremium: Bool
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -19,14 +21,24 @@ struct AccountLoggedIn: View {
                     .font(.body)
                     .multilineTextAlignment(.center)
                     .padding()
+                Group {
+                    if !self.isPremium {
+                        Button(action: {
+                            self.buyPremium()
+                        }, label: {
+                            BuySubscriptionView()
+
+                        })
+                    } else {
+                        EmptyView()
+                    }
+                }
                 Spacer().frame(height: geometry.size.height * 0.1)
                 LogInOutButton(action: {
                     self.logOut()
                 }, title: "Log out", width: geometry.size.width * 0.7)
             }
-            
         }
-        
     }
 }
 
@@ -34,6 +46,8 @@ struct AccountLoggedIn_Previews: PreviewProvider {
     static var previews: some View {
         AccountLoggedIn(userName: "Patrick Fischer", logOut: {
             
-        })
+        }, buyPremium: {
+            
+        }, isPremium: false)
     }
 }
