@@ -53,6 +53,9 @@
 		CDC9D659240ED94A00D45F49 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D658240ED94A00D45F49 /* TabBarView.swift */; };
 		CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */; };
 		CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65C240EDD3300D45F49 /* AccountView.swift */; };
+		CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */; };
+		CDC9D662240F405100D45F49 /* LogInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D661240F405100D45F49 /* LogInOutButton.swift */; };
+		CDC9D664240F406B00D45F49 /* AccountNotLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */; };
 		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +134,9 @@
 		CDC9D658240ED94A00D45F49 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		CDC9D65C240EDD3300D45F49 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoggedIn.swift; sourceTree = "<group>"; };
+		CDC9D661240F405100D45F49 /* LogInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInOutButton.swift; sourceTree = "<group>"; };
+		CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNotLoggedIn.swift; sourceTree = "<group>"; };
 		E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -403,6 +409,9 @@
 		CDC9D65E240EDED800D45F49 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */,
+				CDC9D661240F405100D45F49 /* LogInOutButton.swift */,
+				CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -665,7 +674,9 @@
 				CD69E3B8240AC02F00958FFC /* ExerciseCell.swift in Sources */,
 				CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */,
 				CD02E5112409524000F68AA3 /* ExerciseDetailView.swift in Sources */,
+				CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
+				CDC9D664240F406B00D45F49 /* AccountNotLoggedIn.swift in Sources */,
 				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
@@ -689,6 +700,7 @@
 				CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */,
 				CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */,
 				CDC9D653240C331500D45F49 /* LoginView.swift in Sources */,
+				CDC9D662240F405100D45F49 /* LogInOutButton.swift in Sources */,
 				CD3309D623FB1BA5005EEB65 /* RootViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

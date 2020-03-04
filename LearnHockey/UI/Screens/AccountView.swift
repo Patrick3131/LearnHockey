@@ -68,86 +68,16 @@ struct AccountView: View {
         }
     }
     
-    var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.AccountDetails>,Never> {
+    private var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.AccountDetails>,Never> {
         injected.appState.updates(for:\.userData.accountDetails)
     }
-    var routingUpdate:AnyPublisher<AccountRouting,Never> {
+    private var routingUpdate:AnyPublisher<AccountRouting,Never> {
         injected.appState.updates(for: \.routing.account)
-    }
-}
-
-struct AccountLoggedIn: View {
-    var userName: String
-    var logOut: () -> Void
-    var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Text("Hello " + self.userName + "!" ).font(.title)
-                Text("You currently have a monthly membership for 10$ a month.")
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                Spacer().frame(height: geometry.size.height * 0.1)
-                LogInOutButton(action: {
-                    self.logOut()
-                }, title: "Log out", width: geometry.size.width * 0.7)
-            }
-            
-        }
-        
-    }
-}
-
-struct LogInOutButton: View {
-    var action: () -> Void
-    var title: String
-    var width: CGFloat?
-
-    var body: some View {
-        Button(action: {
-            print(self.title)
-            self.action()
-        }, label: {
-            Text(title).font(.title)
-            })
-            .frame(width: self.width)
-        .padding()
-            .background(Color.white)
-        .cornerRadius(5)
-        .padding(1)
-            .background(Color.black)
-        .cornerRadius(5)
-    }
-}
-
-struct AccountNotLoggedIn: View {
-    
-    var loginButtonClicked: () -> Void
-    
-    var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Text("You are currently not logged in. Do you want to log in or create a new account?")
-                    .font(.title)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, geometry.size.width * 0.2)
-                Spacer().frame(height: geometry.size.height * 0.25)
-                LogInOutButton(action: {
-                    self.loginButtonClicked()
-                }, title: "Yes!", width: geometry.size.width * 0.7)
-            }
-        }
-        
     }
 }
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountLoggedIn(userName: "Patrick Fischer", logOut: {
-
-        })
-//        AccountNotLoggedIn(loginButtonClicked: {
-//
-//        })
+        AccountView()
     }
 }
