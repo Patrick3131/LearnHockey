@@ -11,8 +11,9 @@ pod "Firebase/Firestore"
 pod "Firebase/Storage"
 pod 'CodableFirebase'
 pod "Firebase/Auth"
-pod "FirebaseUI/Auth"
-pod "FirebaseUI/Email"
+pod 'FirebaseUI'
+#pod "FirebaseUI/Auth"
+#pod "FirebaseUI/Email"
 
 
   target 'LearnHockeyTests' do
