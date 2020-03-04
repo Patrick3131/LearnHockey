@@ -17,10 +17,8 @@ protocol AuthRepository {
 }
 
 
-class FirebaseAuthRepository: AuthRepository {
+class FirebaseUserRepository: AuthRepository {
     
-    
-
     var handler: AuthStateDidChangeListenerHandle?
     
     deinit {
@@ -33,7 +31,7 @@ class FirebaseAuthRepository: AuthRepository {
                 if let user = user {
                     print(user)
                     print(auth)
-                    promise(.success(AccountDetails(userUID: user.uid, loggedIn: true, premiumUser: false)))
+                    promise(.success(AccountDetails(userUID: user.uid,name: user.displayName, loggedIn: true, premiumUser: false)))
                 } else {
                     promise(.success(AccountDetails(userUID: nil, loggedIn: false, premiumUser: false)))
                 }
@@ -45,6 +43,11 @@ class FirebaseAuthRepository: AuthRepository {
     func logOut() {
         try? Auth.auth().signOut()
     }
+    
+    func createPremiumUser() {
+        
+    }
+
     
     private func stopListen() {
         if let handler = handler {

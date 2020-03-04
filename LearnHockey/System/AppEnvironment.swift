@@ -9,6 +9,7 @@
 import UIKit
 import Combine
 import Firebase
+import FirebaseFirestore
 
 struct AppEnvironment {
     let container: DIContainer
@@ -31,8 +32,9 @@ extension AppEnvironment {
         let exerciseWebRepository = FirebaseWebRepository(store: Firestore.firestore())
         let exerciseInteractor = AppExerciseInteractor(webRepository: exerciseWebRepository, appState: appState)
         
-        let authRepository = FirebaseAuthRepository()
-        let authInteractor = AppAuthInteractor(authRepository: authRepository, appState: appState)
+        let authRepository = FirebaseUserRepository()
+        let premiumRepository = FirebasePremiumRepository()
+        let authInteractor = AppUserInteractor(authRepository: authRepository, appState: appState, premiumRepository: premiumRepository)
         return .init(exerciseInteractor: exerciseInteractor, authInteractor: authInteractor)
     }
 }
