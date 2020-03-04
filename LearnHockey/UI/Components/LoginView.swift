@@ -9,13 +9,18 @@
 import SwiftUI
 
 struct LoginView: View {
+    var cancel: () -> Void
     var body: some View {
-        FUIAuthBaseViewControllerWrapper()
+        FUIAuthBaseViewControllerWrapper() {
+            self.cancel()
+        }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(cancel: {
+            
+        })
     }
 }
