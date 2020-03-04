@@ -17,7 +17,7 @@ struct ContentView: View {
         self.container = container
     }
     var body: some View {
-            content
+        TabBarView().inject(container)
                 .onReceive(authentificationUpdate) { value in
                     print("onRecieve:", value)
                     self.accountDetails = value
@@ -36,10 +36,14 @@ struct ContentView: View {
             if details.loggedIn == true {
                 return AnyView(CategoriesListView().inject(container))
             } else {
-                return AnyView(LoginView())
+                return AnyView(LoginView() {
+                    
+                })
             }
         case .notRequested:
-            return AnyView(LoginView())
+            return AnyView(LoginView() {
+                
+            })
         default: break
         }
         return AnyView(EmptyView())
