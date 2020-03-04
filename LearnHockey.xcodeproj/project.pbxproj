@@ -46,7 +46,7 @@
 		CDA5A17B2409E7720083097C /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5A17A2409E7720083097C /* DetailItemView.swift */; };
 		CDC9D64D240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D64C240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift */; };
 		CDC9D64F240C2B6F00D45F49 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */; };
-		CDC9D651240C2E8100D45F49 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D650240C2E8100D45F49 /* AuthInteractor.swift */; };
+		CDC9D651240C2E8100D45F49 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D650240C2E8100D45F49 /* UserInteractor.swift */; };
 		CDC9D653240C331500D45F49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D652240C331500D45F49 /* LoginView.swift */; };
 		CDC9D655240EBFEB00D45F49 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D654240EBFEB00D45F49 /* README.md */; };
 		CDC9D657240ECBF600D45F49 /* FirebaseWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */; };
@@ -56,6 +56,8 @@
 		CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */; };
 		CDC9D662240F405100D45F49 /* LogInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D661240F405100D45F49 /* LogInOutButton.swift */; };
 		CDC9D664240F406B00D45F49 /* AccountNotLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */; };
+		CDCD3D6A24100FD600DB811F /* BuySubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */; };
+		CDCD3D6E2410666D00DB811F /* PremiumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */; };
 		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,7 +129,7 @@
 		CDA5A17A2409E7720083097C /* DetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
 		CDC9D64C240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUIAuthBaseViewControllerWrapper.swift; sourceTree = "<group>"; };
 		CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		CDC9D650240C2E8100D45F49 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		CDC9D650240C2E8100D45F49 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		CDC9D652240C331500D45F49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CDC9D654240EBFEB00D45F49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWebRepository.swift; sourceTree = "<group>"; };
@@ -137,6 +139,8 @@
 		CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoggedIn.swift; sourceTree = "<group>"; };
 		CDC9D661240F405100D45F49 /* LogInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInOutButton.swift; sourceTree = "<group>"; };
 		CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNotLoggedIn.swift; sourceTree = "<group>"; };
+		CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionView.swift; sourceTree = "<group>"; };
+		CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumRepository.swift; sourceTree = "<group>"; };
 		E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,6 +314,7 @@
 				CD02E51224095B0D00F68AA3 /* Storage */,
 				CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */,
 				CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */,
+				CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -318,7 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */,
-				CDC9D650240C2E8100D45F49 /* AuthInteractor.swift */,
+				CDC9D650240C2E8100D45F49 /* UserInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -360,13 +365,10 @@
 			isa = PBXGroup;
 			children = (
 				CDC9D65E240EDED800D45F49 /* Account */,
+				CDC9D665240F413B00D45F49 /* Exercises */,
 				CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */,
 				CD915FD0240879CF00319A0B /* CategorieCell.swift */,
 				CDA5A17A2409E7720083097C /* DetailItemView.swift */,
-				CD69E3B3240AAC4200958FFC /* DifficultyView.swift */,
-				CD69E3B5240ABFE200958FFC /* ThreeStarView.swift */,
-				CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */,
-				CDC9D652240C331500D45F49 /* LoginView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -409,11 +411,23 @@
 		CDC9D65E240EDED800D45F49 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				CDC9D652240C331500D45F49 /* LoginView.swift */,
 				CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */,
 				CDC9D661240F405100D45F49 /* LogInOutButton.swift */,
 				CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */,
+				CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		CDC9D665240F413B00D45F49 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				CD69E3B3240AAC4200958FFC /* DifficultyView.swift */,
+				CD69E3B5240ABFE200958FFC /* ThreeStarView.swift */,
+				CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */,
+			);
+			path = Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -667,6 +681,7 @@
 				CD9F3A9D24097A910064016B /* ExercisesWebRepository.swift in Sources */,
 				CD3309DE23FB2514005EEB65 /* CategoriesListView.swift in Sources */,
 				CD3309C823FB0EB2005EEB65 /* Exercise.swift in Sources */,
+				CDCD3D6E2410666D00DB811F /* PremiumRepository.swift in Sources */,
 				CDC9D657240ECBF600D45F49 /* FirebaseWebRepository.swift in Sources */,
 				CDC9D64F240C2B6F00D45F49 /* AuthRepository.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
@@ -681,7 +696,7 @@
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
 				CD69E3B6240ABFE200958FFC /* ThreeStarView.swift in Sources */,
-				CDC9D651240C2E8100D45F49 /* AuthInteractor.swift in Sources */,
+				CDC9D651240C2E8100D45F49 /* UserInteractor.swift in Sources */,
 				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,
 				CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */,
 				CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */,
@@ -691,6 +706,7 @@
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
 				CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */,
 				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
+				CDCD3D6A24100FD600DB811F /* BuySubscriptionView.swift in Sources */,
 				CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */,
 				CDC9D64D240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift in Sources */,
 				CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */,

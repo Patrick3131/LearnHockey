@@ -51,21 +51,32 @@ struct AccountView: View {
     private var userContent: AnyView {
         switch routingState {
         case .loggedIn:
-            return AnyView(AccountLoggedIn(userName: "Patrick Fischer", logOut: {
-                self.injected.interactors.authInteractor.logOut()
-            }))
+            return AnyView(
+                AccountLoggedIn(
+                    userName: accountDetails.value?.name ?? "User",
+                    logOut: {
+                        self.injected.interactors.authInteractor.logOut()},
+                    buyPremium: {
+                        self.createPremium()
+                },
+                    isPremium: accountDetails.value?.premiumUser ?? false)
+            )
         case .notLoggedIn:
             return
                 AnyView(AccountNotLoggedIn(loginButtonClicked: {
                     self.injected.appState[\.routing.account] = .loggingIn
-            }))
+                }))
         case .loggingIn:
             return AnyView(LoginView() {
                 self.injected.appState[\.routing.account] = .notLoggedIn
             }
-                .navigationBarHidden(true)
+            .navigationBarHidden(true)
             )
         }
+    }
+    
+    private func createPremium() {
+        injected.interactors.authInteractor.createPremium()
     }
     
     private var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.AccountDetails>,Never> {

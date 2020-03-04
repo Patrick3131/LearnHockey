@@ -22,8 +22,8 @@ extension AppState {
         var account: Account = .notLoggedIn
         enum Account: Equatable {
             case notLoggedIn
-            case loggedIn
             case loggingIn
+            case loggedIn
         }
     }
 }
@@ -39,6 +39,7 @@ extension AppState {
         
         struct AccountDetails: Equatable {
             var userUID: String?
+            var name: String?
             var loggedIn: Bool = false
             var premiumUser: Bool = false
         }

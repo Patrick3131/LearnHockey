@@ -10,10 +10,10 @@
 extension DIContainer {
     struct Interactors {
         let exerciseInteractor: ExerciseInteractor
-        let authInteractor: AuthInteractor
+        let authInteractor: UserInteractor
         
         init(exerciseInteractor: ExerciseInteractor,
-             authInteractor: AuthInteractor
+             authInteractor: UserInteractor
         ) {
             self.exerciseInteractor = exerciseInteractor
             self.authInteractor = authInteractor
@@ -22,7 +22,7 @@ extension DIContainer {
         
         static var stub: Self {
             .init(exerciseInteractor: StubAppExerciseInteractor(),
-                  authInteractor: StubAuthInteractor()
+                  authInteractor: StubUserInteractor()
             )
         }
     }

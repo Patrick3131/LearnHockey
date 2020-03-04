@@ -20,7 +20,7 @@ struct TabBarView: View {
                 TabBarItem(text: "Exercise", image: "star")
             }.tag(Tab.exercise)
             AccountView().tabItem {
-                TabBarItem(text: "Account", image: "star")
+                TabBarItem(text: "Account", image: "person")
             }.tag(Tab.profil)
         }
     }
