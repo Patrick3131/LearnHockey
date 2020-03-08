@@ -31,7 +31,7 @@ struct ExercisesView: View {
     
     var body: some View {
         content
-            .navigationBarTitle("Exercise")
+            .navigationBarTitle(category.rawValue.capitalized)
             .fixNavigationBarBug { self.goBack() }
             .onReceive(routingUpdate) { self.routingState = $0 }
             .onReceive([self.selection].publisher.first()) { _ in

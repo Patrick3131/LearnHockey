@@ -20,9 +20,10 @@ struct BuySubscriptionView: View {
                     .foregroundColor(Color(.systemBackground))
                     .padding(.bottom, 5)
                 Text("Access to all exercises")
-                .fixedSize(horizontal: false, vertical: true)
+                .fixedSize()
                     .foregroundColor(Color(.systemBackground))
             }.padding(.vertical)
+            Spacer()
             VStack(alignment:.trailing) {
                 Text("Subscribe")
                     .foregroundColor(Color.baseDark)

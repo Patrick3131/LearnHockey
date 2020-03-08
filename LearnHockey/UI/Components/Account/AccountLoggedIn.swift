@@ -14,7 +14,7 @@ struct AccountLoggedIn: View {
     var buyPremium: () -> Void
     var isPremium: Bool
     
-    private let premiumText: String = "You currently have a monthly membership for 10$ a month."
+    private let premiumText: String = "You currently have a monthly membership for 2.99 € / month."
     private let nonPremiumText: String = "In our subscription all packages and exercises are included. Buy monthly or yearly."
     var body: some View {
         GeometryReader { geometry in
