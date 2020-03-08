@@ -17,6 +17,11 @@ typealias Store<State> = CurrentValueSubject<State, Never>
 
 final class CancelBag {
     var subscriptions = Set<AnyCancellable>()
+    
+    deinit {
+        subscriptions.removeAll()
+        print("Deinit Cancelbag")
+    }
 }
 
 extension AnyCancellable {
