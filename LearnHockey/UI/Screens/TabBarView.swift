@@ -13,6 +13,15 @@ struct TabBarView: View {
     @State private var selectedTab = Tab.exercise
     @Environment(\.injected) private var injected: DIContainer
 
+    init() {
+//        let newAppearance = UINavigationBarAppearance()
+//        newAppearance.configureWithOpaqueBackground()
+//        newAppearance.backgroundColor = UIColor(named: "baseMidDark")
+//        newAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.systemBackground]
+        UINavigationBar.appearance().backgroundColor = UIColor(named: "baseMidDark")
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.systemBackground]
+        UITabBar.appearance().barTintColor = UIColor(named: "baseMidDark")
+    }
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -22,7 +31,7 @@ struct TabBarView: View {
             AccountView().tabItem {
                 TabBarItem(text: "Account", image: "person")
             }.tag(Tab.profil)
-        }
+        }.accentColor(Color(.systemBackground))
     }
 }
 

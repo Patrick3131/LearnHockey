@@ -12,9 +12,9 @@ struct ThreeStarView: View {
     var howManyStarsFilled: Int
     var body: some View {
         HStack(spacing: 5) {
-            Image(systemName: "star.fill")
-            Image(systemName: self.secondStar())
-            Image(systemName: self.thirdStar())
+            Image(systemName: "star.fill").foregroundColor(Color.baseMidDark)
+            Image(systemName: self.secondStar()).foregroundColor(Color.baseMidDark)
+            Image(systemName: self.thirdStar()).foregroundColor(Color.baseMidDark)
         }
     }
     

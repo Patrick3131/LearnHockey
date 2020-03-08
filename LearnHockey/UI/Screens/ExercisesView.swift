@@ -106,7 +106,8 @@ private extension ExercisesView {
                 Text("Difficulty").tag(1)
                 Text("Player").tag(2)
             }.pickerStyle(SegmentedPickerStyle())
-                .padding(.horizontal, 5)
+                .background(Color.baseLight)
+                .padding([.top,.horizontal], 5)
             List(exercises) { exercise in
                 NavigationLink(
                     destination: ExerciseDetailView(exercise: Exercise.mock),

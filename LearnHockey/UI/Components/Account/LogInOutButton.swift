@@ -19,10 +19,11 @@ struct LogInOutButton: View {
             self.action()
         }, label: {
             Text(title).font(.title)
+                .foregroundColor(Color.baseDark)
             })
             .frame(width: self.width)
         .padding()
-            .background(Color.white)
+            .background(Color(.systemBackground))
         .cornerRadius(5)
         .padding(1)
             .background(Color.black)
