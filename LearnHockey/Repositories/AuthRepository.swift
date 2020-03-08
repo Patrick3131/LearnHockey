@@ -13,8 +13,8 @@ import FirebaseFirestore
 
 
 protocol AuthRepository {
-    func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void)
     func logOut()
+    func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void)
 }
 
 
@@ -22,9 +22,11 @@ protocol AuthRepository {
 class FirebaseUserRepository: AuthRepository {
     
     var handler: AuthStateDidChangeListenerHandle?
-    
+    var storage = Set<AnyCancellable>()
+
     private var dbName = "user"
     private var db: Firestore
+    
     init() {
         self.db = Firestore.firestore()
     }
@@ -33,12 +35,102 @@ class FirebaseUserRepository: AuthRepository {
         stopListen()
     }
     
+    private func stopListen() {
+           if let handler = handler {
+               Auth.auth().removeStateDidChangeListener(handler)
+           }
+       }
     
-    func subscriber() {
+
+    
+    func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
+        self.handler = Auth.auth().addStateDidChangeListener { [weak self] auth, user in
+            guard let safeSelf = self else { return }
+            completion(Future<AccountDetails,Error> { promise in
+                if let user = user {
+                    safeSelf.handleUserInDatabase(user: user.uid)
+                    .sink(receiveCompletion: { completion in
+                        if let error = completion.error  {
+                            print(error.localizedDescription)
+                            promise(.failure(error))
+                        }
+                    }, receiveValue: { result in
+                        if result {
+                            promise(.success(AccountDetails(userUID: user.uid,name: user.displayName, loggedIn: true, premiumUser: false)))
+                        }
+                    }).store(in: &safeSelf.storage)
+                } else {
+                    promise(.success(AccountDetails(userUID: nil, loggedIn: false, premiumUser: false)))
+                }
+            }.eraseToAnyPublisher())
+        }
+    }
+    
+    
+    func logOut() {
+        try? Auth.auth().signOut()
+    }
+    
+    /// Checks if User exists in Firestore, if not creates an empty User and returns true
+    private func handleUserInDatabase(user: String) -> AnyPublisher<Bool,Error> {
+        return Future<Bool,Error>( { [weak self] promise in
+            guard let safeSelf = self else { return }
+            safeSelf.checkIfUserIsInDatabase(user: user)
+                .flatMap { result -> AnyPublisher<Bool,Error> in
+                    if result == false {
+                        return safeSelf.createEmptyUser(user: user).eraseToAnyPublisher()
+                    } else {
+                        promise(.success(true))
+                        return Empty<Bool,Error>(completeImmediately: true).eraseToAnyPublisher()
+                    }}
+                .sink(receiveCompletion: { completion in
+                    if let error = completion.error {
+                        promise(.failure(error))
+                    }}, receiveValue: {promise(.success($0))})
+                .store(in:&safeSelf.storage)
+            }
+        ).eraseToAnyPublisher()
+    }
+    
+    private func checkIfUserIsInDatabase(user id: String) -> AnyPublisher<Bool,Error> {
+        return Future<Bool,Error>( { [weak self] promise in
+            guard let safeSelf = self else { return }
+            let docRef = safeSelf.db.collection(safeSelf.dbName).document(id)
+            docRef.getDocument { document, error in
+                if let document = document {
+                    if document.exists {
+                        promise(.success(true))
+                    } else {
+                        print("This is the first login of user: \(id), user will be added to Firestore now.")
+                        promise(.success(false))
+                    }
+                }
+            }
+        }).eraseToAnyPublisher()
         
     }
     
-    func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
+    
+    
+    private func createEmptyUser(user id: String) -> AnyPublisher<Bool,Error> {
+        return Future<Bool,Error>( { [weak self] promise in
+            guard let safeSelf = self else { return }
+            let dic = ["premium":false]
+            safeSelf.db.collection(safeSelf.dbName).document(id).setData(dic, merge: true) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    promise(.failure(error))
+                } else {
+                    print("User:\(id) was successfully added to Firestory" )
+                    promise(.success(true))
+                }
+            }
+        }).eraseToAnyPublisher()
+    }
+    
+    // MARK: - Completionhandler functions
+    
+    private func checkLoginStateCompletionHandlerVersion(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] auth, user in
             guard let safeSelf = self else { return }
             completion(Future<AccountDetails,Error> { promise in
@@ -52,7 +144,7 @@ class FirebaseUserRepository: AuthRepository {
                             if isAvailable {
                                  promise(.success(AccountDetails(userUID: user.uid,name: user.displayName, loggedIn: true, premiumUser: false)))
                             } else {
-                                safeSelf.createEmptyUser(user: user.uid) { result in
+                                safeSelf.createEmptyUser(user: user.uid,email: user.email) { result in
                                     switch result {
                                     case .success(_):
                                         promise(.success(AccountDetails(userUID: user.uid,name: user.displayName, loggedIn: true, premiumUser: false)))
@@ -65,7 +157,6 @@ class FirebaseUserRepository: AuthRepository {
                             print(error)
                         }
                     }
-
                 } else {
                     promise(.success(AccountDetails(userUID: nil, loggedIn: false, premiumUser: false)))
                 }
@@ -73,11 +164,6 @@ class FirebaseUserRepository: AuthRepository {
             )
         }
     }
-    
-    func logOut() {
-        try? Auth.auth().signOut()
-    }
-    
     
     private func checkIfUserIsInDatabase(user id: String, completion: @escaping (Result<Bool,Error>) -> Void) {
         let docRef = db.collection(dbName).document(id)
@@ -94,8 +180,8 @@ class FirebaseUserRepository: AuthRepository {
     }
     
     
-    private func createEmptyUser(user id: String, completion: @escaping (Result<Bool,Error>) -> Void) {
-        let dic = ["premium":false]
+    private func createEmptyUser(user id: String, email:String?, completion: @escaping (Result<Bool,Error>) -> Void) {
+        let dic: [String:Any] = ["premium":false, "email" : email ?? ""]
         db.collection(dbName).document(id).setData(dic, merge: true) { error in
             if let error = error {
                 print(error.localizedDescription)
@@ -107,80 +193,6 @@ class FirebaseUserRepository: AuthRepository {
         }
     }
     
-    private func checkIfUserIsInDatabase(user id: String) -> AnyPublisher<Bool,Error> {
-        return Future<Bool,Error>( { [weak self] promise in
-            guard let safeSelf = self else { return }
-            let docRef = safeSelf.db.collection(safeSelf.dbName).document(id)
-            docRef.getDocument { document, error in
-                if let document = document {
-                    if document.exists {
-                        promise(.success(true))
-                    } else {
-                        print("This is the first login, user: \(id) will be added to Firestore now.")
-                        promise(.success(false))
-                        safeSelf.createEmptyUser(user: id)
-                    }
-                }
-            }
-        }).eraseToAnyPublisher()
-        
-    }
     
-    
-    
-    private func createEmptyUser(user id: String) -> AnyPublisher<Bool,Error> {
-        return Future<Bool,Error>( { [weak self] promise in
-            guard let safeSelf = self else { return }
-
-            let dic = ["premium":false]
-            safeSelf.db.collection(safeSelf.dbName).document(id).setData(dic, merge: true) { error in
-                if let error = error {
-                    print(error.localizedDescription)
-                    promise(.failure(error))
-                } else {
-                    print("User:\(id) was successfully added to Firestory" )
-                    promise(.success(true))
-                }
-            }
-        }).eraseToAnyPublisher()
-        
-    }
-    
-    func createPremiumUser() {
-        
-    }
-
-    
-    private func stopListen() {
-        if let handler = handler {
-            Auth.auth().removeStateDidChangeListener(handler)
-        }
-    }
+   
 }
-
-
-
-
-                    
-//                    safeSelf.checkIfUserIsInDatabase(user: user.uid)
-//                        .sinkToResult { value in
-//                            switch value {
-//                            case .success(let isUserInDatabase):
-//                                if isUserInDatabase {
-//                                    promise(.success(AccountDetails(userUID: user.uid,name: user.displayName, loggedIn: true, premiumUser: false)))
-//                                } else {
-//                                    safeSelf.createEmptyUser(user: user.uid)
-//                                        .sinkToResult { value in
-//                                            switch value {
-//                                            case .success( _):
-//                                                promise(.success(AccountDetails(userUID: user.uid,name: user.displayName, loggedIn: true, premiumUser: false)))
-//                                            case .failure(let error):
-//                                                print(error)
-//                                            }
-//                                    }
-//                                }
-//                            case .failure(let error):
-//                                print(error)
-//                            }
-//
-//                    }

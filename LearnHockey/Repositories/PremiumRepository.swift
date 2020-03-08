@@ -70,8 +70,9 @@ class FirebasePremiumRepository: PremiumRepository {
     
     func createPremium(user id: String, isPremium: Bool) -> AnyPublisher<Bool,Never> {
         let dic = ["premium":isPremium]
-        return Future<Bool,Never> { promise in
-            self.db.collection(self.dbName).document(id).setData(dic, merge: true) { error in
+        return Future<Bool,Never> { [weak self] promise in
+            guard let safeSelf = self else { return }
+            safeSelf.db.collection(safeSelf.dbName).document(id).setData(dic, merge: true) { error in
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
@@ -89,11 +90,12 @@ class FirebasePremiumRepository: PremiumRepository {
     
     /// prefer to use listener function  https://firebase.google.com/docs/firestore/query-data/listen
     func readPremium(user id: String?) -> AnyPublisher<Bool,Error> {
-        return Future<Bool,Error> { promise in
+        return Future<Bool,Error> { [weak self] promise in
+            guard let safeSelf = self else { return }
             if id == nil {
                 promise(.success(false))
             } else {
-                let docRed = self.db.collection(self.dbName).document(id!)
+                let docRed = safeSelf.db.collection(safeSelf.dbName).document(id!)
                 docRed.getDocument { snapshot, error in
                     if let error = error {
                         promise(.failure(error))
