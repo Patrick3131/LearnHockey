@@ -13,22 +13,34 @@ struct AccountLoggedIn: View {
     var logOut: () -> Void
     var buyPremium: () -> Void
     var isPremium: Bool
+    
+    private let premiumText: String = "You currently have a monthly membership for 10$ a month."
+    private let nonPremiumText: String = "In our subscription all packages and exercises are included. Buy monthly or yearly."
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 Text("Hello " + self.userName + "!" ).font(.title)
-                Text("You currently have a monthly membership for 10$ a month.")
-                    .font(.body)
-                    .multilineTextAlignment(.center)
-                    .padding()
+                Spacer().frame(height: geometry.size.height * 0.1)
+                self.premiumTextView()
+                    .frame(width: geometry.size.width * 0.6)
+                Spacer().frame(height: geometry.size.height * 0.1)
                 Group {
                     if !self.isPremium {
-                        Button(action: {
-                            self.buyPremium()
-                        }, label: {
-                            BuySubscriptionView()
-
-                        })
+                        VStack(alignment: .center,spacing: 70) {
+                            Button(action: {
+                                self.buyPremium()
+                            }, label: {
+                                BuySubscriptionView()
+                                .frame(width: geometry.size.width * 0.9, height: geometry.size.width * 0.2, alignment: .center)
+                            })
+                            Button(action: {
+                                self.buyPremium()
+                            }, label: {
+                                BuySubscriptionView(subscriptionText: "Yearly Subscription", amountText: "29.99 € / Year")
+                                .frame(width: geometry.size.width * 0.9, height: geometry.size.width * 0.2, alignment: .center)
+                            })
+                        }
+                        
                     } else {
                         EmptyView()
                     }
@@ -40,11 +52,46 @@ struct AccountLoggedIn: View {
             }
         }
     }
+    
+    private func premiumTextView() -> some View {
+        Text(isPremium ? premiumText : nonPremiumText)
+            .font(.body)
+            .multilineTextAlignment(.leading)
+            .padding()
+    }
+    
+    private func premiumView() -> some View {
+        GeometryReader { geometry in
+            Group {
+                if !self.isPremium {
+                    VStack(alignment: .center) {
+                        Button(action: {
+                            self.buyPremium()
+                        }, label: {
+                            BuySubscriptionView()
+
+                        })
+//                            .frame(width:200)
+                        Button(action: {
+                            self.buyPremium()
+                        }, label: {
+                            BuySubscriptionView(subscriptionText: "Yearly Subscription", amountText: "29.99 € / Year")
+
+                        })
+                    }
+                    
+                } else {
+                    EmptyView()
+                }
+            }
+        }
+        
+    }
 }
 
 struct AccountLoggedIn_Previews: PreviewProvider {
     static var previews: some View {
-        AccountLoggedIn(userName: "Patrick Fischer", logOut: {
+        AccountLoggedIn(userName: "User", logOut: {
             
         }, buyPremium: {
             

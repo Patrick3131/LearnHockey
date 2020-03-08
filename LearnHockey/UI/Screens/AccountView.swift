@@ -17,21 +17,27 @@ struct AccountView: View {
     @State private var routingState = AccountRouting.notLoggedIn
     
     var body: some View {
-        NavigationView {
-            userContent
-                .navigationBarTitle("Account")
+        GeometryReader { geometry in
+            NavigationView {
+//                ScrollView {
+//                    Text("text")
+                    self.userContent
+                    .navigationBarTitle("Account")
+//                }.frame(width: geometry.size.width, height: geometry.size.height,alignment: .topLeading)
+            }
+            .onReceive(self.authentificationUpdate) { value in
+                print(value)
+                self.accountDetails = value
+                self.setRouting()
+                
+            }
+            .onReceive(self.routingUpdate) { value in
+                print(value)
+                self.routingState = value
+                
+            }
         }
-        .onReceive(authentificationUpdate) { value in
-            print(value)
-            self.accountDetails = value
-            self.setRouting()
-            
-        }
-        .onReceive(routingUpdate) { value in
-            print(value)
-            self.routingState = value
-            
-        }
+        
     }
     
     

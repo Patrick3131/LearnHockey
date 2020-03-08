@@ -34,7 +34,7 @@ struct CategoriesListView: View {
                     destination: ExercisesView(category: category),
                     tag: category.rawValue,
                     selection: self.routingBinding.categories) {
-                        CategorieCell(name: category.rawValue)
+                        CategorieCell(name: category.rawValue, number: "2")
                 }
             }.navigationBarTitle("Categories")
         }
