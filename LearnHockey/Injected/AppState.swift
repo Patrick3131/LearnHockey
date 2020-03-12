@@ -47,6 +47,14 @@ extension AppState {
 }
 
 typealias AccountDetails = AppState.UserData.AccountDetails
+import FirebaseAuth
+extension AccountDetails {
+    init(_ user: User) {
+        self.userUID = user.uid
+        self.name = user.displayName
+        self.loggedIn = true
+    }
+}
 
 extension AppState {
     struct System {
