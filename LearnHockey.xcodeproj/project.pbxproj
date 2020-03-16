@@ -44,6 +44,7 @@
 		CD915FD42408AEEA00319A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */; };
 		CD9F3A9D24097A910064016B /* ExercisesWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */; };
 		CDA5A17B2409E7720083097C /* DetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5A17A2409E7720083097C /* DetailItemView.swift */; };
+		CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB710B2420247300CCA74A /* FirebaseAuthPublisher.swift */; };
 		CDBE57BA24143C06005B6672 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE57B924143C06005B6672 /* Color+Extension.swift */; };
 		CDC9D64D240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D64C240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift */; };
 		CDC9D64F240C2B6F00D45F49 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */; };
@@ -128,6 +129,7 @@
 		CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesWebRepository.swift; sourceTree = "<group>"; };
 		CDA5A17A2409E7720083097C /* DetailItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailItemView.swift; sourceTree = "<group>"; };
+		CDAB710B2420247300CCA74A /* FirebaseAuthPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthPublisher.swift; sourceTree = "<group>"; };
 		CDBE57B924143C06005B6672 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		CDC9D64C240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FUIAuthBaseViewControllerWrapper.swift; sourceTree = "<group>"; };
 		CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */,
+				CDAB710B2420247300CCA74A /* FirebaseAuthPublisher.swift */,
 			);
 			path = Firestore;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
 				CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */,
+				CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */,
 				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
 				CDCD3D6A24100FD600DB811F /* BuySubscriptionView.swift in Sources */,
 				CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */,

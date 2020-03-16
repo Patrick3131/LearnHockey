@@ -41,7 +41,6 @@ class FirebaseUserRepository: AuthRepository {
            }
        }
     
-
     
     func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] auth, user in

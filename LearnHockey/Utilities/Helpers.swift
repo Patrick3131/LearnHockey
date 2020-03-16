@@ -31,6 +31,9 @@ extension AnyCancellable {
     }
 }
 
+
+ // MARK: - Publisher Extensions
+
 extension Publisher {
     func sinkToResult(_ result: @escaping (Result<Output, Failure>) -> Void) -> AnyCancellable {
         return sink(receiveCompletion: { completion in
@@ -61,6 +64,19 @@ extension Publisher {
     }
 }
 
+extension Publisher {
+    func flatMap<Wrapped,Some: Publisher, None: Publisher>(
+        ifSome: @escaping (Wrapped) -> Some,
+        ifNone: @escaping () -> None
+    ) -> AnyPublisher<Some.Output,Failure>
+        where Output == Optional<Wrapped>, Some.Output == None.Output, Some.Failure == Failure, None.Failure == Failure {
+            return self.flatMap {
+                $0.map { ifSome($0).eraseToAnyPublisher() }  ?? ifNone().eraseToAnyPublisher()}
+                .eraseToAnyPublisher()
+    }
+}
+
+
 private extension Error {
     var underlyingError: Error? {
         let nsError = self as NSError
@@ -71,6 +87,8 @@ private extension Error {
         return nsError.userInfo[NSUnderlyingErrorKey] as? Error
     }
 }
+
+// MARK: - CurrentValueSubject Extensions
 
 extension CurrentValueSubject {
     
@@ -93,9 +111,12 @@ extension CurrentValueSubject {
     
     func updates<Value>(for keyPath: KeyPath<Output, Value>) ->
         AnyPublisher<Value, Failure> where Value: Equatable {
-        return map(keyPath).removeDuplicates().eraseToAnyPublisher()
+            return map(keyPath).removeDuplicates().eraseToAnyPublisher()
     }
 }
+
+
+
 
 extension Subscribers.Completion {
     var error: Failure? {
