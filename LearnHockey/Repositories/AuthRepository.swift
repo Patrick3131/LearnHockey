@@ -36,11 +36,21 @@ class FirebaseUserRepository: AuthRepository {
     }
     
     private func stopListen() {
-           if let handler = handler {
-               Auth.auth().removeStateDidChangeListener(handler)
-           }
-       }
+        if let handler = handler {
+            Auth.auth().removeStateDidChangeListener(handler)
+        }
+    }
     
+    var authPublisher = FirebaseAuthPublisher()
+    
+    func checkLoginState() -> AnyPublisher<AccountDetails,Error> {
+        authPublisher.userPublisher.flatMap(
+            ifSome: { (user: User) -> AnyPublisher<AccountDetails,Error> in
+                Just<AccountDetails>(AccountDetails(user)).setFailureType(to: Error.self).eraseToAnyPublisher()
+        }, ifNone: { () -> AnyPublisher<AccountDetails,Error> in
+            Just<AccountDetails>(AccountDetails(userUID: nil, name: nil, loggedIn: false, premiumUser: false)).setFailureType(to: Error.self).eraseToAnyPublisher()
+        })
+    }
     
     func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] auth, user in
