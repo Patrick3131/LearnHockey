@@ -18,12 +18,13 @@ class FirebaseAuthPublisher {
     
     init() {
         userPublisher = userSubject.eraseToAnyPublisher()
-        let handle = Auth.auth().addStateDidChangeListener { [weak userSubject] (auth, user) in
-            guard let safeUserSubject  = userSubject else { return }
-            safeUserSubject.send(user)
+        let handle = Auth.auth().addStateDidChangeListener { [userSubject] (auth, user) in
+            userSubject.send(user)
         }
+        
         AnyCancellable {
             Auth.auth().removeStateDidChangeListener(handle)
         }.store(in: &cancelBar)
     }
+    
 }

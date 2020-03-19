@@ -41,12 +41,6 @@ struct AppUserInteractor: UserInteractor {
            self.premiumRepository = premiumRepository
        }
     
-    func test() -> AnyPublisher<Bool,Never> {
-        return Future<Bool,Never> { promise in
-            promise(.success(true))
-        }.eraseToAnyPublisher()
-    }
-    
     func createPremium() {
         let userID = appState[\.userData.accountDetails].value?.userUID
         let user = appState[\.userData.accountDetails].value
@@ -63,41 +57,37 @@ struct AppUserInteractor: UserInteractor {
     }
     
     private func listenPremium(user: AccountDetails) {
-        let storage = CancelBag()
         premiumRepository.listenPremium(user: user.userUID ?? "1234", completion: { value in
             value.map { value in
                 return Loadable<AccountDetails>.loaded(AccountDetails(accountDetails: user, isPremiumUser: value))
             }
             .eraseToAnyPublisher()
             .sinkToLoadable { self.appState[\.userData.accountDetails] = $0.value! }
-            .store(in: storage)
+            .store(in: self.storage)
         })
     }
     
+    let storage = CancelBag()
+    
     func loginState() {
         let accountDetails = appState.value.userData.accountDetails.value
-        let storage = CancelBag()
         appState[\.userData.accountDetails] = .isLoading(last: accountDetails, cancelBag: storage)
-        authRepository.checkLoginState() { value in
-            let userDetails = value.flatMap { value in
-                self.premiumRepository.readPremium(user: value.userUID)
-            }
-            .eraseToAnyPublisher()
-            .print()
-            value.combineLatest(userDetails) { value, value2 -> AccountDetails in
-                if value.loggedIn {
-                    let details = AccountDetails(userUID: value.userUID, name: value.name, loggedIn: value.loggedIn, premiumUser: value2)
-                    self.listenPremium(user: details)
-                }
-                return AccountDetails(userUID: value.userUID, name: value.name, loggedIn: value.loggedIn, premiumUser: value2)
-            }
-            .eraseToAnyPublisher()
-            .sinkToLoadable { self.appState[\.userData.accountDetails] = $0 }
-            .store(in: storage)
+        
+        let premium = authRepository.checkLoginState().flatMap { value -> AnyPublisher<Bool, Error> in
+            self.listenPremium(user: value)
+            return self.premiumRepository.readPremium(user: value.userUID)
         }
+        
+        authRepository.checkLoginState()
+            .combineLatest(premium){ value, value2 in
+                AccountDetails(accountDetails: value, isPremiumUser: value2)
+        }
+        .sinkToLoadable { self.appState[\.userData.accountDetails] = $0 }
+        .store(in: storage)
     }
     
     func logOut() {
+        
         authRepository.logOut()
     }
     

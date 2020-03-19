@@ -314,6 +314,7 @@
 		CD3309BF23FB0DF8005EEB65 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				CDFB381C2422A715007B0614 /* Authentication */,
 				CD9F3A9B240979CA0064016B /* Firestore */,
 				CD02E51224095B0D00F68AA3 /* Storage */,
 				CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */,
@@ -401,7 +402,6 @@
 			isa = PBXGroup;
 			children = (
 				CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */,
-				CDAB710B2420247300CCA74A /* FirebaseAuthPublisher.swift */,
 			);
 			path = Firestore;
 			sourceTree = "<group>";
@@ -434,6 +434,14 @@
 				CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		CDFB381C2422A715007B0614 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB710B2420247300CCA74A /* FirebaseAuthPublisher.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

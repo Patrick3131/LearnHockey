@@ -14,6 +14,7 @@ import FirebaseFirestore
 
 protocol AuthRepository {
     func logOut()
+    func checkLoginState() -> AnyPublisher<AccountDetails,Error>
     func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void)
 }
 
@@ -41,15 +42,21 @@ class FirebaseUserRepository: AuthRepository {
         }
     }
     
-    var authPublisher = FirebaseAuthPublisher()
+    lazy var authPublisher = FirebaseAuthPublisher()
     
     func checkLoginState() -> AnyPublisher<AccountDetails,Error> {
-        authPublisher.userPublisher.flatMap(
-            ifSome: { (user: User) -> AnyPublisher<AccountDetails,Error> in
-                Just<AccountDetails>(AccountDetails(user)).setFailureType(to: Error.self).eraseToAnyPublisher()
-        }, ifNone: { () -> AnyPublisher<AccountDetails,Error> in
-            Just<AccountDetails>(AccountDetails(userUID: nil, name: nil, loggedIn: false, premiumUser: false)).setFailureType(to: Error.self).eraseToAnyPublisher()
-        })
+        authPublisher.userPublisher
+            .print()
+            .flatMap(
+                ifSome: { [weak self] (user: User) -> AnyPublisher<AccountDetails,Error> in
+                    guard let safeSelf = self else { return Empty().eraseToAnyPublisher() }
+                    return safeSelf.handleUserInDatabase(user: user.uid)
+                        .flatMap { result -> AnyPublisher<AccountDetails,Error> in
+                            Just<AccountDetails>(AccountDetails(user)).setFailureType(to: Error.self).eraseToAnyPublisher()
+                    }.eraseToAnyPublisher()
+                }, ifNone: { () -> AnyPublisher<AccountDetails,Error> in
+                    Just<AccountDetails>(AccountDetails(userUID: nil, name: nil, loggedIn: false, premiumUser: false)).setFailureType(to: Error.self).eraseToAnyPublisher()
+            })
     }
     
     func checkLoginState(completion: @escaping (AnyPublisher<AccountDetails,Error>) -> Void) {
