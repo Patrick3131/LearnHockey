@@ -76,6 +76,19 @@ extension Publisher {
     }
 }
 
+extension Publisher where Output == Bool {
+    func flatMap<True: Publisher, False: Publisher>(
+        ifTrue: @escaping () -> True,
+        ifFalse: @escaping () -> False
+    ) -> AnyPublisher<True.Output, Failure>
+        where True.Output == False.Output, True.Failure == Failure, False.Failure == Failure
+    {
+        return self
+            .flatMap { return $0 ? ifTrue().eraseToAnyPublisher() : ifFalse().eraseToAnyPublisher() }
+            .eraseToAnyPublisher()
+    }
+}
+
 
 private extension Error {
     var underlyingError: Error? {
