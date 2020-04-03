@@ -29,10 +29,11 @@ extension AccountDetails {
 struct AppUserInteractor: UserInteractor {
     
     
-    
-    let authRepository: AuthRepository
     let appState: Store<AppState>
+    let authRepository: AuthRepository
     let premiumRepository: PremiumRepository
+    let storage = CancelBag()
+
     
     
     init(authRepository: AuthRepository, appState: Store<AppState>, premiumRepository: PremiumRepository) {
@@ -67,7 +68,6 @@ struct AppUserInteractor: UserInteractor {
         })
     }
     
-    let storage = CancelBag()
     
     func loginState() {
         let accountDetails = appState.value.userData.accountDetails.value
