@@ -8,18 +8,19 @@
 
 import SwiftUI
 
+
+
+
 struct ExerciseCell: View {
-    let exercise: String
-    let difficulty: Int
-    let amountOfPlayers: String
+    let viewModel: ExerciseCellViewModel
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(exercise)
-                ThreeStarView(howManyStarsFilled: difficulty)
+                Text(viewModel.exerciseName).foregroundColor(viewModel.colorText)
+                ThreeStarView(howManyStarsFilled: viewModel.difficulty,foreGroundColor: viewModel.colorStars)
             }
             Spacer()
-            Text(amountOfPlayers)
+            Text(viewModel.amountOfPlayers).foregroundColor(viewModel.colorText)
         }.padding()
         
         
@@ -28,6 +29,6 @@ struct ExerciseCell: View {
 
 struct ExerciseCell_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseCell(exercise: "Ball hochhalten", difficulty: 2, amountOfPlayers: "Team")
+        ExerciseCell(viewModel: ExerciseCellViewModel(exercise: Exercise.mock))
     }
 }

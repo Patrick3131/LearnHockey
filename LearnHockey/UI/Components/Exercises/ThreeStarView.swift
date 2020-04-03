@@ -10,11 +10,12 @@ import SwiftUI
 
 struct ThreeStarView: View {
     var howManyStarsFilled: Int
+    var foreGroundColor: Color = Color(.label)
     var body: some View {
         HStack(spacing: 5) {
-            Image(systemName: "star.fill").foregroundColor(Color.baseMidDark)
-            Image(systemName: self.secondStar()).foregroundColor(Color.baseMidDark)
-            Image(systemName: self.thirdStar()).foregroundColor(Color.baseMidDark)
+            Image(systemName: "star.fill").foregroundColor(foreGroundColor)
+            Image(systemName: self.secondStar()).foregroundColor(foreGroundColor)
+            Image(systemName: self.thirdStar()).foregroundColor(foreGroundColor)
         }
     }
     
@@ -37,6 +38,6 @@ struct ThreeStarView: View {
 
 struct ThreeStarView_Previews: PreviewProvider {
     static var previews: some View {
-        ThreeStarView(howManyStarsFilled: 1)
+        ThreeStarView(howManyStarsFilled: 1, foreGroundColor: Color.baseMidDark)
     }
 }
