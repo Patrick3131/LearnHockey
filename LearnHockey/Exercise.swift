@@ -18,7 +18,7 @@ struct Exercise {
     var coaching: String?
     var variation: String?
     var difficulty: Difficulty?
-    
+    var isPremium = false
 }
 
 extension Exercise: Codable {}

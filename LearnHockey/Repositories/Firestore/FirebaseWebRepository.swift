@@ -28,6 +28,7 @@ struct FirebaseWebRepository: ExercisesWebRepository {
                     var exercises = [Exercise]()
                     for document in documents.documents {
                         do {
+                            /// if there is one variable missing in the firebase document, then it does not decode at all, might has to change to a different approach
                             let decoded = try FirestoreDecoder().decode(Exercise.self, from: document.data())
                             exercises.append(decoded)
                         } catch let error {

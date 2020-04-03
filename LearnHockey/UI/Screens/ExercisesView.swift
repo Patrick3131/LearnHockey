@@ -113,7 +113,7 @@ private extension ExercisesView {
                     destination: ExerciseDetailView(exercise: Exercise.mock),
                     tag: exercise.name!,
                     selection: self.routingBinding.exercise) {
-                        ExerciseCell(exercise: exercise.name!, difficulty: exercise.difficulty!.rawValue , amountOfPlayers: exercise.amountOfPlayers!)
+                        ExerciseCell(viewModel: ExerciseCellViewModel(exercise: exercise))
                 }
                 
             }
