@@ -35,24 +35,31 @@ extension AppState {
         var categories = Category.allCases
         var exercises: Loadable<[Exercise]> = .notRequested
         var exerciseDetail: Loadable<Exercise> = .notRequested
-        var accountDetails: Loadable<AccountDetails> = .notRequested
+        var accountDetails: Loadable<Account> = .notRequested
         
-        struct AccountDetails: Equatable {
+        struct Account: Equatable {
             var userUID: String?
             var name: String?
             var loggedIn: Bool = false
-            var premiumUser: Bool = false
+            var details: Details?
         }
     }
 }
 
-typealias AccountDetails = AppState.UserData.AccountDetails
+typealias Account = AppState.UserData.Account
 import FirebaseAuth
-extension AccountDetails {
+extension Account {
     init(_ user: User) {
         self.userUID = user.uid
         self.name = user.displayName
         self.loggedIn = true
+    }
+}
+
+extension Account {
+    struct Details: Codable, Equatable {
+        var premium: Bool = false
+        
     }
 }
 

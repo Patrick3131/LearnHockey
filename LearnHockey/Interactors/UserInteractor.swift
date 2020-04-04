@@ -17,12 +17,12 @@ protocol UserInteractor {
     func createPremium()
 }
 
-extension AccountDetails {
-    init(accountDetails:AccountDetails, isPremiumUser: Bool) {
+extension Account {
+    init(accountDetails:Account, isPremiumUser: Bool) {
         self.name = accountDetails.name
         self.userUID = accountDetails.userUID
         self.loggedIn = accountDetails.loggedIn
-        self.premiumUser = isPremiumUser
+        self.details = Details(premium: isPremiumUser)
     }
 }
 
@@ -57,10 +57,10 @@ struct AppUserInteractor: UserInteractor {
         
     }
     
-    private func listenPremium(user: AccountDetails) {
+    private func listenPremium(user: Account) {
         premiumRepository.listenPremium(user: user.userUID ?? "1234", completion: { value in
             value.map { value in
-                return Loadable<AccountDetails>.loaded(AccountDetails(accountDetails: user, isPremiumUser: value))
+                return Loadable<Account>.loaded(Account(accountDetails: user, isPremiumUser: value))
             }
             .eraseToAnyPublisher()
             .sinkToLoadable { self.appState[\.userData.accountDetails] = $0.value! }
@@ -80,7 +80,7 @@ struct AppUserInteractor: UserInteractor {
         
         authRepository.checkLoginState()
             .combineLatest(premium){ value, value2 in
-                AccountDetails(accountDetails: value, isPremiumUser: value2)
+                Account(accountDetails: value, isPremiumUser: value2)
         }
         .sinkToLoadable { self.appState[\.userData.accountDetails] = $0 }
         .store(in: storage)
