@@ -12,7 +12,7 @@ import Combine
 struct ContentView: View {
     
     private let container: DIContainer
-    @State private var accountDetails: Loadable<AppState.UserData.AccountDetails> = .notRequested
+    @State private var accountDetails: Loadable<AppState.UserData.Account> = .notRequested
     init(container: DIContainer) {
         self.container = container
     }
@@ -51,7 +51,7 @@ struct ContentView: View {
 }
 
  extension ContentView {
-    var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.AccountDetails>,Never> {
+    var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.Account>,Never> {
         container.appState.updates(for:\.userData.accountDetails)
     }
 }

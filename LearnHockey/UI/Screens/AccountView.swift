@@ -13,7 +13,7 @@ struct AccountView: View {
     
     @Environment(\.injected) private var injected: DIContainer
     
-    @State private var accountDetails: Loadable<AppState.UserData.AccountDetails> = .notRequested
+    @State private var accountDetails: Loadable<AppState.UserData.Account> = .notRequested
     @State private var routingState = AccountRouting.notLoggedIn
     
     var body: some View {
@@ -65,7 +65,7 @@ struct AccountView: View {
                     buyPremium: {
                         self.createPremium()
                 },
-                    isPremium: accountDetails.value?.premiumUser ?? false)
+                    isPremium: accountDetails.value?.details?.premium ?? false)
             )
         case .notLoggedIn:
             return
@@ -85,7 +85,7 @@ struct AccountView: View {
         injected.interactors.authInteractor.createPremium()
     }
     
-    private var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.AccountDetails>,Never> {
+    private var authentificationUpdate: AnyPublisher<Loadable<AppState.UserData.Account>,Never> {
         injected.appState.updates(for:\.userData.accountDetails)
     }
     private var routingUpdate:AnyPublisher<AccountRouting,Never> {
