@@ -14,12 +14,12 @@ import FirebaseFirestore
 
 protocol AuthRepository {
     func logOut()
-    func checkLoginState() -> AnyPublisher<AccountDetails,Error>
+    func checkLoginState() -> AnyPublisher<Account,Error>
 }
 
 
 
-class FirebaseUserRepository: AuthRepository {
+class FirebaseAuthRepository: AuthRepository {
     
     var handler: AuthStateDidChangeListenerHandle?
     var storage = Set<AnyCancellable>()
@@ -43,18 +43,18 @@ class FirebaseUserRepository: AuthRepository {
     
     lazy var authPublisher = FirebaseAuthPublisher()
     
-    func checkLoginState() -> AnyPublisher<AccountDetails,Error> {
-        authPublisher.userPublisher
+    func checkLoginState() -> AnyPublisher<Account,Error> {
+        authPublisher.publisher
             .print()
             .flatMap(
-                ifSome: { [weak self] (user: User) -> AnyPublisher<AccountDetails,Error> in
+                ifSome: { [weak self] (user: User) -> AnyPublisher<Account,Error> in
                     guard let safeSelf = self else { return Empty().eraseToAnyPublisher() }
                     return safeSelf.handleUserInDatabase(user: user.uid)
-                        .flatMap { result -> AnyPublisher<AccountDetails,Error> in
-                            Just<AccountDetails>(AccountDetails(user)).setFailureType(to: Error.self).eraseToAnyPublisher()
+                        .flatMap { result -> AnyPublisher<Account,Error> in
+                            Just<Account>(Account(user)).setFailureType(to: Error.self).eraseToAnyPublisher()
                     }.eraseToAnyPublisher()
-                }, ifNone: { () -> AnyPublisher<AccountDetails,Error> in
-                    Just<AccountDetails>(AccountDetails(userUID: nil, name: nil, loggedIn: false, premiumUser: false)).setFailureType(to: Error.self).eraseToAnyPublisher()
+                }, ifNone: { () -> AnyPublisher<Account,Error> in
+                    Just<Account>(Account(userUID: nil, name: nil, loggedIn: false, details: nil)).setFailureType(to: Error.self).eraseToAnyPublisher()
             })
     }
     
