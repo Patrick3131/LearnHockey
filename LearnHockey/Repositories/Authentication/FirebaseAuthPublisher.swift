@@ -10,14 +10,20 @@ import Foundation
 import FirebaseAuth
 import Combine
 
-class FirebaseAuthPublisher {
+protocol CustomPublisher {
+    associatedtype myType
+    var publisher: AnyPublisher <myType?,Error> { get set }
+}
+
+class FirebaseAuthPublisher: CustomPublisher {
+    typealias myType = User
     
-    var userPublisher: AnyPublisher<User?,Error>
+    var publisher: AnyPublisher<myType?,Error>
     private var cancelBar = [AnyCancellable]()
     private let userSubject = CurrentValueSubject<User?,Error>(nil)
     
     init() {
-        userPublisher = userSubject.eraseToAnyPublisher()
+        publisher = userSubject.eraseToAnyPublisher()
         let handle = Auth.auth().addStateDidChangeListener { [userSubject] (auth, user) in
             userSubject.send(user)
         }
