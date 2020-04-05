@@ -19,7 +19,7 @@ class FirebaseAuthPublisher: CustomPublisher {
     typealias myType = User
     
     var publisher: AnyPublisher<myType?,Error>
-    private var cancelBar = [AnyCancellable]()
+    private var cancelBag = [AnyCancellable]()
     private let userSubject = CurrentValueSubject<User?,Error>(nil)
     
     init() {
@@ -30,7 +30,7 @@ class FirebaseAuthPublisher: CustomPublisher {
         
         AnyCancellable {
             Auth.auth().removeStateDidChangeListener(handle)
-        }.store(in: &cancelBar)
+        }.store(in: &cancelBag)
     }
     
 }
