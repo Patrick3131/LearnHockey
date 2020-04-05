@@ -9,7 +9,7 @@ target 'LearnHockey' do
 pod "Firebase/Auth"
 pod "Firebase/Firestore"
 pod "Firebase/Storage"
-pod 'CodableFirebase'
+pod 'CodableFirebase', :git => 'https://github.com/Patrick3131/CodableFirebase.git'
 pod "Firebase/Auth"
 pod 'FirebaseUI'
 #pod "FirebaseUI/Auth"

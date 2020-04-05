@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol UserRepository {
+protocol AccountRepository {
+    var auth: AuthRepository { get set }
+    var premium: PremiumRepository { get set }
     
 }
 
-class FirebaseUserRepository: UserRepository {
-    
-}
+//class FirebaseUserRepository: UserRepository {
+//    
+//}

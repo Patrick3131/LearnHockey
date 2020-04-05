@@ -11,7 +11,7 @@ import Combine
 import SwiftUI
 import FirebaseAuth
 
-protocol UserInteractor {
+protocol AccountInteractor {
     func loginState()
     func logOut()
     func createPremium()
@@ -27,7 +27,7 @@ extension Account {
 }
 
 import FirebaseFirestore
-struct AppUserInteractor: UserInteractor {
+struct AppAccountInteractor: AccountInteractor {
     
     
     let appState: Store<AppState>
@@ -61,14 +61,14 @@ struct AppUserInteractor: UserInteractor {
     
     private func listenPremium(user: Account) {
         
-        premiumRepository.listenPremium(user: user.userUID ?? "1234", completion: { value in
-            value.map { value in
-                return Loadable<Account>.loaded(Account(accountDetails: user, isPremiumUser: value))
-            }
-            .eraseToAnyPublisher()
-            .sinkToLoadable { self.appState[\.userData.accountDetails] = $0.value! }
-            .store(in: self.storage)
-        })
+//        premiumRepository.listenPremium(user: user.userUID ?? "1234", completion: { value in
+//            value.map { value in
+//                return Loadable<Account>.loaded(Account(accountDetails: user, isPremiumUser: value))
+//            }
+//            .eraseToAnyPublisher()
+//            .sinkToLoadable { self.appState[\.userData.accountDetails] = $0.value! }
+//            .store(in: self.storage)
+//        })
     }
     
     
@@ -96,7 +96,7 @@ struct AppUserInteractor: UserInteractor {
     
 }
 
-struct StubUserInteractor: UserInteractor {
+struct StubUserInteractor: AccountInteractor {
     func createPremium() {
         
     }

@@ -10,10 +10,10 @@
 extension DIContainer {
     struct Interactors {
         let exerciseInteractor: ExerciseInteractor
-        let authInteractor: UserInteractor
+        let authInteractor: AccountInteractor
         
         init(exerciseInteractor: ExerciseInteractor,
-             authInteractor: UserInteractor
+             authInteractor: AccountInteractor
         ) {
             self.exerciseInteractor = exerciseInteractor
             self.authInteractor = authInteractor
