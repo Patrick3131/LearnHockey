@@ -26,6 +26,7 @@ extension Account {
     }
 }
 
+import FirebaseFirestore
 struct AppUserInteractor: UserInteractor {
     
     
@@ -33,14 +34,14 @@ struct AppUserInteractor: UserInteractor {
     let authRepository: AuthRepository
     let premiumRepository: PremiumRepository
     let storage = CancelBag()
-
+    
     
     
     init(authRepository: AuthRepository, appState: Store<AppState>, premiumRepository: PremiumRepository) {
         self.authRepository = authRepository
         self.appState = appState
-           self.premiumRepository = premiumRepository
-       }
+        self.premiumRepository = premiumRepository
+    }
     
     func createPremium() {
         let userID = appState[\.userData.accountDetails].value?.userUID
@@ -56,8 +57,10 @@ struct AppUserInteractor: UserInteractor {
             .store(in: storage)
         
     }
+
     
     private func listenPremium(user: Account) {
+        
         premiumRepository.listenPremium(user: user.userUID ?? "1234", completion: { value in
             value.map { value in
                 return Loadable<Account>.loaded(Account(accountDetails: user, isPremiumUser: value))

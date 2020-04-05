@@ -10,14 +10,15 @@ import Foundation
 import Combine
 import FirebaseFirestore
 
-struct FirebaseDocumentPublisher {
+class FirestoreDocumentPublisher {
     typealias myType = [String : Any]?
     var publisher: AnyPublisher<myType, Error>
     private var cancelBag = [AnyCancellable]()
     private let dataSubject = CurrentValueSubject<myType,Error>(nil)
+    private let listener: ListenerRegistration
     init(reference: DocumentReference) {
         publisher = dataSubject.eraseToAnyPublisher()
-        let listener = reference.addSnapshotListener { [dataSubject] (documentSnaptshot, error) in
+        self.listener = reference.addSnapshotListener { [dataSubject] (documentSnaptshot, error) in
             if let error = error {
                 print("Error fetching document: \(error) for reference \(reference)")
                 dataSubject.send(completion: Subscribers.Completion<Error>.failure(error))
@@ -26,8 +27,10 @@ struct FirebaseDocumentPublisher {
                 dataSubject.send(document)
             }
         }
-        AnyCancellable {
-            listener.remove()
+        AnyCancellable { [weak self] in
+            if let safeSelf = self {
+                safeSelf.listener.remove()
+            }
         }.store(in: &cancelBag)
     }
 }

@@ -17,7 +17,6 @@
 		CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20326B23FC942D00EE5365 /* ExercisesView.swift */; };
 		CD2CDADE2437DD5900EB0395 /* ExerciseCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CDADD2437DD5900EB0395 /* ExerciseCellViewModel.swift */; };
 		CD2CDAE02438D1F800EB0395 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CDADF2438D1F800EB0395 /* UserRepository.swift */; };
-		CD2CDAE22438D33F00EB0395 /* FirebaseUserPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CDAE12438D33F00EB0395 /* FirebaseUserPublisher.swift */; };
 		CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */; };
 		CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */; };
 		CD33099123FB0D7B005EEB65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33099023FB0D7B005EEB65 /* ContentView.swift */; };
@@ -63,7 +62,9 @@
 		CDC9D664240F406B00D45F49 /* AccountNotLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */; };
 		CDCD3D6A24100FD600DB811F /* BuySubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */; };
 		CDCD3D6E2410666D00DB811F /* PremiumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */; };
-		CDEA60D22439607500B35C35 /* FirebaseDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA60D12439607500B35C35 /* FirebaseDocumentPublisher.swift */; };
+		CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */; };
+		CDEFDED6243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */; };
+		CDEFDED8243A2F340055A172 /* FirestoreDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFDED7243A2F340055A172 /* FirestoreDecoder+Extension.swift */; };
 		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +101,6 @@
 		CD20326B23FC942D00EE5365 /* ExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesView.swift; sourceTree = "<group>"; };
 		CD2CDADD2437DD5900EB0395 /* ExerciseCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCellViewModel.swift; sourceTree = "<group>"; };
 		CD2CDADF2438D1F800EB0395 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		CD2CDAE12438D33F00EB0395 /* FirebaseUserPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserPublisher.swift; sourceTree = "<group>"; };
 		CD33098923FB0D7B005EEB65 /* LearnHockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnHockey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD33098C23FB0D7B005EEB65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD33098E23FB0D7B005EEB65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +152,9 @@
 		CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNotLoggedIn.swift; sourceTree = "<group>"; };
 		CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionView.swift; sourceTree = "<group>"; };
 		CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumRepository.swift; sourceTree = "<group>"; };
-		CDEA60D12439607500B35C35 /* FirebaseDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDocumentPublisher.swift; sourceTree = "<group>"; };
+		CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDocumentPublisher.swift; sourceTree = "<group>"; };
+		CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDecodedDocumentPublisher.swift; sourceTree = "<group>"; };
+		CDEFDED7243A2F340055A172 /* FirestoreDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreDecoder+Extension.swift"; sourceTree = "<group>"; };
 		E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockeyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68C0859FB7EF5A725042F01 /* Pods_LearnHockey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearnHockey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,15 +324,13 @@
 		CD3309BF23FB0DF8005EEB65 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				CDFB381C2422A715007B0614 /* Authentication */,
+				CDEFDED2243A2D530055A172 /* Publisher */,
 				CD9F3A9B240979CA0064016B /* Firestore */,
 				CD02E51224095B0D00F68AA3 /* Storage */,
 				CD2CDADF2438D1F800EB0395 /* UserRepository.swift */,
 				CD9F3A9C24097A910064016B /* ExercisesWebRepository.swift */,
 				CDC9D64E240C2B6F00D45F49 /* AuthRepository.swift */,
 				CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */,
-				CD2CDAE12438D33F00EB0395 /* FirebaseUserPublisher.swift */,
-				CDEA60D12439607500B35C35 /* FirebaseDocumentPublisher.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -446,6 +446,33 @@
 				CD2CDADD2437DD5900EB0395 /* ExerciseCellViewModel.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		CDEFDED2243A2D530055A172 /* Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				CDEFDED3243A2D5D0055A172 /* Firebase */,
+			);
+			path = Publisher;
+			sourceTree = "<group>";
+		};
+		CDEFDED3243A2D5D0055A172 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CDEFDED4243A2DD20055A172 /* Firestore */,
+				CDFB381C2422A715007B0614 /* Authentication */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CDEFDED4243A2DD20055A172 /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+				CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */,
+				CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */,
+				CDEFDED7243A2F340055A172 /* FirestoreDecoder+Extension.swift */,
+			);
+			path = Firestore;
 			sourceTree = "<group>";
 		};
 		CDFB381C2422A715007B0614 /* Authentication */ = {
@@ -723,7 +750,6 @@
 				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
-				CD2CDAE22438D33F00EB0395 /* FirebaseUserPublisher.swift in Sources */,
 				CD69E3B6240ABFE200958FFC /* ThreeStarView.swift in Sources */,
 				CDC9D651240C2E8100D45F49 /* UserInteractor.swift in Sources */,
 				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,
@@ -740,11 +766,13 @@
 				CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */,
 				CDC9D64D240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift in Sources */,
 				CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */,
-				CDEA60D22439607500B35C35 /* FirebaseDocumentPublisher.swift in Sources */,
+				CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */,
 				CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */,
 				CD33099123FB0D7B005EEB65 /* ContentView.swift in Sources */,
 				CD2CDAE02438D1F800EB0395 /* UserRepository.swift in Sources */,
 				CD69E3B4240AAC4200958FFC /* DifficultyView.swift in Sources */,
+				CDEFDED6243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift in Sources */,
+				CDEFDED8243A2F340055A172 /* FirestoreDecoder+Extension.swift in Sources */,
 				CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */,
 				CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */,
 				CDC9D653240C331500D45F49 /* LoginView.swift in Sources */,
