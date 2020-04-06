@@ -16,9 +16,9 @@ struct SubscriptionView: View {
     
     private var content: AnyView {
         switch subscription {
-        case .noSubscription(let valid):
+        case let .noSubscription(valid):
             return AnyView(NoValidSubscription(valid: valid))
-        case .validSubscription(let period,let cost,let valid):
+        case let .validSubscription(period,cost,valid):
             return AnyView(HasSubscription(period: period, cost: cost, valid: valid))
         }
     }
