@@ -14,6 +14,7 @@ struct NoValidSubscription: View {
     var body: some View {
         VStack {
             title
+            validText
         }
     }
     

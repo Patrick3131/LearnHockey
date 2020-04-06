@@ -69,7 +69,7 @@ struct AccountView: View {
             )
         case .notLoggedIn:
             return
-                AnyView(AccountNotLoggedIn(loginButtonClicked: {
+                AnyView(NotLoggedInView(loginButtonClicked: {
                     self.injected.appState[\.routing.account] = .loggingIn
                 }))
         case .loggingIn:

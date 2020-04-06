@@ -42,9 +42,9 @@ struct ExercisesView: View {
     private var content: AnyView {
         switch exercises {
         case .notRequested: return AnyView(notRequestedView)
-        case let .isLoading(last, _): return AnyView(Text("loading"))
+        case .isLoading(_, _): return AnyView(Text("loading"))
         case let .loaded(exercises) : return AnyView(loadedView(exercises))
-        case let .failed(error): return AnyView(Text("failed"))
+        case .failed(_): return AnyView(Text("failed"))
         }
     }
     private func filterExercises() {
