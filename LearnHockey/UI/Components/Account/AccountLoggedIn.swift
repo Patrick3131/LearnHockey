@@ -30,13 +30,13 @@ struct AccountLoggedIn: View {
                             Button(action: {
                                 self.buyPremium()
                             }, label: {
-                                BuySubscriptionView()
+                                BuySubscriptionElementView()
                                 .frame(width: geometry.size.width * 0.9, height: geometry.size.width * 0.2, alignment: .center)
                             })
                             Button(action: {
                                 self.buyPremium()
                             }, label: {
-                                BuySubscriptionView(subscriptionText: "Yearly Subscription", amountText: "29.99 € / Year")
+                                BuySubscriptionElementView(subscriptionText: "Yearly Subscription", amountText: "29.99 € / Year")
                                 .frame(width: geometry.size.width * 0.9, height: geometry.size.width * 0.2, alignment: .center)
                             })
                         }
@@ -46,7 +46,7 @@ struct AccountLoggedIn: View {
                     }
                 }
                 Spacer().frame(height: geometry.size.height * 0.1)
-                LogInOutButton(action: {
+                ActionButton(action: {
                     self.logOut()
                 }, title: "Log out", width: geometry.size.width * 0.7)
             }
@@ -68,14 +68,14 @@ struct AccountLoggedIn: View {
                         Button(action: {
                             self.buyPremium()
                         }, label: {
-                            BuySubscriptionView()
+                            BuySubscriptionElementView()
 
                         })
 //                            .frame(width:200)
                         Button(action: {
                             self.buyPremium()
                         }, label: {
-                            BuySubscriptionView(subscriptionText: "Yearly Subscription", amountText: "29.99 € / Year")
+                            BuySubscriptionElementView(subscriptionText: "Yearly Subscription", amountText: "29.99 € / Year")
 
                         })
                     }
