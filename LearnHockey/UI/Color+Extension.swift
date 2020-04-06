@@ -14,3 +14,11 @@ extension Color {
     static let baseLight = Color("baseLight")
     static let baseMidDark = Color("baseMidDark")
 }
+
+import UIKit.UIButton
+
+extension UIColor {
+    static var button: UIColor {
+        return UIButton(type: .system).tintColor
+    }
+}
