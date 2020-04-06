@@ -58,10 +58,22 @@
 		CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */; };
 		CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65C240EDD3300D45F49 /* AccountView.swift */; };
 		CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */; };
-		CDC9D662240F405100D45F49 /* LogInOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D661240F405100D45F49 /* LogInOutButton.swift */; };
-		CDC9D664240F406B00D45F49 /* AccountNotLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */; };
-		CDCD3D6A24100FD600DB811F /* BuySubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */; };
+		CDC9D662240F405100D45F49 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D661240F405100D45F49 /* ActionButton.swift */; };
+		CDC9D664240F406B00D45F49 /* NotLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */; };
+		CDCD3D6A24100FD600DB811F /* BuySubscriptionElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */; };
 		CDCD3D6E2410666D00DB811F /* PremiumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */; };
+		CDE3A38D243B4E4A005A4FC0 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */; };
+		CDE3A38F243B5059005A4FC0 /* ProfilOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */; };
+		CDE3A391243B5848005A4FC0 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A390243B5848005A4FC0 /* FeedbackView.swift */; };
+		CDE3A393243B5B34005A4FC0 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A392243B5B34005A4FC0 /* SubscriptionView.swift */; };
+		CDE3A396243B6697005A4FC0 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A395243B6697005A4FC0 /* String+Extensions.swift */; };
+		CDE3A399243B6E50005A4FC0 /* NoValidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A398243B6E50005A4FC0 /* NoValidSubscription.swift */; };
+		CDE3A39B243B6E6B005A4FC0 /* HasSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A39A243B6E6B005A4FC0 /* HasSubscription.swift */; };
+		CDE3A39D243B81A1005A4FC0 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A39C243B81A1005A4FC0 /* ProfilView.swift */; };
+		CDE3A39F243B829F005A4FC0 /* BuySubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */; };
+		CDE3A3A1243B82B3005A4FC0 /* SubscriptionTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */; };
+		CDE3A3A3243B8733005A4FC0 /* CancelSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */; };
+		CDE3A3A5243BA979005A4FC0 /* AccountView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A4243BA979005A4FC0 /* AccountView2.swift */; };
 		CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */; };
 		CDEFDED6243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */; };
 		F3141125E1035A4735CB8A25 /* Pods_LearnHockeyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A242EDE872C6474DC3AD08 /* Pods_LearnHockeyTests.framework */; };
@@ -147,10 +159,22 @@
 		CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		CDC9D65C240EDD3300D45F49 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoggedIn.swift; sourceTree = "<group>"; };
-		CDC9D661240F405100D45F49 /* LogInOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInOutButton.swift; sourceTree = "<group>"; };
-		CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNotLoggedIn.swift; sourceTree = "<group>"; };
-		CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionView.swift; sourceTree = "<group>"; };
+		CDC9D661240F405100D45F49 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedInView.swift; sourceTree = "<group>"; };
+		CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionElementView.swift; sourceTree = "<group>"; };
 		CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumRepository.swift; sourceTree = "<group>"; };
+		CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
+		CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilOverviewView.swift; sourceTree = "<group>"; };
+		CDE3A390243B5848005A4FC0 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		CDE3A392243B5B34005A4FC0 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		CDE3A395243B6697005A4FC0 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		CDE3A398243B6E50005A4FC0 /* NoValidSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoValidSubscription.swift; sourceTree = "<group>"; };
+		CDE3A39A243B6E6B005A4FC0 /* HasSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSubscription.swift; sourceTree = "<group>"; };
+		CDE3A39C243B81A1005A4FC0 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionView.swift; sourceTree = "<group>"; };
+		CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTestView.swift; sourceTree = "<group>"; };
+		CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelSubscriptionView.swift; sourceTree = "<group>"; };
+		CDE3A3A4243BA979005A4FC0 /* AccountView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView2.swift; sourceTree = "<group>"; };
 		CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDocumentPublisher.swift; sourceTree = "<group>"; };
 		CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDecodedDocumentPublisher.swift; sourceTree = "<group>"; };
 		E59C68A17CEF8FFBE6454466 /* Pods-LearnHockeyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnHockeyUITests.release.xcconfig"; path = "Target Support Files/Pods-LearnHockeyUITests/Pods-LearnHockeyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -302,6 +326,7 @@
 		CD3309BD23FB0DE7005EEB65 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CDE3A394243B6685005A4FC0 /* Extensions */,
 				CD3309CB23FB1535005EEB65 /* Loadable.swift */,
 				CD3309C923FB1528005EEB65 /* Helpers.swift */,
 				CD02E53A2409778B00F68AA3 /* KingfisherBridge.swift */,
@@ -371,6 +396,7 @@
 				CD20326B23FC942D00EE5365 /* ExercisesView.swift */,
 				CD02E5102409524000F68AA3 /* ExerciseDetailView.swift */,
 				CDC9D658240ED94A00D45F49 /* TabBarView.swift */,
+				CDE3A3A4243BA979005A4FC0 /* AccountView2.swift */,
 				CDC9D65C240EDD3300D45F49 /* AccountView.swift */,
 			);
 			path = Screens;
@@ -426,11 +452,19 @@
 		CDC9D65E240EDED800D45F49 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				CDE3A397243B6E29005A4FC0 /* Subscription */,
 				CDC9D652240C331500D45F49 /* LoginView.swift */,
 				CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */,
-				CDC9D661240F405100D45F49 /* LogInOutButton.swift */,
-				CDC9D663240F406B00D45F49 /* AccountNotLoggedIn.swift */,
-				CDCD3D6924100FD600DB811F /* BuySubscriptionView.swift */,
+				CDC9D661240F405100D45F49 /* ActionButton.swift */,
+				CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */,
+				CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */,
+				CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */,
+				CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */,
+				CDE3A390243B5848005A4FC0 /* FeedbackView.swift */,
+				CDE3A39C243B81A1005A4FC0 /* ProfilView.swift */,
+				CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */,
+				CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */,
+				CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -444,6 +478,24 @@
 				CD2CDADD2437DD5900EB0395 /* ExerciseCellViewModel.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		CDE3A394243B6685005A4FC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CDE3A395243B6697005A4FC0 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CDE3A397243B6E29005A4FC0 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				CDE3A392243B5B34005A4FC0 /* SubscriptionView.swift */,
+				CDE3A398243B6E50005A4FC0 /* NoValidSubscription.swift */,
+				CDE3A39A243B6E6B005A4FC0 /* HasSubscription.swift */,
+			);
+			path = Subscription;
 			sourceTree = "<group>";
 		};
 		CDEFDED2243A2D530055A172 /* Publisher */ = {
@@ -728,6 +780,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC9D659240ED94A00D45F49 /* TabBarView.swift in Sources */,
+				CDE3A38F243B5059005A4FC0 /* ProfilOverviewView.swift in Sources */,
+				CDE3A399243B6E50005A4FC0 /* NoValidSubscription.swift in Sources */,
 				CDBE57BA24143C06005B6672 /* Color+Extension.swift in Sources */,
 				CD9F3A9D24097A910064016B /* ExercisesWebRepository.swift in Sources */,
 				CD3309DE23FB2514005EEB65 /* CategoriesListView.swift in Sources */,
@@ -736,22 +790,26 @@
 				CDC9D657240ECBF600D45F49 /* FirebaseWebRepository.swift in Sources */,
 				CDC9D64F240C2B6F00D45F49 /* AuthRepository.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
+				CDE3A39D243B81A1005A4FC0 /* ProfilView.swift in Sources */,
 				CDA5A17B2409E7720083097C /* DetailItemView.swift in Sources */,
+				CDE3A3A3243B8733005A4FC0 /* CancelSubscriptionView.swift in Sources */,
 				CD2CDADE2437DD5900EB0395 /* ExerciseCellViewModel.swift in Sources */,
 				CD69E3B8240AC02F00958FFC /* ExerciseCell.swift in Sources */,
 				CD20326C23FC942D00EE5365 /* ExercisesView.swift in Sources */,
 				CD02E5112409524000F68AA3 /* ExerciseDetailView.swift in Sources */,
 				CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
-				CDC9D664240F406B00D45F49 /* AccountNotLoggedIn.swift in Sources */,
+				CDC9D664240F406B00D45F49 /* NotLoggedInView.swift in Sources */,
 				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
+				CDE3A393243B5B34005A4FC0 /* SubscriptionView.swift in Sources */,
 				CD3309D423FB1A4E005EEB65 /* InteractorsDIContainer.swift in Sources */,
 				CD69E3B6240ABFE200958FFC /* ThreeStarView.swift in Sources */,
 				CDC9D651240C2E8100D45F49 /* AccountInteractor.swift in Sources */,
 				CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */,
 				CD3309DA23FB1EF0005EEB65 /* AppSystemEventsHandler.swift in Sources */,
 				CD02E516240965A400F68AA3 /* StorageRepository.swift in Sources */,
+				CDE3A3A1243B82B3005A4FC0 /* SubscriptionTestView.swift in Sources */,
 				CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */,
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
@@ -759,20 +817,26 @@
 				CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */,
 				CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */,
 				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
-				CDCD3D6A24100FD600DB811F /* BuySubscriptionView.swift in Sources */,
+				CDCD3D6A24100FD600DB811F /* BuySubscriptionElementView.swift in Sources */,
 				CD3309D823FB1E35005EEB65 /* SystemEventsHandler.swift in Sources */,
 				CDC9D64D240C288300D45F49 /* FUIAuthBaseViewControllerWrapper.swift in Sources */,
+				CDE3A38D243B4E4A005A4FC0 /* ManageAccountView.swift in Sources */,
 				CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */,
+				CDE3A3A5243BA979005A4FC0 /* AccountView2.swift in Sources */,
 				CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */,
+				CDE3A396243B6697005A4FC0 /* String+Extensions.swift in Sources */,
 				CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */,
+				CDE3A39F243B829F005A4FC0 /* BuySubscriptionView.swift in Sources */,
 				CD33099123FB0D7B005EEB65 /* ContentView.swift in Sources */,
+				CDE3A391243B5848005A4FC0 /* FeedbackView.swift in Sources */,
+				CDE3A39B243B6E6B005A4FC0 /* HasSubscription.swift in Sources */,
 				CD2CDAE02438D1F800EB0395 /* AccountRepository.swift in Sources */,
 				CD69E3B4240AAC4200958FFC /* DifficultyView.swift in Sources */,
 				CDEFDED6243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift in Sources */,
 				CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */,
 				CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */,
 				CDC9D653240C331500D45F49 /* LoginView.swift in Sources */,
-				CDC9D662240F405100D45F49 /* LogInOutButton.swift in Sources */,
+				CDC9D662240F405100D45F49 /* ActionButton.swift in Sources */,
 				CD3309D623FB1BA5005EEB65 /* RootViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
