@@ -15,21 +15,7 @@ import Foundation
 // Should have called it "CVS Store"
 typealias Store<State> = CurrentValueSubject<State, Never>
 
-final class CancelBag {
-    var subscriptions = Set<AnyCancellable>()
-    
-    deinit {
-        subscriptions.removeAll()
-        print("Deinit Cancelbag")
-    }
-}
 
-extension AnyCancellable {
-    
-    func store(in cancelBag: CancelBag) {
-        cancelBag.subscriptions.insert(self)
-    }
-}
 
 
  // MARK: - Publisher Extensions
