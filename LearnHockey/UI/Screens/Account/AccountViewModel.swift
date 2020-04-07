@@ -18,6 +18,7 @@ extension AccountView {
                 setRouting()
             }
         }
+        @Published var showLoginView = false
 
         
         let container: DIContainer
@@ -36,13 +37,10 @@ extension AccountView {
             }
             
         }
-        
-        func loadPublisher() {
-            
-        }
+
         
         func loggingIn() {
-            routingState = .loggingIn
+            showLoginView = true
         }
         
         func cancelLogin() {

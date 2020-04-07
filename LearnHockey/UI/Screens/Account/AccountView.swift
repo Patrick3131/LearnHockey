@@ -14,6 +14,11 @@ struct AccountView: View {
     var body: some View {
         NavigationView {
             userContent
+                .sheet(isPresented: self.$viewModel.showLoginView, content: {
+                    LoginView(cancel: {
+                        self.viewModel.cancelLogin()
+                    })
+                })
                 .navigationBarTitle("Profil")
                 .navigationBarItems(trailing: (
                     Group {
@@ -39,10 +44,8 @@ extension AccountView {
             }))
         case .loggedIn:
             return AnyView(ProfilView(viewModel: viewModel.createProfilViewModel()))
-        case .loggingIn:
-            return AnyView(LoginView(cancel: {
-                self.viewModel.cancelLogin()
-            }))
+        default:
+            return AnyView(EmptyView())
         }
     }
 }
