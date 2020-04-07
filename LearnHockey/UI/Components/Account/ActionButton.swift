@@ -15,7 +15,6 @@ struct ActionButton: View {
 
     var body: some View {
         Button(action: {
-            print(self.title)
             self.action()
         }, label: {
             Text(title).font(.title)
