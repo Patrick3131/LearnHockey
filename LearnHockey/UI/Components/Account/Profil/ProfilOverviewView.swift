@@ -22,7 +22,7 @@ struct ProfilOverviewView: View {
                 SubscriptionView(subscription: self.viewModel.subscription)
                 Spacer().frame(width: 50, height: 30, alignment: .center)
                 ActionButton(action: {
-                    self.viewModel.clicked()
+                    self.viewModel.manage()
                 }, title: "Manage", width: 150)
                 
             }
@@ -35,20 +35,13 @@ extension ProfilOverviewView {
     struct ViewModel {
         var name: String
         var subscription: SubscriptionView.Subscription
-        
-        var clicked: () -> Void
-        
-        init(managed: @escaping () -> Void) {
-            self.clicked = managed
-            self.name = "Test"
-            self.subscription = SubscriptionView.Subscription.validSubscription(period: .monthly, cost: "13€", valid: .renew("15. Mai"))
-        }
+        var manage: () -> Void
     }
 }
 
 struct ProfilOverviewView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilOverviewView(viewModel: ProfilOverviewView.ViewModel(managed: {
+        ProfilOverviewView(viewModel: ProfilOverviewView.ViewModel(name: "Thomas", subscription: .validSubscription(period: .monthly, cost: "14€", valid: .expired("15. Mai")), manage: {
             
         }))
     }

@@ -58,7 +58,7 @@
 		CDC9D657240ECBF600D45F49 /* FirebaseWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */; };
 		CDC9D659240ED94A00D45F49 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D658240ED94A00D45F49 /* TabBarView.swift */; };
 		CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */; };
-		CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65C240EDD3300D45F49 /* AccountView.swift */; };
+		CDC9D65D240EDD3300D45F49 /* AccountViewOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65C240EDD3300D45F49 /* AccountViewOLD.swift */; };
 		CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */; };
 		CDC9D662240F405100D45F49 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D661240F405100D45F49 /* ActionButton.swift */; };
 		CDC9D664240F406B00D45F49 /* NotLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */; };
@@ -75,7 +75,7 @@
 		CDE3A39F243B829F005A4FC0 /* BuySubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */; };
 		CDE3A3A1243B82B3005A4FC0 /* SubscriptionTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */; };
 		CDE3A3A3243B8733005A4FC0 /* CancelSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */; };
-		CDE3A3A5243BA979005A4FC0 /* AccountView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A4243BA979005A4FC0 /* AccountView2.swift */; };
+		CDE3A3A5243BA979005A4FC0 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A4243BA979005A4FC0 /* AccountView.swift */; };
 		CDE3A3A8243BB1C6005A4FC0 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A3A7243BB1C6005A4FC0 /* AccountViewModel.swift */; };
 		CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */; };
 		CDEFDED6243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */; };
@@ -160,7 +160,7 @@
 		CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWebRepository.swift; sourceTree = "<group>"; };
 		CDC9D658240ED94A00D45F49 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		CDC9D65C240EDD3300D45F49 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		CDC9D65C240EDD3300D45F49 /* AccountViewOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewOLD.swift; sourceTree = "<group>"; };
 		CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoggedIn.swift; sourceTree = "<group>"; };
 		CDC9D661240F405100D45F49 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedInView.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionView.swift; sourceTree = "<group>"; };
 		CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTestView.swift; sourceTree = "<group>"; };
 		CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelSubscriptionView.swift; sourceTree = "<group>"; };
-		CDE3A3A4243BA979005A4FC0 /* AccountView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView2.swift; sourceTree = "<group>"; };
+		CDE3A3A4243BA979005A4FC0 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		CDE3A3A7243BB1C6005A4FC0 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		CDEA60D12439607500B35C35 /* FirestoreDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDocumentPublisher.swift; sourceTree = "<group>"; };
 		CDEFDED5243A2DF20055A172 /* FirestoreDecodedDocumentPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDecodedDocumentPublisher.swift; sourceTree = "<group>"; };
@@ -243,6 +243,16 @@
 				CD02E515240965A400F68AA3 /* StorageRepository.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		CD12B325243D2DB200331E78 /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */,
+				CDE3A390243B5848005A4FC0 /* FeedbackView.swift */,
+				CDE3A39C243B81A1005A4FC0 /* ProfilView.swift */,
+			);
+			path = Profil;
 			sourceTree = "<group>";
 		};
 		CD33098023FB0D7B005EEB65 = {
@@ -452,6 +462,7 @@
 		CDC9D65E240EDED800D45F49 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				CD12B325243D2DB200331E78 /* Profil */,
 				CDE3A397243B6E29005A4FC0 /* Subscription */,
 				CDC9D652240C331500D45F49 /* LoginView.swift */,
 				CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */,
@@ -459,9 +470,6 @@
 				CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */,
 				CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */,
 				CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */,
-				CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */,
-				CDE3A390243B5848005A4FC0 /* FeedbackView.swift */,
-				CDE3A39C243B81A1005A4FC0 /* ProfilView.swift */,
 				CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */,
 				CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */,
 				CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */,
@@ -501,9 +509,9 @@
 		CDE3A3A6243BADBC005A4FC0 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				CDE3A3A4243BA979005A4FC0 /* AccountView2.swift */,
-				CDC9D65C240EDD3300D45F49 /* AccountView.swift */,
+				CDE3A3A4243BA979005A4FC0 /* AccountView.swift */,
 				CDE3A3A7243BB1C6005A4FC0 /* AccountViewModel.swift */,
+				CDC9D65C240EDD3300D45F49 /* AccountViewOLD.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -824,7 +832,7 @@
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
-				CDC9D65D240EDD3300D45F49 /* AccountView.swift in Sources */,
+				CDC9D65D240EDD3300D45F49 /* AccountViewOLD.swift in Sources */,
 				CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */,
 				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
 				CDCD3D6A24100FD600DB811F /* BuySubscriptionElementView.swift in Sources */,
@@ -833,7 +841,7 @@
 				CDE3A38D243B4E4A005A4FC0 /* ManageAccountView.swift in Sources */,
 				CD33098F23FB0D7B005EEB65 /* SceneDelegate.swift in Sources */,
 				CD12B324243CD06B00331E78 /* CancelBag.swift in Sources */,
-				CDE3A3A5243BA979005A4FC0 /* AccountView2.swift in Sources */,
+				CDE3A3A5243BA979005A4FC0 /* AccountView.swift in Sources */,
 				CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */,
 				CDE3A396243B6697005A4FC0 /* String+Extensions.swift in Sources */,
 				CDE3A3A8243BB1C6005A4FC0 /* AccountViewModel.swift in Sources */,

@@ -28,7 +28,7 @@ struct TabBarView: View {
             CategoriesListView().tabItem {
                 TabBarItem(text: "Exercise", image: "star")
             }.tag(Tab.exercise)
-            AccountView().tabItem {
+            AccountView(viewModel: AccountView.ViewModel(container: injected)).tabItem {
                 TabBarItem(text: "Account", image: "person")
             }.tag(Tab.profil)
         }.accentColor(Color(.systemBackground))
