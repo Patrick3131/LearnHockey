@@ -40,6 +40,8 @@
 		CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */; };
 		CD3309DE23FB2514005EEB65 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */; };
 		CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */; };
+		CD527E8B243DF529006E358D /* README_UI.md in Resources */ = {isa = PBXBuildFile; fileRef = CD527E8A243DF529006E358D /* README_UI.md */; };
+		CD527E8D243DF798006E358D /* BuySubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD527E8C243DF798006E358D /* BuySubscriptionViewModel.swift */; };
 		CD69E3B4240AAC4200958FFC /* DifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69E3B3240AAC4200958FFC /* DifficultyView.swift */; };
 		CD69E3B6240ABFE200958FFC /* ThreeStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69E3B5240ABFE200958FFC /* ThreeStarView.swift */; };
 		CD69E3B8240AC02F00958FFC /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */; };
@@ -142,6 +144,8 @@
 		CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
 		CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInteractor.swift; sourceTree = "<group>"; };
+		CD527E8A243DF529006E358D /* README_UI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_UI.md; sourceTree = "<group>"; };
+		CD527E8C243DF798006E358D /* BuySubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionViewModel.swift; sourceTree = "<group>"; };
 		CD69E3B3240AAC4200958FFC /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
 		CD69E3B5240ABFE200958FFC /* ThreeStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeStarView.swift; sourceTree = "<group>"; };
 		CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
@@ -395,6 +399,7 @@
 				CD3309C423FB0E24005EEB65 /* Components */,
 				CD3309C323FB0E1B005EEB65 /* Screens */,
 				CDBE57B924143C06005B6672 /* Color+Extension.swift */,
+				CD527E8A243DF529006E358D /* README_UI.md */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -422,6 +427,17 @@
 				CDA5A17A2409E7720083097C /* DetailItemView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		CD527E89243DF4CD006E358D /* BuySubscription */ = {
+			isa = PBXGroup;
+			children = (
+				CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */,
+				CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */,
+				CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */,
+				CD527E8C243DF798006E358D /* BuySubscriptionViewModel.swift */,
+			);
+			path = BuySubscription;
 			sourceTree = "<group>";
 		};
 		CD915FCD240873AD00319A0B /* Modifiers */ = {
@@ -468,11 +484,9 @@
 				CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */,
 				CDC9D661240F405100D45F49 /* ActionButton.swift */,
 				CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */,
-				CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */,
+				CD527E89243DF4CD006E358D /* BuySubscription */,
 				CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */,
-				CDE3A39E243B829F005A4FC0 /* BuySubscriptionView.swift */,
 				CDE3A3A2243B8733005A4FC0 /* CancelSubscriptionView.swift */,
-				CDE3A3A0243B82B3005A4FC0 /* SubscriptionTestView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -665,6 +679,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD527E8B243DF529006E358D /* README_UI.md in Resources */,
 				CD33099923FB0D7C005EEB65 /* LaunchScreen.storyboard in Resources */,
 				CD33099623FB0D7C005EEB65 /* Preview Assets.xcassets in Resources */,
 				CDC9D655240EBFEB00D45F49 /* README.md in Resources */,
@@ -807,6 +822,7 @@
 				CDCD3D6E2410666D00DB811F /* PremiumRepository.swift in Sources */,
 				CDC9D657240ECBF600D45F49 /* FirebaseWebRepository.swift in Sources */,
 				CDC9D64F240C2B6F00D45F49 /* AuthRepository.swift in Sources */,
+				CD527E8D243DF798006E358D /* BuySubscriptionViewModel.swift in Sources */,
 				CD3309CC23FB1535005EEB65 /* Loadable.swift in Sources */,
 				CDE3A39D243B81A1005A4FC0 /* ProfilView.swift in Sources */,
 				CDA5A17B2409E7720083097C /* DetailItemView.swift in Sources */,
