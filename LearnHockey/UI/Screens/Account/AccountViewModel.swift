@@ -19,9 +19,9 @@ extension AccountView {
             }
         }
         @Published var showLoginView = false
-
+        @Published var showManageSubscription = false
         
-        let container: DIContainer
+        private let container: DIContainer
         private var cancelBag = CancelBag()
         
         init(container: DIContainer) {
@@ -30,7 +30,7 @@ extension AccountView {
             cancelBag.collect {
                 $routingState
                     .removeDuplicates()
-                    /// actually it would be enough if the state is only stored in this ViewModel
+                    /// actually it would be enough if the state is only stored in this ViewModel, I will remove the Routing state out of the Appstate
                     .sink { appState[\.routing.account] = $0 }
                 authentificationUpdate
                     .assign(to: \.accountDetails, on: self)
@@ -41,6 +41,10 @@ extension AccountView {
         
         func loggingIn() {
             showLoginView = true
+        }
+        
+        func manageSubscription() {
+            showManageSubscription = true
         }
         
         func cancelLogin() {
@@ -89,7 +93,10 @@ extension AccountView.ViewModel {
     }
     
     func createProfilOverviewViewModel() -> ProfilOverviewView.ViewModel {
-        ProfilOverviewView.ViewModel(name: accountDetails.value?.name ?? "", subscription: .validSubscription(period: .monthly, cost: "3€", valid: .renew("15. Mai")), manage: {
+        ProfilOverviewView.ViewModel(name: accountDetails.value?.name ?? "", subscription: .validSubscription(period: .monthly, cost: "3€", valid: .renew("15. Mai")), manage: { [weak self] in
+            if let safeSelf = self {
+                safeSelf.manageSubscription()
+            }
             
         })
     }
@@ -100,6 +107,11 @@ extension AccountView.ViewModel {
     
     func deleteProfil() {
         print("Ist noch nicht implementiert")
+    }
+    
+    // MARK: - BuySubscription
+    func createBuySubcriptionViewModel() -> BuySubscriptionView.ViewModel {
+        BuySubscriptionView.ViewModel(container: container)
     }
 }
 

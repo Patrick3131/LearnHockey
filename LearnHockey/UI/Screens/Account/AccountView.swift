@@ -14,11 +14,21 @@ struct AccountView: View {
     var body: some View {
         NavigationView {
             userContent
-                .sheet(isPresented: self.$viewModel.showLoginView, content: {
-                    LoginView(cancel: {
-                        self.viewModel.cancelLogin()
+                /// multiple sheets: https://stackoverflow.com/questions/58837007/multiple-sheetispresented-doesnt-work-in-swiftui
+                
+                .background(EmptyView()
+                    .sheet(isPresented: self.$viewModel.showLoginView, content: {
+                        LoginView(cancel: {
+                            self.viewModel.cancelLogin()
+                        })
+                    }))
+                .background(EmptyView()
+                    .sheet(isPresented: self.$viewModel.showManageSubscription, onDismiss: {
+                        print(12345)
+                    }, content: {
+                        BuySubscriptionView(viewModel: self.viewModel.createBuySubcriptionViewModel())
                     })
-                })
+            )
                 .navigationBarTitle("Profil")
                 .navigationBarItems(trailing: (
                     Group {
