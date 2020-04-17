@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import Combine
+import Purchases
 
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -26,6 +27,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let environment = AppEnvironment.bootstrap()
         let contentView = ContentView(container: environment.container)
 
+        // Set up Purchase
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: PrivateConfig.revenueCatApiKey)
+        
+        
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
