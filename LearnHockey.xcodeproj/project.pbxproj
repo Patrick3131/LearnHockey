@@ -40,6 +40,7 @@
 		CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */; };
 		CD3309DE23FB2514005EEB65 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */; };
 		CD3309E023FB27F0005EEB65 /* ExerciseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */; };
+		CD4981252449A03800289C53 /* PrivateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4981242449A03800289C53 /* PrivateConfig.swift */; };
 		CD527E8B243DF529006E358D /* README_UI.md in Resources */ = {isa = PBXBuildFile; fileRef = CD527E8A243DF529006E358D /* README_UI.md */; };
 		CD527E8D243DF798006E358D /* BuySubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD527E8C243DF798006E358D /* BuySubscriptionViewModel.swift */; };
 		CD527E90243E150C006E358D /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = CD527E8F243E150C006E358D /* Purchases */; };
@@ -145,6 +146,7 @@
 		CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
 		CD3309DF23FB27F0005EEB65 /* ExerciseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInteractor.swift; sourceTree = "<group>"; };
+		CD4981242449A03800289C53 /* PrivateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateConfig.swift; sourceTree = "<group>"; };
 		CD527E8A243DF529006E358D /* README_UI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_UI.md; sourceTree = "<group>"; };
 		CD527E8C243DF798006E358D /* BuySubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionViewModel.swift; sourceTree = "<group>"; };
 		CD69E3B3240AAC4200958FFC /* DifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyView.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				CD3309DB23FB1FB2005EEB65 /* AppEnvironment.swift */,
 				CD3309D723FB1E35005EEB65 /* SystemEventsHandler.swift */,
 				CD3309D923FB1EF0005EEB65 /* AppSystemEventsHandler.swift */,
+				CD4981242449A03800289C53 /* PrivateConfig.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 				CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */,
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
+				CD4981252449A03800289C53 /* PrivateConfig.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
 				CDC9D65D240EDD3300D45F49 /* AccountViewOLD.swift in Sources */,
 				CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */,
