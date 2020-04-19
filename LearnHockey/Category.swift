@@ -9,16 +9,14 @@
 import Foundation
 
 
-enum Category: String, CaseIterable {
-    case defense = "defense"
-    case midfield = "midfield"
-    case offense = "offense"
-    case games = "games"
+struct Category {
+    let name: String
+    var numberOfExercises = 4
 }
 
 
 
 extension Category: Identifiable {
-    var id: String { self.rawValue }
+    var id: String { self.name }
 }
 

@@ -32,7 +32,7 @@ typealias AccountRouting = AppState.ViewRouting.Account
 
 extension AppState {
     struct UserData {
-        var categories = Category.allCases
+        var categories = [Category(name: "Defense"),Category(name: "Midfield"),Category(name: "Offense"),Category(name: "Games")]
         var exercises: Loadable<[Exercise]> = .notRequested
         var exerciseDetail: Loadable<Exercise> = .notRequested
         var accountDetails: Loadable<Account> = .notRequested

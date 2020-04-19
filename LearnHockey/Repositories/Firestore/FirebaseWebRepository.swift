@@ -14,12 +14,12 @@ import Combine
 
 struct FirebaseWebRepository: ExercisesWebRepository {
     
-    var categorie = Category.games
+    var categorie = Category(name: "Games")
     var store: Firestore
     
     
     func loadExercises(category: Category) -> AnyPublisher<[Exercise], Error> {
-        let document = store.collection(category.rawValue)
+        let document = store.collection(category.name)
         return Future<[Exercise], Error> { promise in
             document.getDocuments { documents, error in
                 if let error = error {
@@ -42,7 +42,8 @@ struct FirebaseWebRepository: ExercisesWebRepository {
     }
     
     func loadExerciseDetail(_ exerciseId: String) -> AnyPublisher<Exercise, Error> {
-        let document = store.collection(categorie.rawValue).document(exerciseId)
+//        das mit den categorien muss noch umimplementiert werden
+        let document = store.collection(categorie.name).document(exerciseId)
         return Future<Exercise,Error> { promise in
             document.getDocument { document, error in
                 if let error = error {
@@ -69,7 +70,7 @@ struct FirebaseWebRepository: ExercisesWebRepository {
 
 extension FirebaseWebRepository {
     init() {
-        self.categorie = Category.games
+        self.categorie = Category(name: "Games")
         self.store = Firestore.firestore()
     }
 }
