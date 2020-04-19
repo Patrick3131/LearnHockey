@@ -34,7 +34,7 @@ struct ContentView: View {
         case .loaded(let details):
             
             if details.loggedIn == true {
-                return AnyView(CategoriesListView().inject(container))
+                return AnyView(CategoriesListView(viewModel: CategoriesListView.ViewModel(container: container)))
             } else {
                 return AnyView(LoginView() {
                     

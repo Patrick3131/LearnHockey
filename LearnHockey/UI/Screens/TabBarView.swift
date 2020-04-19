@@ -25,7 +25,7 @@ struct TabBarView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            CategoriesListView().tabItem {
+            CategoriesListView(viewModel: CategoriesListView.ViewModel(container: injected)).tabItem {
                 TabBarItem(text: "Exercise", image: "star")
             }.tag(Tab.exercise)
             AccountView(viewModel: AccountView.ViewModel(container: injected)).tabItem {

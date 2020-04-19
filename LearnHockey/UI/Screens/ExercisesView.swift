@@ -31,7 +31,7 @@ struct ExercisesView: View {
     
     var body: some View {
         content
-            .navigationBarTitle(category.rawValue.capitalized)
+            .navigationBarTitle(category.name.capitalized)
             .fixNavigationBarBug { self.goBack() }
             .onReceive(routingUpdate) { self.routingState = $0 }
             .onReceive([self.selection].publisher.first()) { _ in
@@ -140,6 +140,6 @@ private extension ExercisesView {
 
 struct Exercises_Previews: PreviewProvider {
     static var previews: some View {
-        ExercisesView(category: Category.games)
+        ExercisesView(category: Category(name: "games"))
     }
 }
