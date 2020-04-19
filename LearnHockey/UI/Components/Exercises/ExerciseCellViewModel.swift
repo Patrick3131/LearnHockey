@@ -8,15 +8,18 @@
 
 import SwiftUI
 
-struct ExerciseCellViewModel {
-    let exerciseName: String
-    let difficulty: Int
-    let amountOfPlayers: String
-    var colorText: Color = .baseDark
-    var colorStars: Color = .baseLight
+
+extension ExerciseCell {
+    struct ViewModel {
+        let exerciseName: String
+        let difficulty: Int
+        let amountOfPlayers: String
+        var colorText: Color = .baseDark
+        var colorStars: Color = .baseLight
+    }
 }
 
-extension ExerciseCellViewModel {
+extension ExerciseCell.ViewModel {
     init(exercise: Exercise){
         self.exerciseName = exercise.name ?? ""
         self.difficulty = exercise.difficulty?.rawValue ?? 0

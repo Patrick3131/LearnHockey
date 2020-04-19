@@ -12,7 +12,7 @@ import SwiftUI
 
 
 struct ExerciseCell: View {
-    let viewModel: ExerciseCellViewModel
+    let viewModel: ViewModel
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -29,6 +29,6 @@ struct ExerciseCell: View {
 
 struct ExerciseCell_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseCell(viewModel: ExerciseCellViewModel(exercise: Exercise.mock))
+        ExerciseCell(viewModel: ExerciseCell.ViewModel(exercise: Exercise.mock))
     }
 }
