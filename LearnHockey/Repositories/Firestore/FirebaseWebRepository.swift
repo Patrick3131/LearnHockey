@@ -14,7 +14,7 @@ import Combine
 
 struct FirebaseWebRepository: ExercisesWebRepository {
     
-    var categorie = Category(name: "Games")
+    var categorie = Category(name: "games")
     var store: Firestore
     
     
@@ -70,7 +70,7 @@ struct FirebaseWebRepository: ExercisesWebRepository {
 
 extension FirebaseWebRepository {
     init() {
-        self.categorie = Category(name: "Games")
+        self.categorie = Category(name: "games")
         self.store = Firestore.firestore()
     }
 }
