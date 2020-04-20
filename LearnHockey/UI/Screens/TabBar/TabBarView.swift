@@ -10,10 +10,10 @@ import SwiftUI
 
 struct TabBarView: View {
     
-    @State private var selectedTab = Tab.exercise
-    @Environment(\.injected) private var injected: DIContainer
+    @ObservedObject var viewModel: ViewModel
 
-    init() {
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
 //        let newAppearance = UINavigationBarAppearance()
 //        newAppearance.configureWithOpaqueBackground()
 //        newAppearance.backgroundColor = UIColor(named: "baseMidDark")
@@ -24,11 +24,11 @@ struct TabBarView: View {
     }
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            CategoriesListView(viewModel: CategoriesListView.ViewModel(container: injected)).tabItem {
+        TabView(selection: $viewModel.selectedTab) {
+            CategoriesListView(viewModel: self.viewModel.createCategoriesListViewModel()).tabItem {
                 TabBarItem(text: "Exercise", image: "star")
             }.tag(Tab.exercise)
-            AccountView(viewModel: AccountView.ViewModel(container: injected)).tabItem {
+            AccountView(viewModel: self.viewModel.createAccountViewModel()).tabItem {
                 TabBarItem(text: "Account", image: "person")
             }.tag(Tab.profil)
         }.accentColor(Color(.systemBackground))
@@ -41,8 +41,8 @@ extension TabBarView {
         case exercise, profil
     }
 }
-struct TabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarView()
-    }
-}
+//struct TabBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TabBarView()
+//    }
+//}

@@ -12,7 +12,7 @@ import Combine
 
 
 extension ExerciseDetailView {
-    class ViewModel: ObservableObject {
+    struct ViewModel {
         private let exercise: Exercise
         private let container: DIContainer
         

@@ -50,6 +50,8 @@
 		CD69E3B8240AC02F00958FFC /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */; };
 		CD6B2E2D244CE1B900FC0ED4 /* ExercisesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B2E2C244CE1B900FC0ED4 /* ExercisesViewModel.swift */; };
 		CD6B2E30244DD7BA00FC0ED4 /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B2E2F244DD7BA00FC0ED4 /* ExerciseDetailViewModel.swift */; };
+		CD6B2E32244DDF1E00FC0ED4 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B2E31244DDF1E00FC0ED4 /* ContentViewModel.swift */; };
+		CD8F1507244DE3EA006DC0D4 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8F1506244DE3EA006DC0D4 /* TabBarViewModel.swift */; };
 		CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */; };
 		CD915FD1240879CF00319A0B /* CategorieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD915FD0240879CF00319A0B /* CategorieCell.swift */; };
 		CD915FD42408AEEA00319A0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */; };
@@ -65,7 +67,6 @@
 		CDC9D657240ECBF600D45F49 /* FirebaseWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */; };
 		CDC9D659240ED94A00D45F49 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D658240ED94A00D45F49 /* TabBarView.swift */; };
 		CDC9D65B240EDB6A00D45F49 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */; };
-		CDC9D65D240EDD3300D45F49 /* AccountViewOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65C240EDD3300D45F49 /* AccountViewOLD.swift */; };
 		CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */; };
 		CDC9D662240F405100D45F49 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D661240F405100D45F49 /* ActionButton.swift */; };
 		CDC9D664240F406B00D45F49 /* NotLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */; };
@@ -158,6 +159,8 @@
 		CD69E3B7240AC02F00958FFC /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		CD6B2E2C244CE1B900FC0ED4 /* ExercisesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewModel.swift; sourceTree = "<group>"; };
 		CD6B2E2F244DD7BA00FC0ED4 /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
+		CD6B2E31244DDF1E00FC0ED4 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		CD8F1506244DE3EA006DC0D4 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		CD915FCE240873C500319A0B /* NavigationBarBugFixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBugFixer.swift; sourceTree = "<group>"; };
 		CD915FD0240879CF00319A0B /* CategorieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieCell.swift; sourceTree = "<group>"; };
 		CD915FD32408AEEA00319A0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -173,7 +176,6 @@
 		CDC9D656240ECBF600D45F49 /* FirebaseWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWebRepository.swift; sourceTree = "<group>"; };
 		CDC9D658240ED94A00D45F49 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CDC9D65A240EDB6A00D45F49 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		CDC9D65C240EDD3300D45F49 /* AccountViewOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewOLD.swift; sourceTree = "<group>"; };
 		CDC9D65F240F403500D45F49 /* AccountLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoggedIn.swift; sourceTree = "<group>"; };
 		CDC9D661240F405100D45F49 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedInView.swift; sourceTree = "<group>"; };
@@ -418,11 +420,11 @@
 		CD3309C323FB0E1B005EEB65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CD8F1505244DE38D006DC0D4 /* TabBar */,
+				CD6B2E33244DDF2500FC0ED4 /* ContentView */,
 				CD6B2E2E244DD79400FC0ED4 /* ExerciseDetail */,
 				CD6B2E2B244CE19D00FC0ED4 /* Exercises */,
 				CD332210244C562400347BDC /* CategoriesList */,
-				CD33099023FB0D7B005EEB65 /* ContentView.swift */,
-				CDC9D658240ED94A00D45F49 /* TabBarView.swift */,
 				CDE3A3A6243BADBC005A4FC0 /* Account */,
 			);
 			path = Screens;
@@ -476,6 +478,24 @@
 				CD6B2E2F244DD7BA00FC0ED4 /* ExerciseDetailViewModel.swift */,
 			);
 			path = ExerciseDetail;
+			sourceTree = "<group>";
+		};
+		CD6B2E33244DDF2500FC0ED4 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				CD6B2E31244DDF1E00FC0ED4 /* ContentViewModel.swift */,
+				CD33099023FB0D7B005EEB65 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		CD8F1505244DE38D006DC0D4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CDC9D658240ED94A00D45F49 /* TabBarView.swift */,
+				CD8F1506244DE3EA006DC0D4 /* TabBarViewModel.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		CD915FCD240873AD00319A0B /* Modifiers */ = {
@@ -563,7 +583,6 @@
 			children = (
 				CDE3A3A4243BA979005A4FC0 /* AccountView.swift */,
 				CDE3A3A7243BB1C6005A4FC0 /* AccountViewModel.swift */,
-				CDC9D65C240EDD3300D45F49 /* AccountViewOLD.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -875,6 +894,7 @@
 				CD02E5112409524000F68AA3 /* ExerciseDetailView.swift in Sources */,
 				CDC9D660240F403500D45F49 /* AccountLoggedIn.swift in Sources */,
 				CD3309D223FB1991005EEB65 /* DIContainer.swift in Sources */,
+				CD6B2E32244DDF1E00FC0ED4 /* ContentViewModel.swift in Sources */,
 				CDC9D664240F406B00D45F49 /* NotLoggedInView.swift in Sources */,
 				CD915FCF240873C500319A0B /* NavigationBarBugFixer.swift in Sources */,
 				CD3309CA23FB1528005EEB65 /* Helpers.swift in Sources */,
@@ -891,7 +911,6 @@
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
 				CD4981252449A03800289C53 /* PrivateConfig.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
-				CDC9D65D240EDD3300D45F49 /* AccountViewOLD.swift in Sources */,
 				CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */,
 				CD3309C623FB0E4B005EEB65 /* Category.swift in Sources */,
 				CDCD3D6A24100FD600DB811F /* BuySubscriptionElementView.swift in Sources */,
@@ -902,6 +921,7 @@
 				CD12B324243CD06B00331E78 /* CancelBag.swift in Sources */,
 				CDE3A3A5243BA979005A4FC0 /* AccountView.swift in Sources */,
 				CDEA60D22439607500B35C35 /* FirestoreDocumentPublisher.swift in Sources */,
+				CD8F1507244DE3EA006DC0D4 /* TabBarViewModel.swift in Sources */,
 				CDE3A396243B6697005A4FC0 /* String+Extensions.swift in Sources */,
 				CDE3A3A8243BB1C6005A4FC0 /* AccountViewModel.swift in Sources */,
 				CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */,

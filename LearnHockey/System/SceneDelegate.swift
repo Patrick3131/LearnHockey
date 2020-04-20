@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let environment = AppEnvironment.bootstrap()
-        let contentView = ContentView(container: environment.container)
+        let contentView = ContentView(viewModel: .init(container: environment.container))
 
         // Set up Purchase
         Purchases.debugLogsEnabled = true

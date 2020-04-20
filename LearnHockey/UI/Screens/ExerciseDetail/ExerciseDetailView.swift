@@ -11,7 +11,7 @@ import SwiftUI
 struct ExerciseDetailView: View {
     
     @Environment(\.locale) private var locale: Locale
-    @ObservedObject var viewModel: ViewModel
+    var viewModel: ViewModel
 
     var body: some View {
         GeometryReader { geometry in
