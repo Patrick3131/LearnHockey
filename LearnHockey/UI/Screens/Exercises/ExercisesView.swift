@@ -24,8 +24,6 @@ struct ExercisesView: View {
             .fixNavigationBarBug { self.viewModel.goBack() }
     }
     
-    
-    
     private var content: AnyView {
         switch viewModel.exercises {
         case .notRequested: return AnyView(notRequestedView)
@@ -67,10 +65,10 @@ private extension ExercisesView {
                 .padding([.top,.horizontal], 5)
             List(exercises) { exercise in
                 NavigationLink(
-                    destination: ExerciseDetailView(exercise: Exercise.mock),
+                    destination: ExerciseDetailView(viewModel: self.viewModel.createExerciseDetailViewModel(exercise: exercise)),
                     tag: exercise.name!,
                     selection: self.$viewModel.routingState.exercise) {
-                        ExerciseCell(viewModel: ExerciseCell.ViewModel(exercise: exercise))
+                        ExerciseCell(viewModel: self.viewModel.createExerciseCellViewModel(exercise: exercise))
                 }
                 
             }

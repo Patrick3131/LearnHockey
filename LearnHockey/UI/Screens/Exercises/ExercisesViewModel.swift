@@ -88,5 +88,8 @@ extension ExercisesView.ViewModel {
         return ExerciseCell.ViewModel(exercise: exercise)
     }
     
+    func createExerciseDetailViewModel(exercise: Exercise) -> ExerciseDetailView.ViewModel {
+        return ExerciseDetailView.ViewModel(container: container, exercise: exercise)
+    }
  
 }

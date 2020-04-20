@@ -9,26 +9,24 @@
 import SwiftUI
 
 struct ExerciseDetailView: View {
-    let exercise: Exercise
     
     @Environment(\.locale) private var locale: Locale
-    @Environment(\.injected) private var injected: DIContainer
-    
-    
+    @ObservedObject var viewModel: ViewModel
+
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 VStack(alignment: .leading, spacing: 5) {
-                    self.createImageItem(title: "Image", image: self.exercise.image)
-                    self.createDifficultyItem(title: "Difficulty", content: self.exercise.difficulty)
-                    self.createItem(title: "Amount of Players", content: self.exercise.amountOfPlayers)
-                    self.createItem(title: "Explanation", content: self.exercise.variation)
-                    self.createItem(title: "Duration", content: self.exercise.variation)
-                    self.createItem(title: "Coaching", content: self.exercise.variation)
-                    self.createItem(title: "Variation", content: self.exercise.coaching)
+                    self.createImageItem(title: "Image", image: self.viewModel.image)
+                    self.createDifficultyItem(title: "Difficulty", content: self.viewModel.difficulty)
+                    self.createItem(title: "Amount of Players", content: self.viewModel.amountOfPlayers)
+                    self.createItem(title: "Explanation", content: self.viewModel.variation)
+                    self.createItem(title: "Duration", content: self.viewModel.variation)
+                    self.createItem(title: "Coaching", content: self.viewModel.variation)
+                    self.createItem(title: "Variation", content: self.viewModel.coaching)
                     
                 }.padding()
-                    .navigationBarTitle(self.exercise.name ?? "")
+                    .navigationBarTitle(self.viewModel.navigationBarTitle)
             }.frame(width: geometry.size.width, height: geometry.size.height, alignment: .topLeading)
         }
         
@@ -75,8 +73,8 @@ struct ExerciseDetailView: View {
 }
 
 
-struct ExerciseView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExerciseDetailView(exercise: Exercise.mock)
-    }
-}
+//struct ExerciseView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ExerciseDetailView(exercise: Exercise.mock)
+//    }
+//}
