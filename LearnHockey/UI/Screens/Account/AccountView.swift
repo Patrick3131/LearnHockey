@@ -12,7 +12,6 @@ import Combine
 struct AccountView: View {
     @ObservedObject private(set) var viewModel: ViewModel
     var body: some View {
-        NavigationView {
             userContent
                 /// multiple sheets: https://stackoverflow.com/questions/58837007/multiple-sheetispresented-doesnt-work-in-swiftui
                 
@@ -41,7 +40,6 @@ struct AccountView: View {
                         }
                     }
                 ))
-        }
     }
 }
 

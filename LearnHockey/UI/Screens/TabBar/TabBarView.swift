@@ -23,12 +23,24 @@ struct TabBarView: View {
         UITabBar.appearance().barTintColor = UIColor(named: "baseMidDark")
     }
     
+    
+    /*
+     SwiftUI bug when switching between Tabs:
+     "2020-04-20 18:03:22.122113+0200 LearnHockey[23547:15656492] precondition failure: invalid input index: 2
+     "
+     temporary fix: https://stackoverflow.com/questions/58304009/how-to-debug-precondition-failure-in-xcode
+     Wrap the problematic view around a NavigationView in this case AccountView again and set the top padding to -60
+     */
     var body: some View {
         TabView(selection: $viewModel.selectedTab) {
-            CategoriesListView(viewModel: self.viewModel.createCategoriesListViewModel()).tabItem {
-                TabBarItem(text: "Exercise", image: "star")
+            CategoriesListView(viewModel: self.viewModel.createCategoriesListViewModel())
+                .tabItem {
+                    TabBarItem(text: "Exercise", image: "star")
             }.tag(Tab.exercise)
-            AccountView(viewModel: self.viewModel.createAccountViewModel()).tabItem {
+            NavigationView {
+                AccountView(viewModel: self.viewModel.createAccountViewModel())
+            }
+            .tabItem {
                 TabBarItem(text: "Account", image: "person")
             }.tag(Tab.profil)
         }.accentColor(Color(.systemBackground))
