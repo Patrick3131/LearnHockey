@@ -9,13 +9,10 @@ SwiftUI Sample App
 PrivateConfig file includes API-Keys and therefore is not under source control, if you want to run the app add you need to add it to the app.
 
 Sample:
-
+```
 struct PrivateConfig {
     static var revenueCatApiKey = "ApiKEY"
 }
-
-See also:
-https://github.com/nalexn/clean-architecture-swiftui
-
+```
 
 
