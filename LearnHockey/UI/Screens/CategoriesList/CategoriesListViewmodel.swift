@@ -20,14 +20,16 @@ extension CategoriesListView {
         
         init(container: DIContainer) {
             self.container = container
-            
-            self.categories = Loadable<[Category]>.loaded([Category(name: "Defense"),Category(name: "Midfield"),Category(name: "Offense"),Category(name: "Games")])
+            _categories = .init(initialValue: Loadable<[Category]>.loaded([Category(name: "defense"),Category(name: "midfield"),Category(name: "offense"),Category(name: "games")]))
             
             let appState = container.appState
+            _routingState = .init(initialValue: appState.value.routing.categories)
             self.cancelBag.collect {
                 $routingState
+                .removeDuplicates()
                     .sink { appState[\.routing.categories] = $0}
                 appState.map(\.routing.categories)
+                .print()
                 .removeDuplicates()
                     .assign(to: (\.routingState), on: self)
             }
@@ -36,5 +38,11 @@ extension CategoriesListView {
         var title: String {
             "Categories"
         }
+        
+        func createExerciseViewModel(category: Category) -> ExercisesView.ViewModel {
+            return .init(container: container, category: category)
+        }
     }
+    
+    
 }

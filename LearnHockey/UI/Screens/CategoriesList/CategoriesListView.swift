@@ -12,12 +12,7 @@ import Combine
 struct CategoriesListView: View {
     @Environment(\.locale) private var locale: Locale
     @ObservedObject var viewModel: ViewModel
-    
-    init(viewModel: ViewModel) {
-        self.viewModel = viewModel
-    }
-    
-    
+
     var body: some View {
         content
     }
@@ -34,7 +29,7 @@ struct CategoriesListView: View {
         case .loaded(let categories):
             return AnyView(List(categories) { category in
                 NavigationLink(
-                    destination: ExercisesView(category: category),
+                    destination: ExercisesView(viewModel: self.viewModel.createExerciseViewModel(category:category)),
                     tag: category.name,
                     selection: self.$viewModel.routingState.categories) {
                         CategorieCell(name: category.name, number: "\(category.numberOfExercises)")
@@ -44,11 +39,7 @@ struct CategoriesListView: View {
             return AnyView(EmptyView())
         }
     }
-    
 }
-
-// MARK: - State Updates
-
 
 extension CategoriesListView {
     struct Routing: Equatable {
