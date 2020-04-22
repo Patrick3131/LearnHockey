@@ -98,7 +98,6 @@ extension AccountView.ViewModel {
             if let safeSelf = self {
                 safeSelf.manageSubscription()
             }
-            
         })
     }
     

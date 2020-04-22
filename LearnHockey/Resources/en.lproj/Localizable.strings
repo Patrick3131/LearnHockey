@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  LearnHockey
+
+  Created by Patrick Fischer on 22.04.20.
+  Copyright © 2020 Patrick Fischer. All rights reserved.
+*/
+
+"You are currently not logged in. Do you want to log in or create a new account?" = "You are currently not logged in. Do you want to log in or create a new account?";
+"Login/Signup" = "Login/Signup";
