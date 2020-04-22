@@ -1,0 +1,7 @@
+input_dir: LearnHockey/Resources
+output_dir: LearnHockey/Generated
+xcassets:
+- inputs: Assets.xcassets
+  outputs:
+    - templateName: swift4
+      output: image-Constants.swift

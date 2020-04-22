@@ -14,7 +14,8 @@ pod "Firebase/Auth"
 pod 'FirebaseUI'
 #pod "FirebaseUI/Auth"
 #pod "FirebaseUI/Email"
-
+# not really a pod check https://github.com/SwiftGen/SwiftGen for installation
+pod 'SwiftGen', '~> 6.0'
 
   target 'LearnHockeyTests' do
     inherit! :search_paths
