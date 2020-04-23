@@ -14,7 +14,7 @@ extension ExercisesView {
     class ViewModel: ObservableObject {
         @Published var exercises: Loadable<[Exercise]>
         @Published var selection: Int = 0
-        @Published var routing: Router
+        @Published var routing: ExerciseDetailRouting
 
         private let container: DIContainer
         private var cancelBag = CancelBag()

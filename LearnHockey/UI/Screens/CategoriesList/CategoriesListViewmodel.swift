@@ -14,7 +14,7 @@ extension CategoriesListView {
     class ViewModel: ObservableObject {
         @Environment(\.locale) private var locale: Locale
         @Published var categories: Loadable<[Category]>
-        @Published var routing: Router
+        @Published var routing: ExerciseRouting
         private let container: DIContainer
         private var cancelBag = CancelBag()
         

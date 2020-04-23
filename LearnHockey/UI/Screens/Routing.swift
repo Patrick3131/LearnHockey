@@ -10,13 +10,17 @@ import Foundation
 import SwiftUI
 import Combine
 
-protocol ExerciseRouting {
+protocol HasObjectWillChange {
+    var objectWillChange: ObservableObjectPublisher { get }
+}
+
+protocol ExerciseRouting:class,HasObjectWillChange {
     var categoriesRouting: CategoriesListView.Routing { get set }
     func exerciseViewDestination(viewModel: CategoriesListView.ViewModel, category: Category) -> AnyView
 }
 
 
-protocol ExerciseDetailRouting {
+protocol ExerciseDetailRouting:HasObjectWillChange {
     var exerciseDetailRouting: ExercisesView.Routing { get set }
     func exerciseDetailViewDestination(viewModel: ExercisesView.ViewModel,exercise: Exercise) -> AnyView
 }
