@@ -19,16 +19,10 @@ extension AppState {
     struct ViewRouting:Equatable {
         var categories = CategoriesListView.Routing()
         var exercises = ExercisesView.Routing()
-        var account: Account = .notLoggedIn
-        enum Account: Equatable {
-            case notLoggedIn
-            case loggingIn
-            case loggedIn
-        }
+        var account = AccountView.Routing.notLoggedIn
+    
     }
 }
-
-typealias AccountRouting = AppState.ViewRouting.Account
 
 extension AppState {
     struct UserData {
