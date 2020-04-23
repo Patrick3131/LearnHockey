@@ -14,13 +14,12 @@ protocol HasObjectWillChange {
     var objectWillChange: ObservableObjectPublisher { get }
 }
 
-protocol ExerciseRouting:class,HasObjectWillChange {
-    var categoriesRouting: CategoriesListView.Routing { get set }
+protocol CategoriesListRouting:class,HasObjectWillChange {
+    var exercisesRouting: CategoriesListView.Routing { get set }
     func exerciseViewDestination(viewModel: CategoriesListView.ViewModel, category: Category) -> AnyView
 }
 
-
-protocol ExerciseDetailRouting:HasObjectWillChange {
+protocol ExercisesRouting:HasObjectWillChange {
     var exerciseDetailRouting: ExercisesView.Routing { get set }
     func exerciseDetailViewDestination(viewModel: ExercisesView.ViewModel,exercise: Exercise) -> AnyView
 }

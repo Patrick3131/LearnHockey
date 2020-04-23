@@ -17,7 +17,7 @@ extension ExercisesView {
 }
 
 extension ExercisesView {
-    class Router:ObservableObject, ExerciseDetailRouting {
+    class Router:ObservableObject, ExercisesRouting {
         @Published var exerciseDetailRouting: ExercisesView.Routing
         private var cancelBag = CancelBag()
         

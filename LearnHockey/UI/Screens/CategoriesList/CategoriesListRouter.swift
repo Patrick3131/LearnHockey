@@ -16,21 +16,21 @@ extension CategoriesListView {
 }
 
 extension CategoriesListView {
-    class Router: ObservableObject, ExerciseRouting {
-        @Published var categoriesRouting: CategoriesListView.Routing
+    class Router: ObservableObject, CategoriesListRouting {
+        @Published var exercisesRouting: CategoriesListView.Routing
         private var cancelBag = CancelBag()
         
         init(appState: Store<AppState>) {
-            _categoriesRouting = .init(initialValue: appState.value.routing.categories)
+            _exercisesRouting = .init(initialValue: appState.value.routing.categories)
             
             self.cancelBag.collect {
-                $categoriesRouting
+                $exercisesRouting
                     .removeDuplicates()
                     .sink { appState[\.routing.categories] = $0 }
                 
                 appState.map(\.routing.categories)
                     .removeDuplicates()
-                    .assign(to: (\.categoriesRouting), on: self)
+                    .assign(to: (\.exercisesRouting), on: self)
                 
             }
         }
@@ -41,8 +41,8 @@ extension CategoriesListView {
                     destination: ExercisesView(viewModel:
                         viewModel.createExerciseViewModel(category: category)),
                     tag: category.name,
-                    selection: Binding<String?>.init(get: {self.categoriesRouting.categories},
-                                                     set: {  self.categoriesRouting.categories = $0 ?? ""}))
+                    selection: Binding<String?>.init(get: {self.exercisesRouting.categories},
+                                                     set: {  self.exercisesRouting.categories = $0 ?? ""}))
                 {
                     CategorieCell(name: category.name, number: "\(category.numberOfExercises)")
             })
