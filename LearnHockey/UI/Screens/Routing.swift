@@ -10,11 +10,11 @@ import Foundation
 import SwiftUI
 import Combine
 
-protocol HasObjectWillChange {
+protocol HasObjectWillChange: class {
     var objectWillChange: ObservableObjectPublisher { get }
 }
 
-protocol CategoriesListRouting:class,HasObjectWillChange {
+protocol CategoriesListRouting:HasObjectWillChange {
     var exercisesRouting: CategoriesListView.Routing { get set }
     func exerciseViewDestination(viewModel: CategoriesListView.ViewModel, category: Category) -> AnyView
 }

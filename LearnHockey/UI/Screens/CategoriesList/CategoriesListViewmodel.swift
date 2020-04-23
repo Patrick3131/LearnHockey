@@ -47,6 +47,4 @@ extension CategoriesListView {
             return .init(container: container, category: category)
         }
     }
-    
-    
 }
