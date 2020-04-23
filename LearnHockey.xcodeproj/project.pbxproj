@@ -73,6 +73,9 @@
 		CDC9D664240F406B00D45F49 /* NotLoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */; };
 		CDCD3D6A24100FD600DB811F /* BuySubscriptionElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */; };
 		CDCD3D6E2410666D00DB811F /* PremiumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */; };
+		CDCDCB742451C2D0001C55E9 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB732451C2D0001C55E9 /* Routing.swift */; };
+		CDCDCB762451E8D6001C55E9 /* CategoriesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB752451E8D6001C55E9 /* CategoriesListRouter.swift */; };
+		CDCDCB782451E94D001C55E9 /* ExercisesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB772451E94D001C55E9 /* ExercisesRouter.swift */; };
 		CDE3A38D243B4E4A005A4FC0 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */; };
 		CDE3A38F243B5059005A4FC0 /* ProfilOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */; };
 		CDE3A391243B5848005A4FC0 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A390243B5848005A4FC0 /* FeedbackView.swift */; };
@@ -184,6 +187,9 @@
 		CDC9D663240F406B00D45F49 /* NotLoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotLoggedInView.swift; sourceTree = "<group>"; };
 		CDCD3D6924100FD600DB811F /* BuySubscriptionElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuySubscriptionElementView.swift; sourceTree = "<group>"; };
 		CDCD3D6D2410666D00DB811F /* PremiumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumRepository.swift; sourceTree = "<group>"; };
+		CDCDCB732451C2D0001C55E9 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		CDCDCB752451E8D6001C55E9 /* CategoriesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListRouter.swift; sourceTree = "<group>"; };
+		CDCDCB772451E94D001C55E9 /* ExercisesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesRouter.swift; sourceTree = "<group>"; };
 		CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
 		CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilOverviewView.swift; sourceTree = "<group>"; };
 		CDE3A390243B5848005A4FC0 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -431,6 +437,7 @@
 				CD6B2E2B244CE19D00FC0ED4 /* Exercises */,
 				CD332210244C562400347BDC /* CategoriesList */,
 				CDE3A3A6243BADBC005A4FC0 /* Account */,
+				CDCDCB732451C2D0001C55E9 /* Routing.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -452,6 +459,7 @@
 			children = (
 				CD3309DD23FB2514005EEB65 /* CategoriesListView.swift */,
 				CD332211244C563C00347BDC /* CategoriesListViewmodel.swift */,
+				CDCDCB752451E8D6001C55E9 /* CategoriesListRouter.swift */,
 			);
 			path = CategoriesList;
 			sourceTree = "<group>";
@@ -472,6 +480,7 @@
 			children = (
 				CD20326B23FC942D00EE5365 /* ExercisesView.swift */,
 				CD6B2E2C244CE1B900FC0ED4 /* ExercisesViewModel.swift */,
+				CDCDCB772451E94D001C55E9 /* ExercisesRouter.swift */,
 			);
 			path = Exercises;
 			sourceTree = "<group>";
@@ -939,7 +948,9 @@
 				CDE3A3A1243B82B3005A4FC0 /* SubscriptionTestView.swift in Sources */,
 				CD02E53B2409778B00F68AA3 /* KingfisherBridge.swift in Sources */,
 				CD3309D023FB15EA005EEB65 /* AppState.swift in Sources */,
+				CDCDCB782451E94D001C55E9 /* ExercisesRouter.swift in Sources */,
 				CD3309DC23FB1FB2005EEB65 /* AppEnvironment.swift in Sources */,
+				CDCDCB762451E8D6001C55E9 /* CategoriesListRouter.swift in Sources */,
 				CD4981252449A03800289C53 /* PrivateConfig.swift in Sources */,
 				CD33098D23FB0D7B005EEB65 /* AppDelegate.swift in Sources */,
 				CDAB710C2420247300CCA74A /* FirebaseAuthPublisher.swift in Sources */,
@@ -955,6 +966,7 @@
 				CD8A18802450E403003F622A /* image-Constants.swift in Sources */,
 				CD8F1507244DE3EA006DC0D4 /* TabBarViewModel.swift in Sources */,
 				CDE3A396243B6697005A4FC0 /* String+Extensions.swift in Sources */,
+				CDCDCB742451C2D0001C55E9 /* Routing.swift in Sources */,
 				CDE3A3A8243BB1C6005A4FC0 /* AccountViewModel.swift in Sources */,
 				CD02E51424095B3000F68AA3 /* CRUDStorage.swift in Sources */,
 				CD6B2E2D244CE1B900FC0ED4 /* ExercisesViewModel.swift in Sources */,
