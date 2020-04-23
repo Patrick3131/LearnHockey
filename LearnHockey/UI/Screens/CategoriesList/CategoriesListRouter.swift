@@ -31,7 +31,6 @@ extension CategoriesListView {
                 appState.map(\.routing.categories)
                     .removeDuplicates()
                     .assign(to: (\.exercisesRouting), on: self)
-                
             }
         }
         

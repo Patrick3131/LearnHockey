@@ -16,3 +16,6 @@ struct PrivateConfig {
 ```
 
 
+For more information:
+https://github.com/nalexn/clean-architecture-swiftui
+
