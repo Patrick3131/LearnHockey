@@ -71,11 +71,6 @@ private extension ExercisesView {
     }
 }
 
-extension ExercisesView {
-    struct Routing: Equatable {
-        var exercise: String?
-    }
-}
 
 
 

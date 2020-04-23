@@ -14,24 +14,13 @@ struct AccountView: View {
     var body: some View {
             userContent
                 /// multiple sheets: https://stackoverflow.com/questions/58837007/multiple-sheetispresented-doesnt-work-in-swiftui
-                
-                .background(EmptyView()
-                    .sheet(isPresented: self.$viewModel.showLoginView, content: {
-                        LoginView(cancel: {
-                            self.viewModel.cancelLogin()
-                        })
-                    }))
-                .background(EmptyView()
-                    .sheet(isPresented: self.$viewModel.showManageSubscription, onDismiss: {
-                        print(12345)
-                    }, content: {
-                        BuySubscriptionView(viewModel: self.viewModel.createBuySubcriptionViewModel())
-                    })
+                .background(self.viewModel.showLoginView())
+                .background(self.viewModel.showManageSubscriptionView()
             )
                 .navigationBarTitle("Profil")
                 .navigationBarItems(trailing: (
                     Group {
-                        if viewModel.routingState == .loggedIn {
+                        if viewModel.router.routingState == .loggedIn {
                             Button("Logout") {
                                 self.viewModel.logOut()
                             }
@@ -45,7 +34,7 @@ struct AccountView: View {
 
 extension AccountView {
     private var userContent: AnyView {
-        switch viewModel.routingState {
+        switch viewModel.router.routingState {
         case .notLoggedIn:
             return AnyView(NotLoggedInView(loginButtonClicked: {
                 self.viewModel.loggingIn()

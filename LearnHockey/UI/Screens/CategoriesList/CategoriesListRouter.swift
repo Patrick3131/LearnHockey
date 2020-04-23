@@ -10,6 +10,12 @@ import Foundation
 import SwiftUI
 
 extension CategoriesListView {
+    struct Routing: Equatable {
+        var categories: String?
+    }
+}
+
+extension CategoriesListView {
     class Router: ObservableObject, ExerciseRouting {
         @Published var categoriesRouting: CategoriesListView.Routing
         private var cancelBag = CancelBag()

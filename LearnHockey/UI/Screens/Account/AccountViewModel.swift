@@ -12,44 +12,50 @@ import Combine
 extension AccountView {
     class ViewModel: ObservableObject {
         
-        @Published var routingState: AccountRouting = .notLoggedIn
         @Published private var accountDetails: Loadable<AppState.UserData.Account> = .notRequested {
             didSet {
                 print("324")
                 setRouting()
             }
         }
-        @Published var showLoginView = false
-        @Published var showManageSubscription = false
-        
+        @Published var router: AccountRouting
+
         private let container: DIContainer
         private var cancelBag = CancelBag()
         
         init(container: DIContainer) {
             self.container = container
-            let appState = container.appState
+            _router = .init(initialValue: Router(appState: container.appState))
+            
             cancelBag.collect {
-                $routingState
-                    .removeDuplicates()
-                    /// actually it would be enough if the state is only stored in this ViewModel, I will remove the Routing state out of the Appstate
-                    .sink { appState[\.routing.account] = $0 }
+                router.objectWillChange
+                    .sink {
+                        self.objectWillChange.send()
+                }
                 authentificationUpdate
                     .assign(to: \.accountDetails, on: self)
             }
             
         }
 
-        
         func loggingIn() {
-            showLoginView = true
+            router.showLoginView = true
         }
         
         func manageSubscription() {
-            showManageSubscription = true
+            router.showManageSubscription = true
+        }
+        
+        func showManageSubscriptionView() -> AnyView {
+            router.showManageSubscription(viewModel: self)
+        }
+        
+        func showLoginView() ->  AnyView {
+            router.showManageSubscription(viewModel: self)
         }
         
         func cancelLogin() {
-            routingState = .notLoggedIn
+            router.routingState = .notLoggedIn
         }
         
         func logOut() {
@@ -60,11 +66,11 @@ extension AccountView {
             switch accountDetails {
             case .loaded(let user):
                 if user.loggedIn {
-                    routingState = .loggedIn
+                    router.routingState = .loggedIn
                 }
 
                 if user.loggedIn == false {
-                    routingState = .notLoggedIn
+                    router.routingState = .notLoggedIn
                 }
             default: break
             }

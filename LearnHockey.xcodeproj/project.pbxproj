@@ -76,6 +76,7 @@
 		CDCDCB742451C2D0001C55E9 /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB732451C2D0001C55E9 /* Routing.swift */; };
 		CDCDCB762451E8D6001C55E9 /* CategoriesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB752451E8D6001C55E9 /* CategoriesListRouter.swift */; };
 		CDCDCB782451E94D001C55E9 /* ExercisesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB772451E94D001C55E9 /* ExercisesRouter.swift */; };
+		CDCDCB7A2451EDB2001C55E9 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCDCB792451EDB2001C55E9 /* AccountRouter.swift */; };
 		CDE3A38D243B4E4A005A4FC0 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */; };
 		CDE3A38F243B5059005A4FC0 /* ProfilOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */; };
 		CDE3A391243B5848005A4FC0 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3A390243B5848005A4FC0 /* FeedbackView.swift */; };
@@ -190,6 +191,7 @@
 		CDCDCB732451C2D0001C55E9 /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		CDCDCB752451E8D6001C55E9 /* CategoriesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListRouter.swift; sourceTree = "<group>"; };
 		CDCDCB772451E94D001C55E9 /* ExercisesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesRouter.swift; sourceTree = "<group>"; };
+		CDCDCB792451EDB2001C55E9 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
 		CDE3A38C243B4E4A005A4FC0 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
 		CDE3A38E243B5059005A4FC0 /* ProfilOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilOverviewView.swift; sourceTree = "<group>"; };
 		CDE3A390243B5848005A4FC0 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
@@ -431,13 +433,13 @@
 		CD3309C323FB0E1B005EEB65 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CDCDCB732451C2D0001C55E9 /* Routing.swift */,
 				CD8F1505244DE38D006DC0D4 /* TabBar */,
 				CD6B2E33244DDF2500FC0ED4 /* ContentView */,
 				CD6B2E2E244DD79400FC0ED4 /* ExerciseDetail */,
 				CD6B2E2B244CE19D00FC0ED4 /* Exercises */,
 				CD332210244C562400347BDC /* CategoriesList */,
 				CDE3A3A6243BADBC005A4FC0 /* Account */,
-				CDCDCB732451C2D0001C55E9 /* Routing.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -604,6 +606,7 @@
 			children = (
 				CDE3A3A4243BA979005A4FC0 /* AccountView.swift */,
 				CDE3A3A7243BB1C6005A4FC0 /* AccountViewModel.swift */,
+				CDCDCB792451EDB2001C55E9 /* AccountRouter.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -914,6 +917,7 @@
 			files = (
 				CDC9D659240ED94A00D45F49 /* TabBarView.swift in Sources */,
 				CDE3A38F243B5059005A4FC0 /* ProfilOverviewView.swift in Sources */,
+				CDCDCB7A2451EDB2001C55E9 /* AccountRouter.swift in Sources */,
 				CDE3A399243B6E50005A4FC0 /* NoValidSubscription.swift in Sources */,
 				CDBE57BA24143C06005B6672 /* Color+Extension.swift in Sources */,
 				CD9F3A9D24097A910064016B /* ExercisesWebRepository.swift in Sources */,

@@ -36,12 +36,6 @@ struct CategoriesListView: View {
     }
 }
 
-extension CategoriesListView {
-    struct Routing: Equatable {
-        var categories: String?
-    }
-}
-
 
 struct CategoriesList_Previews: PreviewProvider {
     static var previews: some View {

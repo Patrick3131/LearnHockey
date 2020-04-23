@@ -9,10 +9,16 @@
 import Foundation
 import SwiftUI
 
+
+extension ExercisesView {
+    struct Routing: Equatable {
+        var exercise: String?
+    }
+}
+
 extension ExercisesView {
     class Router:ObservableObject, ExerciseDetailRouting {
         @Published var exerciseDetailRouting: ExercisesView.Routing
-        
         private var cancelBag = CancelBag()
         
         init(appState: Store<AppState>) {

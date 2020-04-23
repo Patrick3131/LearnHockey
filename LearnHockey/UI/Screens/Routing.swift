@@ -25,5 +25,12 @@ protocol ExerciseDetailRouting:HasObjectWillChange {
     func exerciseDetailViewDestination(viewModel: ExercisesView.ViewModel,exercise: Exercise) -> AnyView
 }
 
-
-
+protocol AccountRouting: HasObjectWillChange {
+    var routingState: AccountView.Routing { get set }
+    var showLoginView: Bool { get set }
+    var showManageSubscription: Bool { get set }
+    
+    
+    func showLoginView(viewModel: AccountView.ViewModel) -> AnyView
+    func showManageSubscription(viewModel: AccountView.ViewModel) -> AnyView
+}
