@@ -14,7 +14,6 @@ extension AccountView {
         
         @Published private var accountDetails: Loadable<AppState.UserData.Account> = .notRequested {
             didSet {
-                print("324")
                 setRouting()
             }
         }

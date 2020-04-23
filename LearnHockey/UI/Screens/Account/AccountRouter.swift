@@ -52,7 +52,6 @@ extension AccountView {
             return AnyView(EmptyView()
                 .sheet(isPresented: Binding<Bool>.init(get: { self.showManageSubscription },
                                                        set: { self.showManageSubscription = $0 }), onDismiss: {
-                                                        print(12345)
                 }, content: {
                     BuySubscriptionView(viewModel: viewModel.createBuySubcriptionViewModel())
                 })

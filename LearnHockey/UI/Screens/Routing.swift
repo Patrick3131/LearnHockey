@@ -30,7 +30,6 @@ protocol AccountRouting: HasObjectWillChange {
     var showLoginView: Bool { get set }
     var showManageSubscription: Bool { get set }
     
-    
     func showLoginView(viewModel: AccountView.ViewModel) -> AnyView
     func showManageSubscription(viewModel: AccountView.ViewModel) -> AnyView
 }
