@@ -14,7 +14,7 @@ extension ExercisesView {
     class ViewModel: ObservableObject {
         @Published var exercises: Loadable<[Exercise]>
         @Published var selection: Int = 0
-        @Published var routingState: Routing = .init()
+        @Published var routing: Router
 
         private let container: DIContainer
         private var cancelBag = CancelBag()
@@ -23,13 +23,11 @@ extension ExercisesView {
         init(container: DIContainer,category: Category) {
             self.container = container
             self.category = category
+            _routing = .init(initialValue: Router(appState: container.appState))
             _exercises = .init(initialValue: .notRequested)
-            let appState = container.appState
-            _routingState = .init(initialValue: appState.value.routing.exercises)
             cancelBag.collect {
-                    self.routingUpdate
-                    .removeDuplicates()
-                        .assign(to: \.routingState, on: self)
+                routing.objectWillChange
+                    .sink { self.objectWillChange.send()}
                     $selection
                     .sink(receiveValue: { _ in
                         self.filterExercises()
@@ -84,6 +82,10 @@ extension ExercisesView {
 
 
 extension ExercisesView.ViewModel {
+    func routingToExerciseDetailView(exercise:Exercise) -> AnyView {
+        routing.exerciseDetailViewDestination(viewModel: self, exercise: exercise)
+    }
+    
     func createExerciseCellViewModel(exercise: Exercise) -> ExerciseCell.ViewModel {
         return ExerciseCell.ViewModel(exercise: exercise)
     }

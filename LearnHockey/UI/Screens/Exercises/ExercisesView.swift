@@ -64,13 +64,7 @@ private extension ExercisesView {
                 .background(Color.baseLight)
                 .padding([.top,.horizontal], 5)
             List(exercises) { exercise in
-                NavigationLink(
-                    destination: ExerciseDetailView(viewModel: self.viewModel.createExerciseDetailViewModel(exercise: exercise)),
-                    tag: exercise.name!,
-                    selection: self.$viewModel.routingState.exercise) {
-                        ExerciseCell(viewModel: self.viewModel.createExerciseCellViewModel(exercise: exercise))
-                }
-                
+                self.viewModel.routingToExerciseDetailView(exercise: exercise)
             }
         }
             

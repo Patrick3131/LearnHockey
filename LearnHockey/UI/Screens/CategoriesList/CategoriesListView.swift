@@ -28,12 +28,7 @@ struct CategoriesListView: View {
         switch viewModel.categories {
         case .loaded(let categories):
             return AnyView(List(categories) { category in
-                NavigationLink(
-                    destination: ExercisesView(viewModel: self.viewModel.createExerciseViewModel(category:category)),
-                    tag: category.name,
-                    selection: self.$viewModel.routingState.categories) {
-                        CategorieCell(name: category.name, number: "\(category.numberOfExercises)")
-                }
+                self.viewModel.routingToExercisesView(category: category)
             })
         default:
             return AnyView(EmptyView())
